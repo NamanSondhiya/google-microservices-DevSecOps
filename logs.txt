@@ -884,3 +884,4 @@
 #137 8.789 npm WARN deprecated @opentelemetry/exporter-otlp-grpc@0.26.0: Please use trace and metric specific exporters @opentelemetry/exporter-trace-otlp-grpc and @opentelemetry/exporter-metrics-otlp-grpc
 #137 8.802 npm WARN deprecated @opentelemetry/sdk-metrics-base@0.26.0: Please use @opentelemetry/sdk-metrics
 #137 9.617 npm WARN deprecated @opentelemetry/api-metrics@0.26.0: Please use @opentelemetry/api >= 1.3.0
+l
