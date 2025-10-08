@@ -3,6 +3,11 @@ services:
     image: redis:alpine
     ports:
       - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
 
   adservice:
     build: ./src/adservice
@@ -10,6 +15,7 @@ services:
       - "9555:9555"
     environment:
       - PORT=9555
+    restart: always
 
   cartservice:
     build: ./src/cartservice/src
@@ -19,7 +25,9 @@ services:
       - REDIS_ADDR=redis-cart:6379
       - PORT=7070
     depends_on:
-      - redis-cart
+      redis-cart:
+        condition: service_healthy
+    restart: always
 
   checkoutservice:
     build: ./src/checkoutservice
@@ -34,12 +42,19 @@ services:
       - CURRENCY_SERVICE_ADDR=currencyservice:7000
       - CART_SERVICE_ADDR=cartservice:7070
     depends_on:
-      - productcatalogservice
-      - shippingservice
-      - paymentservice
-      - emailservice
-      - currencyservice
-      - cartservice
+      productcatalogservice:
+        condition: service_started
+      shippingservice:
+        condition: service_started
+      paymentservice:
+        condition: service_started
+      emailservice:
+        condition: service_started
+      currencyservice:
+        condition: service_started
+      cartservice:
+        condition: service_started
+    restart: always
 
   currencyservice:
     build: ./src/currencyservice
@@ -47,6 +62,7 @@ services:
       - "7000:7000"
     environment:
       - PORT=7000
+    restart: always
 
   emailservice:
     build: ./src/emailservice
@@ -54,6 +70,7 @@ services:
       - "8082:8080"
     environment:
       - PORT=8080
+    restart: always
 
   frontend:
     build: ./src/frontend
@@ -69,13 +86,21 @@ services:
       - CHECKOUT_SERVICE_ADDR=checkoutservice:5050
       - AD_SERVICE_ADDR=adservice:9555
     depends_on:
-      - productcatalogservice
-      - currencyservice
-      - cartservice
-      - recommendationservice
-      - shippingservice
-      - checkoutservice
-      - adservice
+      productcatalogservice:
+        condition: service_started
+      currencyservice:
+        condition: service_started
+      cartservice:
+        condition: service_started
+      recommendationservice:
+        condition: service_started
+      shippingservice:
+        condition: service_started
+      checkoutservice:
+        condition: service_started
+      adservice:
+        condition: service_started
+    restart: always
 
   paymentservice:
     build: ./src/paymentservice
@@ -83,6 +108,7 @@ services:
       - "50051:50051"
     environment:
       - PORT=50051
+    restart: always
 
   productcatalogservice:
     build: ./src/productcatalogservice
@@ -90,6 +116,7 @@ services:
       - "3550:3550"
     environment:
       - PORT=3550
+    restart: always
 
   recommendationservice:
     build: ./src/recommendationservice
@@ -99,7 +126,9 @@ services:
       - PORT=8080
       - PRODUCT_CATALOG_SERVICE_ADDR=productcatalogservice:3550
     depends_on:
-      - productcatalogservice
+      productcatalogservice:
+        condition: service_started
+    restart: always
 
   shippingservice:
     build: ./src/shippingservice
@@ -107,6 +136,7 @@ services:
       - "50052:50051"
     environment:
       - PORT=50051
+    restart: always
 
   loadgenerator:
     build: ./src/loadgenerator
@@ -115,4 +145,6 @@ services:
       - USERS=10
       - RATE=1
     depends_on:
-      - frontend
+      frontend:
+        condition: service_started
+    restart: on-failure
