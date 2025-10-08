@@ -1,61 +1,49 @@
-# Copyright 2025 Google LLC
-# Licensed under the Apache License, Version 2.0
-# https://www.apache.org/licenses/LICENSE-2.0
+# Copyright 2020 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 
-# ---- Base image ----
-FROM node:20.18.1-alpine@sha256:24fb6aa7020d9a20b00d6da6d1714187c45ed00d1eb4adb01395843c338b9372 AS base
+FROM node:20.2.0-alpine@sha256:f25b0e9d3d116e267d4ff69a3a99c0f4cf6ae94eadd87f1bf7bd68ea3ff0bef7 AS base
 
-# CHANGE: set consistent working directory and non-root environment early
-WORKDIR /usr/src/app
-ENV NODE_ENV=production
-
-# ---- Builder stage ----
 FROM base AS builder
 
-# CHANGE: install build dependencies for native modules, removed later
-RUN apk add --no-cache python3 make g++
-
-# Copy only dependency manifests for caching
-COPY package*.json ./
-
-# CHANGE: use `npm ci` to ensure deterministic installs with package-lock.json
-RUN npm ci
-
-# Copy rest of the source code
-COPY . .
-
-# ---- Runtime stage ----
-FROM base AS runtime
-
-# CHANGE: create non-root user
-RUN addgroup -S nodejs && adduser -S nodejs -G nodejs
+# Some packages (e.g. @google-cloud/profiler) require additional
+# deps for post-install scripts
+RUN apk add --update --no-cache \
+    python3 \
+    make \
+    g++ 
 
 WORKDIR /usr/src/app
 
-# Copy built app and dependencies
-COPY --from=builder /usr/src/app ./
+COPY package*.json ./
 
-# CHANGE: prune dev dependencies for smaller final image
-RUN npm prune --omit=dev
+RUN npm install --only=production
 
-# Expose the application port
-EXPOSE 7000
+FROM base AS without-grpc-health-probe-bin
 
-# ---- Install gRPC health probe ----
+WORKDIR /usr/src/app
+
+COPY --from=builder /usr/src/app/node_modules ./node_modules
+
+COPY . .
+
+EXPOSE 50051
+
+ENTRYPOINT [ "node", "index.js" ]
+
+FROM without-grpc-health-probe-bin
+
+# renovate: datasource=github-releases depName=grpc-ecosystem/grpc-health-probe
 ENV GRPC_HEALTH_PROBE_VERSION=v0.4.18
-
-# CHANGE: secure download with checksum verification
-RUN apk add --no-cache wget curl && \
-    wget -qO /usr/local/bin/grpc_health_probe \
-      "https://github.com/grpc-ecosystem/grpc-health-probe/releases/download/${GRPC_HEALTH_PROBE_VERSION}/grpc_health_probe-linux-amd64" && \
-    chmod +x /usr/local/bin/grpc_health_probe
-
-# CHANGE: Add Docker healthcheck that uses grpc_health_probe
-HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
-  CMD grpc_health_probe -addr=localhost:7000 || exit 1
-
-# CHANGE: run as non-root user
-USER nodejs
-
-# CHANGE: use CMD instead of ENTRYPOINT for better override flexibility
-CMD ["node", "server.js"]
+RUN wget -qO/bin/grpc_health_probe https://github.com/grpc-ecosystem/grpc-health-probe/releases/download/${GRPC_HEALTH_PROBE_VERSION}/grpc_health_probe-linux-amd64 && \
+    chmod +x /bin/grpc_health_probe
