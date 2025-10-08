@@ -1,22 +1,21 @@
 #1 [internal] load local bake definitions
-#1 reading from stdin 6.10kB done
+#1 reading from stdin 6.70kB done
 #1 DONE 0.0s
 
-#2 [emailservice internal] load build definition from Dockerfile
-#2 transferring dockerfile: 1.34kB done
+#2 [checkoutservice internal] load build definition from Dockerfile
+#2 transferring dockerfile: 1.43kB done
 #2 DONE 0.0s
 
-#3 [shippingservice internal] load build definition from Dockerfile
-#3 transferring dockerfile: 1.46kB done
+#3 [productcatalogservice internal] load build definition from Dockerfile
+#3 transferring dockerfile: 1.53kB done
 #3 DONE 0.0s
 
-#4 [productcatalogservice internal] load build definition from Dockerfile
-#4 transferring dockerfile: 1.53kB done
+#4 [paymentservice internal] load build definition from Dockerfile
+#4 transferring dockerfile: 1.26kB done
 #4 DONE 0.0s
 
-#5 [recommendationservice internal] load build definition from Dockerfile
-#5 transferring dockerfile: 1.37kB done
-#5 WARN: LegacyKeyValueFormat: "ENV key=value" should be used instead of legacy "ENV key value" format (line 45)
+#5 [adservice internal] load build definition from Dockerfile
+#5 transferring dockerfile: 1.51kB done
 #5 DONE 0.0s
 
 #6 [currencyservice internal] load build definition from Dockerfile
@@ -26,862 +25,597 @@
 #6 WARN: FromAsCasing: 'as' and 'FROM' keywords' casing do not match (line 32)
 #6 DONE 0.0s
 
-#7 [frontend internal] load build definition from Dockerfile
-#7 transferring dockerfile: 1.46kB done
+#7 [cartservice internal] load build definition from Dockerfile
+#7 transferring dockerfile: 1.51kB done
 #7 DONE 0.0s
 
-#8 [paymentservice internal] load build definition from Dockerfile
-#8 transferring dockerfile: 1.26kB done
+#8 [emailservice internal] load build definition from Dockerfile
+#8 transferring dockerfile: 1.34kB done
 #8 DONE 0.0s
 
-#9 [emailservice internal] load metadata for docker.io/library/python:3.12.8-alpine@sha256:54bec49592c8455de8d5983d984efff76b6417a6af9b5dcc8d0237bf6ad3bd20
-#9 DONE 0.0s
+#9 [frontend internal] load build definition from Dockerfile
+#9 transferring dockerfile: 1.46kB done
+#9 DONE 0.1s
 
-#10 [cartservice internal] load build definition from Dockerfile
-#10 transferring dockerfile: 1.51kB done
-#10 DONE 0.0s
+#10 [shippingservice internal] load build definition from Dockerfile
+#10 transferring dockerfile: 1.46kB done
+#10 DONE 0.1s
 
-#11 [checkoutservice internal] load build definition from Dockerfile
-#11 transferring dockerfile: 1.43kB done
+#11 [recommendationservice internal] load build definition from Dockerfile
+#11 transferring dockerfile: 1.37kB done
 #11 DONE 0.1s
 
-#12 [adservice internal] load build definition from Dockerfile
-#12 transferring dockerfile: 1.51kB done
+#12 [loadgenerator internal] load build definition from Dockerfile
+#12 transferring dockerfile: 1.32kB done
 #12 DONE 0.1s
 
-#13 [auth] library/node:pull token for registry-1.docker.io
-#13 DONE 0.0s
+#13 [shippingservice internal] load metadata for docker.io/library/golang:1.23.4-alpine@sha256:c23339199a08b0e12032856908589a6d41a0dab141b8b3b21f156fc571a3f1d3
+#13 ...
 
-#14 [emailservice internal] load .dockerignore
-#14 transferring context: 2B done
-#14 DONE 0.0s
+#14 [cartservice internal] load metadata for mcr.microsoft.com/dotnet/sdk:9.0.101-noble@sha256:1f13e67d295e02abdfd187c341f887442bad611eda536766172ced401fc8b9fa
+#14 DONE 0.3s
 
-#15 [recommendationservice internal] load .dockerignore
-#15 transferring context: 2B done
-#15 DONE 0.0s
+#15 [cartservice internal] load metadata for mcr.microsoft.com/dotnet/runtime-deps:9.0.1-noble-chiseled@sha256:6f7466eda39e24efaf7eab2325e15d776a685d13cc93b4ea0cde9ee4f7982210
+#15 DONE 0.3s
 
-#16 [productcatalogservice internal] load .dockerignore
-#16 transferring context: 48B done
+#16 [cartservice internal] load .dockerignore
+#16 transferring context: 92B done
 #16 DONE 0.0s
 
-#17 [recommendationservice base 1/1] FROM docker.io/library/python:3.12.8-alpine@sha256:54bec49592c8455de8d5983d984efff76b6417a6af9b5dcc8d0237bf6ad3bd20
+#17 [cartservice stage-1 1/3] FROM mcr.microsoft.com/dotnet/runtime-deps:9.0.1-noble-chiseled@sha256:6f7466eda39e24efaf7eab2325e15d776a685d13cc93b4ea0cde9ee4f7982210
 #17 DONE 0.0s
 
-#18 [shippingservice internal] load .dockerignore
-#18 transferring context: 48B done
+#18 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:9.0.101-noble@sha256:1f13e67d295e02abdfd187c341f887442bad611eda536766172ced401fc8b9fa
 #18 DONE 0.0s
 
-#19 [frontend internal] load .dockerignore
-#19 transferring context: 48B done
+#19 [cartservice internal] load build context
+#19 transferring context: 569B done
 #19 DONE 0.0s
 
-#20 [paymentservice internal] load metadata for docker.io/library/node:20.18.1-alpine@sha256:24fb6aa7020d9a20b00d6da6d1714187c45ed00d1eb4adb01395843c338b9372
-#20 DONE 0.0s
+#20 [cartservice builder 4/6] RUN dotnet restore cartservice.csproj     -a amd64
+#20 CACHED
 
-#21 [paymentservice internal] load metadata for docker.io/library/alpine:3.20.3@sha256:1e42bbe2508154c9126d48c2b8a75420c3544343bf86fd041fb7527e017a4b4a
-#21 DONE 0.0s
+#21 [cartservice builder 3/6] COPY cartservice.csproj .
+#21 CACHED
 
-#22 [recommendationservice internal] load build context
-#22 DONE 0.0s
+#22 [cartservice builder 6/6] RUN dotnet publish cartservice.csproj     -p:PublishSingleFile=true     -a amd64     --self-contained true     -p:PublishTrimmed=true     -p:TrimMode=full     -c release     -o /cartservice
+#22 CACHED
 
-#23 [emailservice internal] load build context
-#23 transferring context: 377B done
-#23 DONE 0.0s
+#23 [cartservice builder 2/6] WORKDIR /app
+#23 CACHED
 
-#24 [checkoutservice stage-1 1/4] WORKDIR /src
-#24 DONE 0.0s
+#24 [cartservice builder 5/6] COPY . .
+#24 CACHED
 
-#25 [checkoutservice builder 1/6] FROM docker.io/library/golang:1.23.4-alpine@sha256:c23339199a08b0e12032856908589a6d41a0dab141b8b3b21f156fc571a3f1d3
-#25 DONE 0.0s
+#25 [cartservice stage-1 2/3] WORKDIR /app
+#25 CACHED
 
-#26 [checkoutservice internal] load metadata for docker.io/library/golang:1.23.4-alpine@sha256:c23339199a08b0e12032856908589a6d41a0dab141b8b3b21f156fc571a3f1d3
-#26 DONE 0.1s
+#26 [cartservice stage-1 3/3] COPY --from=builder /cartservice .
+#26 CACHED
 
-#27 [adservice internal] load metadata for docker.io/library/eclipse-temurin:21.0.5_11-jdk@sha256:a20cfa6afdbf57ff2c4de77ae2d0e3725a6349f1936b5ad7c3d1b06f6d1b840a
+#27 [cartservice] exporting to image
+#27 exporting layers done
+#27 writing image sha256:f58197e879333a7a8df979ffe6281b95f65d2da5bc771609c63c57a56bbd63cb done
+#27 naming to docker.io/library/google-microservices-devsecops-cartservice done
 #27 DONE 0.0s
 
-#28 [adservice internal] load metadata for docker.io/library/eclipse-temurin:21.0.5_11-jre-alpine@sha256:4300bfe1e11f3dfc3e3512f39939f9093cf18d0e581d1ab1ccd0512f32fe33f0
+#28 [cartservice] resolving provenance for metadata file
 #28 DONE 0.0s
 
-#22 [recommendationservice internal] load build context
-#22 transferring context: 304B done
-#22 DONE 0.0s
+#29 [loadgenerator internal] load metadata for docker.io/library/python:3.12.8-alpine@sha256:54bec49592c8455de8d5983d984efff76b6417a6af9b5dcc8d0237bf6ad3bd20
+#29 ...
 
-#29 [paymentservice internal] load .dockerignore
-#29 transferring context: 53B done
-#29 DONE 0.0s
-
-#30 [productcatalogservice internal] load build context
-#30 transferring context: 470B done
+#30 [auth] library/golang:pull token for registry-1.docker.io
 #30 DONE 0.0s
 
-#31 [frontend internal] load build context
-#31 transferring context: 3.74kB 0.0s done
+#31 [auth] library/node:pull token for registry-1.docker.io
 #31 DONE 0.0s
 
-#32 [emailservice stage-2 2/4] WORKDIR /email_server
-#32 CACHED
+#32 [auth] library/eclipse-temurin:pull token for registry-1.docker.io
+#32 DONE 0.0s
 
-#33 [emailservice stage-2 1/4] RUN apk update     && apk add --no-cache libstdc++     && rm -rf /var/cache/apk/*
-#33 CACHED
+#33 [auth] library/alpine:pull token for registry-1.docker.io
+#33 DONE 0.0s
 
-#34 [emailservice builder 2/3] COPY requirements.txt .
-#34 CACHED
+#34 [auth] library/python:pull token for registry-1.docker.io
+#34 DONE 0.0s
 
-#35 [emailservice builder 3/3] RUN pip install -r requirements.txt
-#35 CACHED
+#35 [currencyservice internal] load metadata for docker.io/library/node:20.18.1-alpine@sha256:24fb6aa7020d9a20b00d6da6d1714187c45ed00d1eb4adb01395843c338b9372
+#35 DONE 1.6s
 
-#36 [emailservice stage-2 3/4] COPY --from=builder /usr/local/lib/python3.12/ /usr/local/lib/python3.12/
-#36 CACHED
+#36 [currencyservice internal] load .dockerignore
+#36 transferring context: 64B done
+#36 DONE 0.0s
 
-#37 [recommendationservice builder 3/3] RUN pip install -r requirements.txt
+#37 [currencyservice base 1/1] FROM docker.io/library/node:20.18.1-alpine@sha256:24fb6aa7020d9a20b00d6da6d1714187c45ed00d1eb4adb01395843c338b9372
 #37 CACHED
 
-#38 [recommendationservice builder 2/3] COPY requirements.txt .
-#38 CACHED
+#38 [currencyservice internal] load build context
+#38 transferring context: 2.02kB done
+#38 DONE 0.0s
 
-#39 [recommendationservice stage-2 2/4] WORKDIR /recommendationservice
+#39 [currencyservice builder 1/4] RUN apk add --update --no-cache     python3     make     g++
 #39 CACHED
 
-#40 [recommendationservice builder 1/3] RUN apk update     && apk add --no-cache g++ linux-headers     && rm -rf /var/cache/apk/*
+#40 [currencyservice builder 2/4] WORKDIR /usr/src/app
 #40 CACHED
 
-#41 [recommendationservice stage-2 3/4] COPY --from=builder /usr/local/lib/python3.12/ /usr/local/lib/python3.12/
+#41 [currencyservice builder 3/4] COPY package*.json ./
 #41 CACHED
 
-#42 [recommendationservice stage-2 1/4] RUN apk update     && apk add --no-cache libstdc++     && rm -rf /var/cache/apk/*
-#42 CACHED
+#42 [currencyservice without-grpc-health-probe-bin 1/3] WORKDIR /usr/src/app
+#42 DONE 0.0s
 
-#43 [recommendationservice stage-2 4/4] COPY . .
-#43 CACHED
+#29 [recommendationservice internal] load metadata for docker.io/library/python:3.12.8-alpine@sha256:54bec49592c8455de8d5983d984efff76b6417a6af9b5dcc8d0237bf6ad3bd20
+#29 DONE 1.7s
 
-#44 [shippingservice internal] load build context
-#44 transferring context: 418B done
+#43 [recommendationservice internal] load .dockerignore
+#43 transferring context: 2B done
+#43 DONE 0.0s
+
+#44 [emailservice internal] load .dockerignore
+#44 transferring context: 2B done
 #44 DONE 0.0s
 
-#45 [productcatalogservice builder 3/6] COPY go.mod go.sum ./
-#45 CACHED
+#45 [loadgenerator internal] load .dockerignore
+#45 transferring context: 2B done
+#45 DONE 0.0s
 
-#46 [productcatalogservice stage-1 2/4] COPY --from=builder /productcatalogservice ./server
+#46 [emailservice base 1/1] FROM docker.io/library/python:3.12.8-alpine@sha256:54bec49592c8455de8d5983d984efff76b6417a6af9b5dcc8d0237bf6ad3bd20
+#46 DONE 0.0s
+
+#47 [emailservice internal] load build context
+#47 transferring context: 377B done
+#47 DONE 0.0s
+
+#48 [recommendationservice internal] load build context
+#48 transferring context: 304B done
+#48 DONE 0.0s
+
+#46 [recommendationservice base 1/1] FROM docker.io/library/python:3.12.8-alpine@sha256:54bec49592c8455de8d5983d984efff76b6417a6af9b5dcc8d0237bf6ad3bd20
 #46 CACHED
 
-#47 [productcatalogservice builder 5/6] COPY . .
-#47 CACHED
-
-#48 [productcatalogservice builder 4/6] RUN go mod download
-#48 CACHED
-
-#49 [productcatalogservice builder 6/6] RUN GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -gcflags="${SKAFFOLD_GO_GCFLAGS}" -o /productcatalogservice .
+#49 [recommendationservice stage-2 3/4] COPY --from=builder /usr/local/lib/python3.12/ /usr/local/lib/python3.12/
 #49 CACHED
 
-#50 [productcatalogservice stage-1 3/4] COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
+#50 [recommendationservice builder 3/3] RUN pip install -r requirements.txt
 #50 CACHED
 
-#51 [productcatalogservice stage-1 4/4] COPY products.json .
+#51 [recommendationservice stage-2 1/4] RUN apk update     && apk add --no-cache libstdc++     && rm -rf /var/cache/apk/*
 #51 CACHED
 
-#52 [frontend builder 6/6] RUN GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -gcflags="${SKAFFOLD_GO_GCFLAGS}" -o /go/bin/frontend .
+#52 [recommendationservice builder 2/3] COPY requirements.txt .
 #52 CACHED
 
-#53 [frontend stage-1 3/4] COPY ./templates ./templates
+#53 [recommendationservice stage-2 2/4] WORKDIR /recommendationservice
 #53 CACHED
 
-#54 [frontend builder 4/6] RUN go mod download
+#54 [recommendationservice stage-2 4/4] COPY . .
 #54 CACHED
 
-#55 [frontend stage-1 2/4] COPY --from=builder /go/bin/frontend /src/server
+#55 [emailservice builder 3/3] RUN pip install -r requirements.txt
 #55 CACHED
 
-#56 [frontend builder 3/6] COPY go.mod go.sum ./
+#56 [emailservice stage-2 1/4] RUN apk update     && apk add --no-cache libstdc++     && rm -rf /var/cache/apk/*
 #56 CACHED
 
-#57 [frontend builder 5/6] COPY . .
+#57 [emailservice stage-2 2/4] WORKDIR /email_server
 #57 CACHED
 
-#58 [frontend stage-1 4/4] COPY ./static ./static
+#58 [emailservice builder 2/3] COPY requirements.txt .
 #58 CACHED
 
-#59 [paymentservice builder 1/5] FROM docker.io/library/node:20.18.1-alpine@sha256:24fb6aa7020d9a20b00d6da6d1714187c45ed00d1eb4adb01395843c338b9372
-#59 DONE 0.0s
+#59 [emailservice builder 1/3] RUN apk update     && apk add --no-cache g++ linux-headers     && rm -rf /var/cache/apk/*
+#59 CACHED
 
-#60 [shippingservice builder 2/6] WORKDIR /src
+#60 [emailservice stage-2 3/4] COPY --from=builder /usr/local/lib/python3.12/ /usr/local/lib/python3.12/
 #60 CACHED
 
-#61 [shippingservice builder 4/6] RUN go mod download
+#61 [emailservice stage-2 4/4] COPY . .
 #61 CACHED
 
-#62 [shippingservice builder 3/6] COPY go.mod go.sum ./
-#62 CACHED
+#62 [loadgenerator internal] load build context
+#62 transferring context: 4.81kB done
+#62 DONE 0.0s
 
-#63 [shippingservice builder 6/6] RUN GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -gcflags="${SKAFFOLD_GO_GCFLAGS}" -o /go/bin/shippingservice .
-#63 CACHED
+#63 [recommendationservice] exporting to image
+#63 exporting layers done
+#63 writing image sha256:4fd72b61108f83403715a939bf05e35c0d6e872fa8d9b09e33e5730c20b8cd10 done
+#63 naming to docker.io/library/google-microservices-devsecops-recommendationservice done
+#63 DONE 0.0s
 
-#64 [shippingservice builder 5/6] COPY . .
-#64 CACHED
+#64 [emailservice] exporting to image
+#64 exporting layers done
+#64 writing image sha256:2ab4ed8a2c197d3585db0b5d64d721b2f3f65ec22d6e5c551c008043adcc96a3 done
+#64 naming to docker.io/library/google-microservices-devsecops-emailservice done
+#64 DONE 0.0s
 
-#65 [shippingservice stage-1 2/2] COPY --from=builder /go/bin/shippingservice /src/shippingservice
-#65 CACHED
+#65 [recommendationservice] resolving provenance for metadata file
+#65 DONE 0.0s
 
-#66 [paymentservice stage-1 1/5] FROM docker.io/library/alpine:3.20.3@sha256:1e42bbe2508154c9126d48c2b8a75420c3544343bf86fd041fb7527e017a4b4a
-#66 DONE 0.0s
+#37 [paymentservice base 1/1] FROM docker.io/library/node:20.18.1-alpine@sha256:24fb6aa7020d9a20b00d6da6d1714187c45ed00d1eb4adb01395843c338b9372
+#37 CACHED
 
-#67 [recommendationservice] exporting to image
-#67 exporting layers done
-#67 writing image sha256:4fd72b61108f83403715a939bf05e35c0d6e872fa8d9b09e33e5730c20b8cd10 done
-#67 naming to docker.io/library/google-microservices-devsecops-recommendationservice done
-#67 DONE 0.0s
+#13 [checkoutservice internal] load metadata for docker.io/library/golang:1.23.4-alpine@sha256:c23339199a08b0e12032856908589a6d41a0dab141b8b3b21f156fc571a3f1d3
+#13 DONE 1.9s
 
-#68 [paymentservice internal] load build context
-#68 transferring context: 501B done
+#66 [adservice internal] load metadata for docker.io/library/eclipse-temurin:21.0.5_11-jre-alpine@sha256:4300bfe1e11f3dfc3e3512f39939f9093cf18d0e581d1ab1ccd0512f32fe33f0
+#66 DONE 1.9s
+
+#67 [paymentservice internal] load metadata for docker.io/library/alpine:3.20.3@sha256:1e42bbe2508154c9126d48c2b8a75420c3544343bf86fd041fb7527e017a4b4a
+#67 DONE 1.9s
+
+#68 [emailservice] resolving provenance for metadata file
 #68 DONE 0.0s
 
-#69 [productcatalogservice] exporting to image
-#69 exporting layers done
-#69 writing image sha256:8d2ad9a9d03705b5336ca6329f91bd53d274122fefb70267c63f1ba723b1ca8c done
-#69 naming to docker.io/library/google-microservices-devsecops-productcatalogservice done
+#69 [shippingservice internal] load .dockerignore
+#69 transferring context: 48B done
 #69 DONE 0.0s
 
-#70 [adservice internal] load .dockerignore
-#70 transferring context: 2B done
+#70 [frontend internal] load .dockerignore
+#70 transferring context: 48B done
 #70 DONE 0.0s
 
-#71 [checkoutservice internal] load .dockerignore
+#71 [productcatalogservice internal] load .dockerignore
 #71 transferring context: 48B done
 #71 DONE 0.0s
 
-#72 [shippingservice] exporting to image
-#72 exporting layers done
-#72 writing image sha256:9955df94ec321b98f4b17a6ac26b9214d202a02f2fb4f8aadf284535f339abe6 done
-#72 naming to docker.io/library/google-microservices-devsecops-shippingservice done
+#72 [checkoutservice internal] load .dockerignore
+#72 transferring context: 48B done
 #72 DONE 0.0s
 
-#73 [frontend] exporting to image
-#73 exporting layers done
-#73 writing image sha256:373efc424d8a7794ceb9c3665132ee65407db65ba8ca4e591b3eb1f97142b7f7 done
-#73 naming to docker.io/library/google-microservices-devsecops-frontend done
+#73 [productcatalogservice stage-1 1/2] WORKDIR /src
 #73 DONE 0.0s
 
-#74 [emailservice stage-2 4/4] COPY . .
+#74 [productcatalogservice builder 1/6] FROM docker.io/library/golang:1.23.4-alpine@sha256:c23339199a08b0e12032856908589a6d41a0dab141b8b3b21f156fc571a3f1d3
 #74 DONE 0.0s
 
-#75 [paymentservice stage-1 4/5] COPY --from=builder /usr/src/app/node_modules ./node_modules
-#75 CACHED
+#75 [paymentservice internal] load .dockerignore
+#75 transferring context: 53B done
+#75 DONE 0.0s
 
-#76 [paymentservice builder 3/5] WORKDIR /usr/src/app
-#76 CACHED
+#76 [adservice internal] load metadata for docker.io/library/eclipse-temurin:21.0.5_11-jdk@sha256:a20cfa6afdbf57ff2c4de77ae2d0e3725a6349f1936b5ad7c3d1b06f6d1b840a
+#76 DONE 1.9s
 
-#77 [paymentservice builder 5/5] RUN npm install --only=production
-#77 CACHED
+#77 [paymentservice stage-1 1/5] FROM docker.io/library/alpine:3.20.3@sha256:1e42bbe2508154c9126d48c2b8a75420c3544343bf86fd041fb7527e017a4b4a
+#77 DONE 0.0s
 
-#78 [paymentservice stage-1 3/5] WORKDIR /usr/src/app
-#78 CACHED
+#78 [paymentservice internal] load build context
+#78 DONE 0.0s
 
-#79 [paymentservice builder 4/5] COPY package*.json ./
-#79 CACHED
+#79 [checkoutservice internal] load build context
+#79 DONE 0.0s
 
-#80 [paymentservice builder 2/5] RUN apk add --update --no-cache     python3     make     g++
-#80 CACHED
+#80 [shippingservice internal] load build context
+#80 transferring context: 418B done
+#80 DONE 0.0s
 
-#81 [paymentservice stage-1 2/5] RUN apk add --no-cache nodejs
-#81 CACHED
+#81 [adservice internal] load .dockerignore
+#81 transferring context: 2B done
+#81 DONE 0.0s
 
-#82 [paymentservice stage-1 5/5] COPY . .
-#82 CACHED
+#82 [frontend internal] load build context
+#82 transferring context: 3.74kB 0.0s done
+#82 DONE 0.0s
 
-#83 [adservice stage-1 1/3] FROM docker.io/library/eclipse-temurin:21.0.5_11-jre-alpine@sha256:4300bfe1e11f3dfc3e3512f39939f9093cf18d0e581d1ab1ccd0512f32fe33f0
-#83 DONE 0.0s
+#83 [loadgenerator builder 1/3] RUN apk update     && apk add --no-cache wget g++ linux-headers     && rm -rf /var/cache/apk/*
+#83 ...
 
-#84 [adservice builder 1/9] FROM docker.io/library/eclipse-temurin:21.0.5_11-jdk@sha256:a20cfa6afdbf57ff2c4de77ae2d0e3725a6349f1936b5ad7c3d1b06f6d1b840a
-#84 DONE 0.0s
+#84 [shippingservice builder 4/6] RUN go mod download
+#84 CACHED
 
-#85 [adservice stage-1 2/3] WORKDIR /app
+#85 [shippingservice builder 6/6] RUN GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -gcflags="${SKAFFOLD_GO_GCFLAGS}" -o /go/bin/shippingservice .
 #85 CACHED
 
-#86 [adservice internal] load build context
-#86 transferring context: 811B done
-#86 DONE 0.0s
+#86 [shippingservice builder 3/6] COPY go.mod go.sum ./
+#86 CACHED
 
-#87 [checkoutservice internal] load build context
-#87 transferring context: 414B done
-#87 DONE 0.0s
+#87 [shippingservice builder 5/6] COPY . .
+#87 CACHED
 
-#88 [checkoutservice builder 6/6] RUN GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -gcflags="${SKAFFOLD_GO_GCFLAGS}" -o /checkoutservice .
+#88 [shippingservice stage-1 2/2] COPY --from=builder /go/bin/shippingservice /src/shippingservice
 #88 CACHED
 
-#89 [checkoutservice builder 4/6] RUN go mod download
+#89 [frontend stage-1 3/4] COPY ./templates ./templates
 #89 CACHED
 
-#90 [checkoutservice builder 5/6] COPY . .
+#90 [frontend builder 5/6] COPY . .
 #90 CACHED
 
-#60 [checkoutservice builder 2/6] WORKDIR /src
-#60 CACHED
-
-#91 [checkoutservice builder 3/6] COPY go.mod go.sum ./
+#91 [frontend stage-1 2/4] COPY --from=builder /go/bin/frontend /src/server
 #91 CACHED
 
-#92 [adservice builder 2/9] WORKDIR /app
+#92 [frontend builder 6/6] RUN GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -gcflags="${SKAFFOLD_GO_GCFLAGS}" -o /go/bin/frontend .
 #92 CACHED
 
-#93 [adservice builder 4/9] COPY gradle gradle
+#93 [frontend builder 3/6] COPY go.mod go.sum ./
 #93 CACHED
 
-#94 [adservice builder 3/9] COPY [build.gradle, gradlew, ./]
+#94 [frontend builder 4/6] RUN go mod download
 #94 CACHED
 
-#95 [checkoutservice stage-1 2/2] COPY --from=builder /checkoutservice /src/checkoutservice
+#95 [frontend stage-1 4/4] COPY ./static ./static
 #95 CACHED
 
-#96 [paymentservice] exporting to image
-#96 exporting layers done
-#96 writing image sha256:979496de1492544e8bfaf8af859aa3ed3e5eb0cc0da9f0326adb1a4d740f5145 done
-#96 naming to docker.io/library/google-microservices-devsecops-paymentservice done
+#96 [adservice stage-1 1/3] FROM docker.io/library/eclipse-temurin:21.0.5_11-jre-alpine@sha256:4300bfe1e11f3dfc3e3512f39939f9093cf18d0e581d1ab1ccd0512f32fe33f0
 #96 DONE 0.0s
 
-#97 [adservice builder 5/9] RUN chmod +x gradlew
-#97 CACHED
+#78 [paymentservice internal] load build context
+#78 transferring context: 501B done
+#78 DONE 0.0s
 
-#98 [checkoutservice] exporting to image
+#79 [checkoutservice internal] load build context
+#79 transferring context: 414B done
+#79 DONE 0.0s
+
+#97 [productcatalogservice internal] load build context
+#97 transferring context: 470B done
+#97 DONE 0.0s
+
+#98 [shippingservice] exporting to image
 #98 exporting layers done
-#98 writing image sha256:2fe0cf0e9e5c1aa5b9056bef3766c131e7024998fd60081cc23f369b804b3613 done
-#98 naming to docker.io/library/google-microservices-devsecops-checkoutservice done
+#98 writing image sha256:9955df94ec321b98f4b17a6ac26b9214d202a02f2fb4f8aadf284535f339abe6 done
+#98 naming to docker.io/library/google-microservices-devsecops-shippingservice done
 #98 DONE 0.0s
 
-#99 [shippingservice] resolving provenance for metadata file
+#99 [frontend] exporting to image
+#99 exporting layers done
+#99 writing image sha256:373efc424d8a7794ceb9c3665132ee65407db65ba8ca4e591b3eb1f97142b7f7 done
+#99 naming to docker.io/library/google-microservices-devsecops-frontend done
 #99 DONE 0.0s
 
-#100 [frontend] resolving provenance for metadata file
+#100 [adservice builder 1/9] FROM docker.io/library/eclipse-temurin:21.0.5_11-jdk@sha256:a20cfa6afdbf57ff2c4de77ae2d0e3725a6349f1936b5ad7c3d1b06f6d1b840a
 #100 DONE 0.0s
 
-#101 [recommendationservice] resolving provenance for metadata file
-#101 DONE 0.1s
+#101 [paymentservice builder 5/5] RUN npm install --only=production
+#101 CACHED
 
-#102 [productcatalogservice] resolving provenance for metadata file
-#102 DONE 0.1s
+#40 [paymentservice builder 2/4] WORKDIR /usr/src/app
+#40 CACHED
 
-#103 [paymentservice] resolving provenance for metadata file
-#103 DONE 0.0s
+#102 [paymentservice stage-1 4/5] COPY --from=builder /usr/src/app/node_modules ./node_modules
+#102 CACHED
 
-#104 [checkoutservice] resolving provenance for metadata file
-#104 DONE 0.0s
+#103 [paymentservice stage-1 2/5] RUN apk add --no-cache nodejs
+#103 CACHED
 
-#105 [emailservice] exporting to image
-#105 ...
+#39 [paymentservice builder 1/4] RUN apk add --update --no-cache     python3     make     g++
+#39 CACHED
 
-#106 [cartservice internal] load metadata for mcr.microsoft.com/dotnet/sdk:9.0.101-noble@sha256:1f13e67d295e02abdfd187c341f887442bad611eda536766172ced401fc8b9fa
-#106 DONE 0.6s
+#104 [paymentservice stage-1 3/5] WORKDIR /usr/src/app
+#104 CACHED
 
-#107 [cartservice internal] load metadata for mcr.microsoft.com/dotnet/runtime-deps:9.0.1-noble-chiseled@sha256:6f7466eda39e24efaf7eab2325e15d776a685d13cc93b4ea0cde9ee4f7982210
-#107 DONE 0.6s
+#105 [paymentservice builder 4/5] COPY package*.json ./
+#105 CACHED
 
-#108 [cartservice internal] load .dockerignore
-#108 transferring context: 92B done
-#108 DONE 0.0s
+#106 [paymentservice stage-1 5/5] COPY . .
+#106 CACHED
 
-#109 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:9.0.101-noble@sha256:1f13e67d295e02abdfd187c341f887442bad611eda536766172ced401fc8b9fa
-#109 DONE 0.0s
+#107 [checkoutservice builder 5/6] COPY . .
+#107 CACHED
 
-#110 [cartservice stage-1 1/3] FROM mcr.microsoft.com/dotnet/runtime-deps:9.0.1-noble-chiseled@sha256:6f7466eda39e24efaf7eab2325e15d776a685d13cc93b4ea0cde9ee4f7982210
-#110 DONE 0.0s
+#108 [checkoutservice builder 6/6] RUN GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -gcflags="${SKAFFOLD_GO_GCFLAGS}" -o /checkoutservice .
+#108 CACHED
 
-#111 [cartservice internal] load build context
-#111 transferring context: 569B done
-#111 DONE 0.0s
+#109 [checkoutservice builder 4/6] RUN go mod download
+#109 CACHED
 
-#112 [cartservice builder 2/6] WORKDIR /app
+#110 [checkoutservice builder 3/6] COPY go.mod go.sum ./
+#110 CACHED
+
+#111 [productcatalogservice stage-1 2/4] COPY --from=builder /productcatalogservice ./server
+#111 CACHED
+
+#112 [productcatalogservice builder 6/6] RUN GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -gcflags="${SKAFFOLD_GO_GCFLAGS}" -o /productcatalogservice .
 #112 CACHED
 
-#113 [cartservice builder 3/6] COPY cartservice.csproj .
+#113 [productcatalogservice builder 3/6] COPY go.mod go.sum ./
 #113 CACHED
 
-#114 [cartservice builder 4/6] RUN dotnet restore cartservice.csproj     -a amd64
+#114 [productcatalogservice builder 2/6] WORKDIR /src
 #114 CACHED
 
-#115 [cartservice builder 5/6] COPY . .
+#115 [productcatalogservice builder 5/6] COPY . .
 #115 CACHED
 
-#116 [cartservice stage-1 2/3] WORKDIR /app
+#116 [productcatalogservice stage-1 3/4] COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
 #116 CACHED
 
-#117 [cartservice builder 6/6] RUN dotnet publish cartservice.csproj     -p:PublishSingleFile=true     -a amd64     --self-contained true     -p:PublishTrimmed=true     -p:TrimMode=full     -c release     -o /cartservice
+#117 [productcatalogservice builder 4/6] RUN go mod download
 #117 CACHED
 
-#118 [cartservice stage-1 3/3] COPY --from=builder /cartservice .
+#118 [productcatalogservice stage-1 4/4] COPY products.json .
 #118 CACHED
 
-#119 [cartservice] exporting to image
-#119 exporting layers done
-#119 writing image sha256:f58197e879333a7a8df979ffe6281b95f65d2da5bc771609c63c57a56bbd63cb done
-#119 naming to docker.io/library/google-microservices-devsecops-cartservice done
-#119 DONE 0.0s
+#119 [checkoutservice stage-1 2/2] COPY --from=builder /checkoutservice /src/checkoutservice
+#119 CACHED
 
-#120 [cartservice] resolving provenance for metadata file
+#120 [adservice internal] load build context
+#120 transferring context: 811B done
 #120 DONE 0.0s
 
-#121 [adservice builder 6/9] RUN ./gradlew downloadRepos
-#121 0.599 Downloading https://services.gradle.org/distributions/gradle-8.14.3-bin.zip
-#121 ...
+#121 [paymentservice] exporting to image
+#121 exporting layers done
+#121 writing image sha256:979496de1492544e8bfaf8af859aa3ed3e5eb0cc0da9f0326adb1a4d740f5145 done
+#121 naming to docker.io/library/google-microservices-devsecops-paymentservice done
+#121 DONE 0.0s
 
-#105 [emailservice] exporting to image
-#105 exporting layers 2.4s done
-#105 writing image sha256:2ab4ed8a2c197d3585db0b5d64d721b2f3f65ec22d6e5c551c008043adcc96a3 done
-#105 naming to docker.io/library/google-microservices-devsecops-emailservice done
-#105 DONE 2.4s
+#122 [adservice builder 3/9] COPY [build.gradle, gradlew, ./]
+#122 CACHED
 
-#122 [emailservice] resolving provenance for metadata file
-#122 DONE 0.0s
+#123 [adservice builder 5/9] RUN chmod +x gradlew
+#123 CACHED
 
-#121 [adservice builder 6/9] RUN ./gradlew downloadRepos
-#121 2.693 ..
-#121 ...
+#124 [adservice builder 7/9] COPY . .
+#124 CACHED
 
-#123 [currencyservice internal] load metadata for docker.io/library/node:20.2.0-alpine@sha256:f25b0e9d3d116e267d4ff69a3a99c0f4cf6ae94eadd87f1bf7bd68ea3ff0bef7
-#123 DONE 3.5s
+#125 [adservice stage-1 2/3] WORKDIR /app
+#125 CACHED
 
-#124 [currencyservice internal] load .dockerignore
-#124 transferring context: 64B done
-#124 DONE 0.0s
+#126 [adservice builder 2/9] WORKDIR /app
+#126 CACHED
 
-#125 [currencyservice internal] load build context
-#125 transferring context: 2.02kB done
-#125 DONE 0.0s
+#127 [adservice builder 8/9] RUN chmod +x gradlew
+#127 CACHED
 
-#126 [currencyservice base 1/1] FROM docker.io/library/node:20.2.0-alpine@sha256:f25b0e9d3d116e267d4ff69a3a99c0f4cf6ae94eadd87f1bf7bd68ea3ff0bef7
-#126 resolve docker.io/library/node:20.2.0-alpine@sha256:f25b0e9d3d116e267d4ff69a3a99c0f4cf6ae94eadd87f1bf7bd68ea3ff0bef7 done
-#126 sha256:e7ddd0a27a0c68123af8d03ffec4921305f9b1cf5e49283b84cfdf112fced2f5 6.48kB / 6.48kB done
-#126 sha256:f56be85fc22e46face30e2c3de3f7fe7c15f8fd7c4e5add29d7f64b87abdaa09 0B / 3.37MB 0.1s
-#126 sha256:761cd71a92baaebace8515f2cca9222cf31d2d60ec505bd1ed18534aedba7d7c 0B / 49.48MB 0.1s
-#126 sha256:e460fd2efeda5f10001bda704768610fba7ac2df61fdeac057c1672944d7b5a3 0B / 2.35MB 0.1s
-#126 sha256:f25b0e9d3d116e267d4ff69a3a99c0f4cf6ae94eadd87f1bf7bd68ea3ff0bef7 1.16kB / 1.16kB done
-#126 sha256:761cd71a92baaebace8515f2cca9222cf31d2d60ec505bd1ed18534aedba7d7c 3.15MB / 49.48MB 0.8s
-#126 sha256:761cd71a92baaebace8515f2cca9222cf31d2d60ec505bd1ed18534aedba7d7c 6.29MB / 49.48MB 1.5s
-#126 sha256:e460fd2efeda5f10001bda704768610fba7ac2df61fdeac057c1672944d7b5a3 1.05MB / 2.35MB 1.6s
-#126 sha256:f56be85fc22e46face30e2c3de3f7fe7c15f8fd7c4e5add29d7f64b87abdaa09 1.05MB / 3.37MB 1.8s
-#126 sha256:e460fd2efeda5f10001bda704768610fba7ac2df61fdeac057c1672944d7b5a3 2.35MB / 2.35MB 1.7s done
-#126 sha256:ff35990e24b76cd57db5a995923f34254e58cb82b459a636911836ff886f33a8 0B / 449B 1.8s
-#126 sha256:f56be85fc22e46face30e2c3de3f7fe7c15f8fd7c4e5add29d7f64b87abdaa09 2.10MB / 3.37MB 2.0s
-#126 sha256:761cd71a92baaebace8515f2cca9222cf31d2d60ec505bd1ed18534aedba7d7c 9.44MB / 49.48MB 2.1s
-#126 sha256:f56be85fc22e46face30e2c3de3f7fe7c15f8fd7c4e5add29d7f64b87abdaa09 3.37MB / 3.37MB 2.2s done
-#126 sha256:ff35990e24b76cd57db5a995923f34254e58cb82b459a636911836ff886f33a8 449B / 449B 2.2s done
-#126 extracting sha256:f56be85fc22e46face30e2c3de3f7fe7c15f8fd7c4e5add29d7f64b87abdaa09 0.1s
-#126 extracting sha256:f56be85fc22e46face30e2c3de3f7fe7c15f8fd7c4e5add29d7f64b87abdaa09 0.1s done
-#126 sha256:761cd71a92baaebace8515f2cca9222cf31d2d60ec505bd1ed18534aedba7d7c 12.58MB / 49.48MB 2.5s
-#126 sha256:761cd71a92baaebace8515f2cca9222cf31d2d60ec505bd1ed18534aedba7d7c 15.73MB / 49.48MB 2.8s
-#126 sha256:761cd71a92baaebace8515f2cca9222cf31d2d60ec505bd1ed18534aedba7d7c 18.87MB / 49.48MB 3.1s
-#126 sha256:761cd71a92baaebace8515f2cca9222cf31d2d60ec505bd1ed18534aedba7d7c 23.07MB / 49.48MB 3.5s
-#126 sha256:761cd71a92baaebace8515f2cca9222cf31d2d60ec505bd1ed18534aedba7d7c 27.26MB / 49.48MB 3.9s
-#126 sha256:761cd71a92baaebace8515f2cca9222cf31d2d60ec505bd1ed18534aedba7d7c 31.46MB / 49.48MB 4.3s
-#126 sha256:761cd71a92baaebace8515f2cca9222cf31d2d60ec505bd1ed18534aedba7d7c 34.60MB / 49.48MB 4.6s
-#126 sha256:761cd71a92baaebace8515f2cca9222cf31d2d60ec505bd1ed18534aedba7d7c 37.75MB / 49.48MB 4.9s
-#126 sha256:761cd71a92baaebace8515f2cca9222cf31d2d60ec505bd1ed18534aedba7d7c 40.89MB / 49.48MB 5.3s
-#126 sha256:761cd71a92baaebace8515f2cca9222cf31d2d60ec505bd1ed18534aedba7d7c 45.09MB / 49.48MB 5.8s
-#126 sha256:761cd71a92baaebace8515f2cca9222cf31d2d60ec505bd1ed18534aedba7d7c 48.23MB / 49.48MB 6.2s
-#126 sha256:761cd71a92baaebace8515f2cca9222cf31d2d60ec505bd1ed18534aedba7d7c 49.48MB / 49.48MB 6.4s done
-#126 extracting sha256:761cd71a92baaebace8515f2cca9222cf31d2d60ec505bd1ed18534aedba7d7c
-#126 ...
+#128 [adservice builder 9/9] RUN ./gradlew installDist
+#128 CACHED
 
-#121 [adservice builder 6/9] RUN ./gradlew downloadRepos
-#121 2.693 .............10%.............20%..
-#121 ...
+#129 [adservice builder 6/9] RUN ./gradlew downloadRepos
+#129 CACHED
 
-#126 [currencyservice base 1/1] FROM docker.io/library/node:20.2.0-alpine@sha256:f25b0e9d3d116e267d4ff69a3a99c0f4cf6ae94eadd87f1bf7bd68ea3ff0bef7
-#126 extracting sha256:761cd71a92baaebace8515f2cca9222cf31d2d60ec505bd1ed18534aedba7d7c 4.6s done
-#126 extracting sha256:e460fd2efeda5f10001bda704768610fba7ac2df61fdeac057c1672944d7b5a3
-#126 extracting sha256:e460fd2efeda5f10001bda704768610fba7ac2df61fdeac057c1672944d7b5a3 0.1s done
-#126 extracting sha256:ff35990e24b76cd57db5a995923f34254e58cb82b459a636911836ff886f33a8 done
-#126 DONE 11.5s
+#130 [adservice builder 4/9] COPY gradle gradle
+#130 CACHED
 
-#127 [currencyservice builder 1/4] RUN apk add --update --no-cache     python3     make     g++
-#127 ...
+#131 [adservice stage-1 3/3] COPY --from=builder /app .
+#131 CACHED
 
-#128 [currencyservice without-grpc-health-probe-bin 1/3] WORKDIR /usr/src/app
-#128 DONE 0.3s
+#132 [checkoutservice] exporting to image
+#132 exporting layers done
+#132 writing image sha256:2fe0cf0e9e5c1aa5b9056bef3766c131e7024998fd60081cc23f369b804b3613 done
+#132 naming to docker.io/library/google-microservices-devsecops-checkoutservice done
+#132 DONE 0.0s
 
-#127 [currencyservice builder 1/4] RUN apk add --update --no-cache     python3     make     g++
-#127 0.425 fetch https://dl-cdn.alpinelinux.org/alpine/v3.17/main/x86_64/APKINDEX.tar.gz
-#127 ...
+#133 [productcatalogservice] exporting to image
+#133 exporting layers done
+#133 writing image sha256:8d2ad9a9d03705b5336ca6329f91bd53d274122fefb70267c63f1ba723b1ca8c done
+#133 naming to docker.io/library/google-microservices-devsecops-productcatalogservice done
+#133 DONE 0.0s
 
-#121 [adservice builder 6/9] RUN ./gradlew downloadRepos
-#121 2.693 .............10%.............20%.............30%.............40%.............50%.............60%.............70%.............80%.............90%..............100%
-#121 38.97 
-#121 38.97 Welcome to Gradle 8.14.3!
-#121 38.97 
-#121 38.97 Here are the highlights of this release:
-#121 38.97  - Java 24 support
-#121 38.97  - GraalVM Native Image toolchain selection
-#121 38.97  - Enhancements to test reporting
-#121 38.97  - Build Authoring improvements
-#121 38.97 
-#121 38.97 For more details see https://docs.gradle.org/8.14.3/release-notes.html
-#121 38.97 
-#121 39.56 Starting a Gradle Daemon (subsequent builds will be faster)
-#121 ...
-
-#127 [currencyservice builder 1/4] RUN apk add --update --no-cache     python3     make     g++
-#127 28.52 fetch https://dl-cdn.alpinelinux.org/alpine/v3.17/community/x86_64/APKINDEX.tar.gz
-#127 32.80 (1/25) Upgrading musl (1.2.3-r4 -> 1.2.3-r6)
-#127 35.14 (2/25) Installing libstdc++-dev (12.2.1_git20220924-r4)
-#127 52.48 (3/25) Installing binutils (2.39-r2)
-#127 56.21 (4/25) Installing libgomp (12.2.1_git20220924-r4)
-#127 56.67 (5/25) Installing libatomic (12.2.1_git20220924-r4)
-#127 ...
-
-#121 [adservice builder 6/9] RUN ./gradlew downloadRepos
-#121 71.56 > Task :downloadRepos
-#121 71.66 
-#121 71.66 [Incubating] Problems report is available at: file:///app/build/reports/problems/problems-report.html
-#121 71.66 
-#121 71.66 Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
-#121 71.66 
-#121 71.66 You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
-#121 71.66 
-#121 71.66 For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
-#121 71.66 
-#121 71.66 BUILD SUCCESSFUL in 1m 11s
-#121 71.66 1 actionable task: 1 executed
-#121 DONE 72.2s
-
-#127 [currencyservice builder 1/4] RUN apk add --update --no-cache     python3     make     g++
-#127 56.99 (6/25) Installing gmp (6.2.1-r2)
-#127 ...
-
-#129 [adservice builder 7/9] COPY . .
-#129 DONE 0.1s
-
-#127 [currencyservice builder 1/4] RUN apk add --update --no-cache     python3     make     g++
-#127 57.55 (7/25) Installing isl25 (0.25-r1)
-#127 ...
-
-#130 [adservice builder 8/9] RUN chmod +x gradlew
-#130 DONE 0.3s
-
-#131 [adservice builder 9/9] RUN ./gradlew installDist
-#131 2.502 Starting a Gradle Daemon, 1 incompatible and 1 stopped Daemons could not be reused, use --status for details
-#131 ...
-
-#127 [currencyservice builder 1/4] RUN apk add --update --no-cache     python3     make     g++
-#127 58.65 (8/25) Installing mpfr4 (4.1.0-r0)
-#127 60.97 (9/25) Installing mpc1 (1.2.1-r1)
-#127 61.30 (10/25) Installing gcc (12.2.1_git20220924-r4)
-#127 ...
-
-#131 [adservice builder 9/9] RUN ./gradlew installDist
-#131 20.30 > Task :protobufDummy UP-TO-DATE
-#131 25.30 > Task :extractIncludeProto
-#131 25.30 > Task :extractProto
-#131 27.70 > Task :generateProto
-#131 39.20 
-#131 39.20 > Task :compileJava
-#131 39.20 Note: /app/src/main/java/hipstershop/AdService.java uses or overrides a deprecated API.
-#131 39.20 Note: Recompile with -Xlint:deprecation for details.
-#131 44.30 
-#131 44.30 > Task :processResources
-#131 44.40 > Task :classes
-#131 44.70 > Task :jar
-#131 48.70 > Task :adService
-#131 48.90 > Task :adServiceClient
-#131 48.90 > Task :startScripts SKIPPED
-#131 49.20 > Task :installDist
-#131 49.30 
-#131 49.30 [Incubating] Problems report is available at: file:///app/build/reports/problems/problems-report.html
-#131 49.30 
-#131 49.30 Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
-#131 49.30 
-#131 49.30 You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
-#131 49.30 
-#131 49.30 For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
-#131 49.30 
-#131 49.30 BUILD SUCCESSFUL in 48s
-#131 49.30 9 actionable tasks: 9 executed
-#131 ...
-
-#127 [currencyservice builder 1/4] RUN apk add --update --no-cache     python3     make     g++
-#127 107.3 (11/25) Installing musl-dev (1.2.3-r6)
-#127 ...
-
-#131 [adservice builder 9/9] RUN ./gradlew installDist
-#131 DONE 49.9s
-
-#127 [currencyservice builder 1/4] RUN apk add --update --no-cache     python3     make     g++
-#127 ...
-
-#132 [adservice stage-1 3/3] COPY --from=builder /app .
-#132 DONE 0.3s
-
-#133 [adservice] exporting to image
-#133 exporting layers
-#133 exporting layers 0.4s done
-#133 writing image sha256:f90225d4135eedf55566f8e771a2152191c61ff65086955b121048f94f6e89e5 done
-#133 naming to docker.io/library/google-microservices-devsecops-adservice done
-#133 DONE 0.5s
-
-#134 [adservice] resolving provenance for metadata file
+#134 [shippingservice] resolving provenance for metadata file
 #134 DONE 0.0s
 
-#127 [currencyservice builder 1/4] RUN apk add --update --no-cache     python3     make     g++
-#127 113.7 (12/25) Installing libc-dev (0.7.2-r3)
-#127 114.0 (13/25) Installing g++ (12.2.1_git20220924-r4)
-#127 136.2 (14/25) Installing make (4.3-r1)
-#127 136.5 (15/25) Installing libexpat (2.6.4-r0)
-#127 136.9 (16/25) Installing libbz2 (1.0.8-r4)
-#127 137.2 (17/25) Installing libffi (3.4.4-r0)
-#127 137.5 (18/25) Installing gdbm (1.23-r0)
-#127 137.8 (19/25) Installing xz-libs (5.2.9-r0)
-#127 138.1 (20/25) Installing mpdecimal (2.5.1-r1)
-#127 138.4 (21/25) Installing ncurses-terminfo-base (6.3_p20221119-r1)
-#127 138.7 (22/25) Installing ncurses-libs (6.3_p20221119-r1)
-#127 139.1 (23/25) Installing readline (8.2.0-r0)
-#127 142.0 (24/25) Installing sqlite-libs (3.40.1-r1)
-#127 143.0 (25/25) Installing python3 (3.10.15-r0)
-#127 157.7 Executing busybox-1.35.0-r29.trigger
-#127 157.7 OK: 287 MiB in 41 packages
-#127 DONE 158.0s
-
-#135 [currencyservice builder 2/4] WORKDIR /usr/src/app
+#135 [adservice] exporting to image
+#135 exporting layers done
+#135 writing image sha256:f90225d4135eedf55566f8e771a2152191c61ff65086955b121048f94f6e89e5 done
+#135 naming to docker.io/library/google-microservices-devsecops-adservice done
 #135 DONE 0.0s
 
-#136 [currencyservice builder 3/4] COPY package*.json ./
+#136 [frontend] resolving provenance for metadata file
 #136 DONE 0.0s
 
-#137 [currencyservice builder 4/4] RUN npm install --only=production
-#137 0.992 npm WARN config only Use `--omit=dev` to omit dev dependencies from the install.
-#137 2.419 npm WARN EBADENGINE Unsupported engine {
-#137 2.419 npm WARN EBADENGINE   package: '@opentelemetry/context-async-hooks@2.1.0',
-#137 2.420 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.420 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.421 npm WARN EBADENGINE }
-#137 2.423 npm WARN EBADENGINE Unsupported engine {
-#137 2.423 npm WARN EBADENGINE   package: '@opentelemetry/exporter-logs-otlp-grpc@0.205.0',
-#137 2.423 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.423 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.424 npm WARN EBADENGINE }
-#137 2.426 npm WARN EBADENGINE Unsupported engine {
-#137 2.426 npm WARN EBADENGINE   package: '@opentelemetry/core@2.1.0',
-#137 2.426 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.426 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.426 npm WARN EBADENGINE }
-#137 2.428 npm WARN EBADENGINE Unsupported engine {
-#137 2.428 npm WARN EBADENGINE   package: '@opentelemetry/exporter-logs-otlp-http@0.205.0',
-#137 2.428 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.428 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.428 npm WARN EBADENGINE }
-#137 2.429 npm WARN EBADENGINE Unsupported engine {
-#137 2.429 npm WARN EBADENGINE   package: '@opentelemetry/core@2.1.0',
-#137 2.429 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.429 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.429 npm WARN EBADENGINE }
-#137 2.430 npm WARN EBADENGINE Unsupported engine {
-#137 2.430 npm WARN EBADENGINE   package: '@opentelemetry/exporter-logs-otlp-proto@0.205.0',
-#137 2.430 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.430 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.430 npm WARN EBADENGINE }
-#137 2.431 npm WARN EBADENGINE Unsupported engine {
-#137 2.431 npm WARN EBADENGINE   package: '@opentelemetry/core@2.1.0',
-#137 2.431 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.431 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.431 npm WARN EBADENGINE }
-#137 2.433 npm WARN EBADENGINE Unsupported engine {
-#137 2.433 npm WARN EBADENGINE   package: '@opentelemetry/exporter-metrics-otlp-grpc@0.205.0',
-#137 2.433 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.433 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.433 npm WARN EBADENGINE }
-#137 2.434 npm WARN EBADENGINE Unsupported engine {
-#137 2.434 npm WARN EBADENGINE   package: '@opentelemetry/core@2.1.0',
-#137 2.434 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.435 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.435 npm WARN EBADENGINE }
-#137 2.435 npm WARN EBADENGINE Unsupported engine {
-#137 2.435 npm WARN EBADENGINE   package: '@opentelemetry/exporter-metrics-otlp-http@0.205.0',
-#137 2.435 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.435 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.435 npm WARN EBADENGINE }
-#137 2.436 npm WARN EBADENGINE Unsupported engine {
-#137 2.436 npm WARN EBADENGINE   package: '@opentelemetry/core@2.1.0',
-#137 2.436 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.436 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.436 npm WARN EBADENGINE }
-#137 2.436 npm WARN EBADENGINE Unsupported engine {
-#137 2.437 npm WARN EBADENGINE   package: '@opentelemetry/exporter-metrics-otlp-proto@0.205.0',
-#137 2.437 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.437 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.437 npm WARN EBADENGINE }
-#137 2.438 npm WARN EBADENGINE Unsupported engine {
-#137 2.438 npm WARN EBADENGINE   package: '@opentelemetry/core@2.1.0',
-#137 2.438 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.438 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.438 npm WARN EBADENGINE }
-#137 2.439 npm WARN EBADENGINE Unsupported engine {
-#137 2.439 npm WARN EBADENGINE   package: '@opentelemetry/exporter-prometheus@0.205.0',
-#137 2.439 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.439 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.439 npm WARN EBADENGINE }
-#137 2.440 npm WARN EBADENGINE Unsupported engine {
-#137 2.440 npm WARN EBADENGINE   package: '@opentelemetry/core@2.1.0',
-#137 2.440 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.440 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.440 npm WARN EBADENGINE }
-#137 2.440 npm WARN EBADENGINE Unsupported engine {
-#137 2.440 npm WARN EBADENGINE   package: '@opentelemetry/exporter-trace-otlp-grpc@0.205.0',
-#137 2.440 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.441 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.441 npm WARN EBADENGINE }
-#137 2.441 npm WARN EBADENGINE Unsupported engine {
-#137 2.441 npm WARN EBADENGINE   package: '@opentelemetry/core@2.1.0',
-#137 2.441 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.441 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.441 npm WARN EBADENGINE }
-#137 2.442 npm WARN EBADENGINE Unsupported engine {
-#137 2.442 npm WARN EBADENGINE   package: '@opentelemetry/exporter-trace-otlp-http@0.205.0',
-#137 2.442 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.442 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.442 npm WARN EBADENGINE }
-#137 2.443 npm WARN EBADENGINE Unsupported engine {
-#137 2.443 npm WARN EBADENGINE   package: '@opentelemetry/core@2.1.0',
-#137 2.443 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.443 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.443 npm WARN EBADENGINE }
-#137 2.444 npm WARN EBADENGINE Unsupported engine {
-#137 2.444 npm WARN EBADENGINE   package: '@opentelemetry/exporter-trace-otlp-proto@0.205.0',
-#137 2.444 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.444 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.444 npm WARN EBADENGINE }
-#137 2.444 npm WARN EBADENGINE Unsupported engine {
-#137 2.444 npm WARN EBADENGINE   package: '@opentelemetry/core@2.1.0',
-#137 2.444 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.444 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.444 npm WARN EBADENGINE }
-#137 2.445 npm WARN EBADENGINE Unsupported engine {
-#137 2.445 npm WARN EBADENGINE   package: '@opentelemetry/exporter-zipkin@2.1.0',
-#137 2.445 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.445 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.445 npm WARN EBADENGINE }
-#137 2.445 npm WARN EBADENGINE Unsupported engine {
-#137 2.445 npm WARN EBADENGINE   package: '@opentelemetry/core@2.1.0',
-#137 2.446 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.446 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.446 npm WARN EBADENGINE }
-#137 2.446 npm WARN EBADENGINE Unsupported engine {
-#137 2.446 npm WARN EBADENGINE   package: '@opentelemetry/instrumentation@0.205.0',
-#137 2.446 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.446 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.446 npm WARN EBADENGINE }
-#137 2.447 npm WARN EBADENGINE Unsupported engine {
-#137 2.447 npm WARN EBADENGINE   package: '@opentelemetry/instrumentation-grpc@0.205.0',
-#137 2.447 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.447 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.447 npm WARN EBADENGINE }
-#137 2.448 npm WARN EBADENGINE Unsupported engine {
-#137 2.448 npm WARN EBADENGINE   package: '@opentelemetry/otlp-exporter-base@0.205.0',
-#137 2.448 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.448 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.448 npm WARN EBADENGINE }
-#137 2.448 npm WARN EBADENGINE Unsupported engine {
-#137 2.448 npm WARN EBADENGINE   package: '@opentelemetry/core@2.1.0',
-#137 2.448 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.448 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.448 npm WARN EBADENGINE }
-#137 2.449 npm WARN EBADENGINE Unsupported engine {
-#137 2.449 npm WARN EBADENGINE   package: '@opentelemetry/otlp-grpc-exporter-base@0.205.0',
-#137 2.449 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.449 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.449 npm WARN EBADENGINE }
-#137 2.449 npm WARN EBADENGINE Unsupported engine {
-#137 2.449 npm WARN EBADENGINE   package: '@opentelemetry/core@2.1.0',
-#137 2.450 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.450 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.450 npm WARN EBADENGINE }
-#137 2.451 npm WARN EBADENGINE Unsupported engine {
-#137 2.452 npm WARN EBADENGINE   package: '@opentelemetry/otlp-transformer@0.205.0',
-#137 2.452 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.452 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.452 npm WARN EBADENGINE }
-#137 2.453 npm WARN EBADENGINE Unsupported engine {
-#137 2.453 npm WARN EBADENGINE   package: '@opentelemetry/core@2.1.0',
-#137 2.453 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.453 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.453 npm WARN EBADENGINE }
-#137 2.454 npm WARN EBADENGINE Unsupported engine {
-#137 2.454 npm WARN EBADENGINE   package: '@opentelemetry/propagator-b3@2.1.0',
-#137 2.454 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.454 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.454 npm WARN EBADENGINE }
-#137 2.455 npm WARN EBADENGINE Unsupported engine {
-#137 2.455 npm WARN EBADENGINE   package: '@opentelemetry/core@2.1.0',
-#137 2.455 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.455 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.455 npm WARN EBADENGINE }
-#137 2.456 npm WARN EBADENGINE Unsupported engine {
-#137 2.456 npm WARN EBADENGINE   package: '@opentelemetry/propagator-jaeger@2.1.0',
-#137 2.456 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.456 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.456 npm WARN EBADENGINE }
-#137 2.457 npm WARN EBADENGINE Unsupported engine {
-#137 2.457 npm WARN EBADENGINE   package: '@opentelemetry/core@2.1.0',
-#137 2.457 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.457 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.457 npm WARN EBADENGINE }
-#137 2.458 npm WARN EBADENGINE Unsupported engine {
-#137 2.458 npm WARN EBADENGINE   package: '@opentelemetry/resources@2.1.0',
-#137 2.458 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.458 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.458 npm WARN EBADENGINE }
-#137 2.459 npm WARN EBADENGINE Unsupported engine {
-#137 2.459 npm WARN EBADENGINE   package: '@opentelemetry/core@2.1.0',
-#137 2.459 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.459 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.459 npm WARN EBADENGINE }
-#137 2.460 npm WARN EBADENGINE Unsupported engine {
-#137 2.460 npm WARN EBADENGINE   package: '@opentelemetry/sdk-logs@0.205.0',
-#137 2.460 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.460 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.460 npm WARN EBADENGINE }
-#137 2.461 npm WARN EBADENGINE Unsupported engine {
-#137 2.461 npm WARN EBADENGINE   package: '@opentelemetry/core@2.1.0',
-#137 2.461 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.461 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.461 npm WARN EBADENGINE }
-#137 2.462 npm WARN EBADENGINE Unsupported engine {
-#137 2.462 npm WARN EBADENGINE   package: '@opentelemetry/sdk-metrics@2.1.0',
-#137 2.462 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.462 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.462 npm WARN EBADENGINE }
-#137 2.463 npm WARN EBADENGINE Unsupported engine {
-#137 2.463 npm WARN EBADENGINE   package: '@opentelemetry/core@2.1.0',
-#137 2.463 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.463 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.463 npm WARN EBADENGINE }
-#137 2.464 npm WARN EBADENGINE Unsupported engine {
-#137 2.465 npm WARN EBADENGINE   package: '@opentelemetry/sdk-node@0.205.0',
-#137 2.465 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.465 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.465 npm WARN EBADENGINE }
-#137 2.466 npm WARN EBADENGINE Unsupported engine {
-#137 2.466 npm WARN EBADENGINE   package: '@opentelemetry/core@2.1.0',
-#137 2.466 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.466 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.466 npm WARN EBADENGINE }
-#137 2.467 npm WARN EBADENGINE Unsupported engine {
-#137 2.467 npm WARN EBADENGINE   package: '@opentelemetry/sdk-trace-base@2.1.0',
-#137 2.467 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.468 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.468 npm WARN EBADENGINE }
-#137 2.468 npm WARN EBADENGINE Unsupported engine {
-#137 2.468 npm WARN EBADENGINE   package: '@opentelemetry/core@2.1.0',
-#137 2.468 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.469 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.469 npm WARN EBADENGINE }
-#137 2.469 npm WARN EBADENGINE Unsupported engine {
-#137 2.469 npm WARN EBADENGINE   package: '@opentelemetry/sdk-trace-node@2.1.0',
-#137 2.469 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.469 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.470 npm WARN EBADENGINE }
-#137 2.470 npm WARN EBADENGINE Unsupported engine {
-#137 2.470 npm WARN EBADENGINE   package: '@opentelemetry/core@2.1.0',
-#137 2.470 npm WARN EBADENGINE   required: { node: '^18.19.0 || >=20.6.0' },
-#137 2.470 npm WARN EBADENGINE   current: { node: 'v20.2.0', npm: '9.6.6' }
-#137 2.471 npm WARN EBADENGINE }
-#137 8.663 npm WARN deprecated @opentelemetry/exporter-otlp-http@0.26.0: Please use trace and metric specific exporters @opentelemetry/exporter-trace-otlp-http and @opentelemetry/exporter-metrics-otlp-http
-#137 8.789 npm WARN deprecated @opentelemetry/exporter-otlp-grpc@0.26.0: Please use trace and metric specific exporters @opentelemetry/exporter-trace-otlp-grpc and @opentelemetry/exporter-metrics-otlp-grpc
-#137 8.802 npm WARN deprecated @opentelemetry/sdk-metrics-base@0.26.0: Please use @opentelemetry/sdk-metrics
-#137 9.617 npm WARN deprecated @opentelemetry/api-metrics@0.26.0: Please use @opentelemetry/api >= 1.3.0
-l
+#137 [paymentservice] resolving provenance for metadata file
+#137 DONE 0.0s
+
+#138 [adservice] resolving provenance for metadata file
+#138 DONE 0.0s
+
+#139 [checkoutservice] resolving provenance for metadata file
+#139 DONE 0.0s
+
+#140 [productcatalogservice] resolving provenance for metadata file
+#140 DONE 0.0s
+
+#83 [loadgenerator builder 1/3] RUN apk update     && apk add --no-cache wget g++ linux-headers     && rm -rf /var/cache/apk/*
+#83 0.337 fetch https://dl-cdn.alpinelinux.org/alpine/v3.21/main/x86_64/APKINDEX.tar.gz
+#83 3.633 fetch https://dl-cdn.alpinelinux.org/alpine/v3.21/community/x86_64/APKINDEX.tar.gz
+#83 ...
+
+#141 [currencyservice builder 4/4] RUN npm install --only=production
+#141 0.569 npm warn config only Use `--omit=dev` to omit dev dependencies from the install.
+#141 6.095 npm warn deprecated @opentelemetry/sdk-metrics-base@0.26.0: Please use @opentelemetry/sdk-metrics
+#141 7.142 npm warn deprecated @opentelemetry/exporter-otlp-http@0.26.0: Please use trace and metric specific exporters @opentelemetry/exporter-trace-otlp-http and @opentelemetry/exporter-metrics-otlp-http
+#141 7.226 npm warn deprecated @opentelemetry/api-metrics@0.26.0: Please use @opentelemetry/api >= 1.3.0
+#141 8.916 npm warn deprecated @opentelemetry/exporter-otlp-grpc@0.26.0: Please use trace and metric specific exporters @opentelemetry/exporter-trace-otlp-grpc and @opentelemetry/exporter-metrics-otlp-grpc
+#141 ...
+
+#142 [loadgenerator stage-2 1/4] RUN apk update     && apk add --no-cache libstdc++     && rm -rf /var/cache/apk/*
+#142 0.344 fetch https://dl-cdn.alpinelinux.org/alpine/v3.21/main/x86_64/APKINDEX.tar.gz
+#142 6.369 fetch https://dl-cdn.alpinelinux.org/alpine/v3.21/community/x86_64/APKINDEX.tar.gz
+#142 ...
+
+#83 [loadgenerator builder 1/3] RUN apk update     && apk add --no-cache wget g++ linux-headers     && rm -rf /var/cache/apk/*
+#83 18.68 v3.21.4-162-g3fa8416fcbf [https://dl-cdn.alpinelinux.org/alpine/v3.21/main]
+#83 18.68 v3.21.4-163-g960a1254289 [https://dl-cdn.alpinelinux.org/alpine/v3.21/community]
+#83 18.68 OK: 25414 distinct packages available
+#83 18.77 fetch https://dl-cdn.alpinelinux.org/alpine/v3.21/main/x86_64/APKINDEX.tar.gz
+#83 21.72 fetch https://dl-cdn.alpinelinux.org/alpine/v3.21/community/x86_64/APKINDEX.tar.gz
+#83 ...
+
+#142 [loadgenerator stage-2 1/4] RUN apk update     && apk add --no-cache libstdc++     && rm -rf /var/cache/apk/*
+#142 26.74 v3.21.4-162-g3fa8416fcbf [https://dl-cdn.alpinelinux.org/alpine/v3.21/main]
+#142 26.74 v3.21.4-163-g960a1254289 [https://dl-cdn.alpinelinux.org/alpine/v3.21/community]
+#142 26.74 OK: 25414 distinct packages available
+#142 26.82 fetch https://dl-cdn.alpinelinux.org/alpine/v3.21/main/x86_64/APKINDEX.tar.gz
+#142 30.01 fetch https://dl-cdn.alpinelinux.org/alpine/v3.21/community/x86_64/APKINDEX.tar.gz
+#142 ...
+
+#83 [loadgenerator builder 1/3] RUN apk update     && apk add --no-cache wget g++ linux-headers     && rm -rf /var/cache/apk/*
+#83 26.76 (1/21) Upgrading musl (1.2.5-r8 -> 1.2.5-r9)
+#83 28.60 (2/21) Installing libgcc (14.2.0-r4)
+#83 29.17 (3/21) Installing libstdc++ (14.2.0-r4)
+#83 33.47 (4/21) Installing libstdc++-dev (14.2.0-r4)
+#83 ...
+
+#141 [currencyservice builder 4/4] RUN npm install --only=production
+#141 46.40 npm error code 1
+#141 46.40 npm error path /usr/src/app/node_modules/pprof
+#141 46.40 npm error command failed
+#141 46.40 npm error command sh -c node-pre-gyp install --fallback-to-build
+#141 46.40 npm error Failed to execute '/usr/local/bin/node /usr/local/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js configure --fallback-to-build --module=/usr/src/app/node_modules/pprof/build/node-v115-linux-x64-musl/pprof.node --module_name=pprof --module_path=/usr/src/app/node_modules/pprof/build/node-v115-linux-x64-musl --napi_version=9 --node_abi_napi=napi --napi_build_version=0 --node_napi_label=node-v115' (1)
+#141 46.40 npm error node-pre-gyp info it worked if it ends with ok
+#141 46.40 npm error node-pre-gyp info using node-pre-gyp@1.0.10
+#141 46.40 npm error node-pre-gyp info using node@20.18.1 | linux | x64
+#141 46.40 npm error node-pre-gyp info check checked for "/usr/src/app/node_modules/pprof/build/node-v115-linux-x64-musl/pprof.node" (not found)
+#141 46.40 npm error node-pre-gyp http GET https://storage.googleapis.com/cloud-profiler/pprof-nodejs/release/v4.0.0/node-v115-linux-x64-musl.tar.gz
+#141 46.40 npm error node-pre-gyp ERR! install response status 404 Not Found on https://storage.googleapis.com/cloud-profiler/pprof-nodejs/release/v4.0.0/node-v115-linux-x64-musl.tar.gz 
+#141 46.40 npm error node-pre-gyp WARN Pre-built binaries not installable for pprof@4.0.0 and node@20.18.1 (node-v115 ABI, musl) (falling back to source compile with node-gyp) 
+#141 46.40 npm error node-pre-gyp WARN Hit error response status 404 Not Found on https://storage.googleapis.com/cloud-profiler/pprof-nodejs/release/v4.0.0/node-v115-linux-x64-musl.tar.gz 
+#141 46.40 npm error gyp info it worked if it ends with ok
+#141 46.40 npm error gyp info using node-gyp@10.1.0
+#141 46.40 npm error gyp info using node@20.18.1 | linux | x64
+#141 46.40 npm error gyp info ok 
+#141 46.40 npm error gyp info it worked if it ends with ok
+#141 46.40 npm error gyp info using node-gyp@10.1.0
+#141 46.40 npm error gyp info using node@20.18.1 | linux | x64
+#141 46.40 npm error gyp info find Python using Python version 3.12.11 found at "/usr/bin/python3"
+#141 46.40 npm error gyp http GET https://unofficial-builds.nodejs.org/download/release/v20.18.1/node-v20.18.1-headers.tar.gz
+#141 46.40 npm error gyp http 200 https://unofficial-builds.nodejs.org/download/release/v20.18.1/node-v20.18.1-headers.tar.gz
+#141 46.40 npm error gyp WARN install got an error, rolling back install
+#141 46.40 npm error gyp ERR! configure error 
+#141 46.40 npm error gyp ERR! stack Error: read ETIMEDOUT
+#141 46.40 npm error gyp ERR! stack at TLSWrap.onStreamRead (node:internal/stream_base_commons:218:20)
+#141 46.40 npm error gyp ERR! System Linux 6.14.0-33-generic
+#141 46.40 npm error gyp ERR! command "/usr/local/bin/node" "/usr/local/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js" "configure" "--fallback-to-build" "--module=/usr/src/app/node_modules/pprof/build/node-v115-linux-x64-musl/pprof.node" "--module_name=pprof" "--module_path=/usr/src/app/node_modules/pprof/build/node-v115-linux-x64-musl" "--napi_version=9" "--node_abi_napi=napi" "--napi_build_version=0" "--node_napi_label=node-v115"
+#141 46.40 npm error gyp ERR! cwd /usr/src/app/node_modules/pprof
+#141 46.40 npm error gyp ERR! node -v v20.18.1
+#141 46.40 npm error gyp ERR! node-gyp -v v10.1.0
+#141 46.40 npm error gyp ERR! not ok 
+#141 46.40 npm error node-pre-gyp ERR! build error 
+#141 46.40 npm error node-pre-gyp ERR! stack Error: Failed to execute '/usr/local/bin/node /usr/local/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js configure --fallback-to-build --module=/usr/src/app/node_modules/pprof/build/node-v115-linux-x64-musl/pprof.node --module_name=pprof --module_path=/usr/src/app/node_modules/pprof/build/node-v115-linux-x64-musl --napi_version=9 --node_abi_napi=napi --napi_build_version=0 --node_napi_label=node-v115' (1)
+#141 46.40 npm error node-pre-gyp ERR! stack     at ChildProcess.<anonymous> (/usr/src/app/node_modules/@mapbox/node-pre-gyp/lib/util/compile.js:89:23)
+#141 46.40 npm error node-pre-gyp ERR! stack     at ChildProcess.emit (node:events:518:28)
+#141 46.40 npm error node-pre-gyp ERR! stack     at maybeClose (node:internal/child_process:1104:16)
+#141 46.40 npm error node-pre-gyp ERR! stack     at ChildProcess._handle.onexit (node:internal/child_process:304:5)
+#141 46.40 npm error node-pre-gyp ERR! System Linux 6.14.0-33-generic
+#141 46.40 npm error node-pre-gyp ERR! command "/usr/local/bin/node" "/usr/src/app/node_modules/.bin/node-pre-gyp" "install" "--fallback-to-build"
+#141 46.40 npm error node-pre-gyp ERR! cwd /usr/src/app/node_modules/pprof
+#141 46.40 npm error node-pre-gyp ERR! node -v v20.18.1
+#141 46.40 npm error node-pre-gyp ERR! node-pre-gyp -v v1.0.10
+#141 46.40 npm error node-pre-gyp ERR! not ok
+#141 46.40 npm notice
+#141 46.40 npm notice New major version of npm available! 10.8.2 -> 11.6.1
+#141 46.40 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.6.1
+#141 46.40 npm notice To update run: npm install -g npm@11.6.1
+#141 46.40 npm notice
+#141 46.41 npm error A complete log of this run can be found in: /root/.npm/_logs/2025-10-08T08_42_02_936Z-debug-0.log
+#141 ERROR: process "/bin/sh -c npm install --only=production" did not complete successfully: exit code: 1
+
+#83 [loadgenerator builder 1/3] RUN apk update     && apk add --no-cache wget g++ linux-headers     && rm -rf /var/cache/apk/*
+#83 CANCELED
+
+#142 [loadgenerator stage-2 1/4] RUN apk update     && apk add --no-cache libstdc++     && rm -rf /var/cache/apk/*
+#142 CANCELED
+------
+ > [currencyservice builder 4/4] RUN npm install --only=production:
+46.40 npm error node-pre-gyp ERR! cwd /usr/src/app/node_modules/pprof
+46.40 npm error node-pre-gyp ERR! node -v v20.18.1
+46.40 npm error node-pre-gyp ERR! node-pre-gyp -v v1.0.10
+46.40 npm error node-pre-gyp ERR! not ok
+46.40 npm notice
+46.40 npm notice New major version of npm available! 10.8.2 -> 11.6.1
+46.40 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.6.1
+46.40 npm notice To update run: npm install -g npm@11.6.1
+46.40 npm notice
+46.41 npm error A complete log of this run can be found in: /root/.npm/_logs/2025-10-08T08_42_02_936Z-debug-0.log
+------
