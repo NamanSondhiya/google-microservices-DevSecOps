@@ -459,6 +459,14 @@ func (fe *frontendServer) chatBotHandler(w http.ResponseWriter, r *http.Request)
 		Details map[string]any `json:"details"`
 	}
 
+	// Check if shopping assistant service is available
+	if fe.shoppingAssistantSvcAddr == "" {
+		response := Response{Message: "Shopping assistant service is not available"}
+		json.NewEncoder(w).Encode(response)
+		w.WriteHeader(http.StatusServiceUnavailable)
+		return
+	}
+
 	var response LLMResponse
 
 	url := "http://" + fe.shoppingAssistantSvcAddr

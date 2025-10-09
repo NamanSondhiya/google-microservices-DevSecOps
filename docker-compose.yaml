@@ -151,10 +151,4 @@ services:
         condition: service_started
     restart: on-failure
 
-  shoppingassistantservice:
-    build: ./src/shoppingassistantservice
-    ports:
-      - "8084:8080"
-    environment:
-      - PORT=8080
-    restart: always
+
