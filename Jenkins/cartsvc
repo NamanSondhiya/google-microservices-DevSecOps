@@ -1,0 +1,66 @@
+library('jenkins-shared') _
+pipeline {
+    agent any
+
+    tools {
+        jdk 'jdk21'
+        jdk 'jdk17'
+    }
+
+    stages{
+        stage('Clean the workspace') {
+            steps {
+                script {
+                    clean_ws()
+                }
+            }
+        }
+        stage('Code Clone from Github') {
+            steps {
+                script {
+                    git_clone("https://github.com/NamanSondhiya/google-microservices-DevSecOps.git", "devOps")
+                }
+            }
+        }
+        stage('Trivy Fs Scan') {
+            steps {
+                dir('src/cartservice') {
+                    script {
+                        trivy_fs_scan()
+                    }
+                }
+            }
+            post {
+                always {
+                    archiveArtifacts 'src/cartservice/trivy-fs-report.txt'
+                }
+            }
+        }
+        stage('Docker Build') {
+            steps {
+                script {
+                    docker_build("cartservice", "${BUILD_NUMBER}", "namanss", "src/cartservice/src")
+                }
+            }
+        }
+        stage('Trivy Image Scan') {
+            steps {
+                script {
+                    trivy_image_scan("cartservice","${BUILD_NUMBER}","namanss")
+                }
+            }
+            post {
+                always {
+                    archiveArtifacts 'cartservice-trivy-image-report.txt'
+                }
+            }
+        }
+        stage('Docker Push') {
+            steps {
+                script {
+                    docker_push("cartservice", "${BUILD_NUMBER}", "namanss")
+                }
+            }
+        }
+    }
+}
