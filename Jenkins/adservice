@@ -43,22 +43,22 @@ pipeline {
                 }
             }
         }
-        stage('Docker Push') {
-            steps {
-                script {
-                    docker_push("adservice", "${BUILD_NUMBER}", "namanss")
-                }
-            }
-        }
         stage('Trivy Image Scan') {
             steps {
                 script {
-                    trivy_image_scan("namanss/adservice:${BUILD_NUMBER}")
+                    trivy_image_scan("adservice","${BUILD_NUMBER}","namanss")
                 }
             }
             post {
                 always {
                     archiveArtifacts 'adservice-trivy-image-report.txt'
+                }
+            }
+        }
+        stage('Docker Push') {
+            steps {
+                script {
+                    docker_push("adservice", "${BUILD_NUMBER}", "namanss")
                 }
             }
         }
