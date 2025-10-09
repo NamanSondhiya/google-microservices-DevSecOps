@@ -1,534 +1,1705 @@
 #1 [internal] load local bake definitions
-#1 reading from stdin 6.70kB done
+#1 reading from stdin 7.36kB done
 #1 DONE 0.0s
 
-#2 [paymentservice internal] load build definition from Dockerfile
-#2 transferring dockerfile: 1.26kB done
+#2 [cartservice internal] load build definition from Dockerfile
+#2 transferring dockerfile: 1.86kB done
+#2 WARN: FromAsCasing: 'as' and 'FROM' keywords' casing do not match (line 16)
+#2 WARN: FromAsCasing: 'as' and 'FROM' keywords' casing do not match (line 24)
 #2 DONE 0.0s
 
-#3 [cartservice internal] load build definition from Dockerfile
-#3 transferring dockerfile: 1.51kB done
+#3 [currencyservice internal] load build definition from Dockerfile
+#3 transferring dockerfile: 1.53kB done
+#3 WARN: FromAsCasing: 'as' and 'FROM' keywords' casing do not match (line 15)
+#3 WARN: FromAsCasing: 'as' and 'FROM' keywords' casing do not match (line 17)
+#3 WARN: FromAsCasing: 'as' and 'FROM' keywords' casing do not match (line 32)
 #3 DONE 0.0s
 
-#4 [currencyservice internal] load build definition from Dockerfile
-#4 transferring dockerfile: 1.53kB done
-#4 DONE 0.0s
+#4 [adservice internal] load build definition from Dockerfile
+#4 transferring dockerfile: 1.82kB done
+#4 WARN: FromAsCasing: 'as' and 'FROM' keywords' casing do not match (line 15)
+#4 WARN: FromAsCasing: 'as' and 'FROM' keywords' casing do not match (line 28)
+#4 DONE 0.1s
 
-#5 [emailservice internal] load build definition from Dockerfile
-#5 transferring dockerfile: 1.34kB done
-#5 DONE 0.0s
+#5 [loadgenerator internal] load build definition from Dockerfile
+#5 transferring dockerfile: 1.32kB done
+#5 DONE 0.1s
 
-#6 [adservice internal] load build definition from Dockerfile
-#6 transferring dockerfile: 1.51kB done
-#6 DONE 0.0s
+#6 [paymentservice internal] load build definition from Dockerfile
+#6 transferring dockerfile: 1.53kB done
+#6 DONE 0.1s
 
-#7 [loadgenerator internal] load build definition from Dockerfile
-#7 transferring dockerfile: 1.32kB done
-#7 DONE 0.0s
+#7 [productcatalogservice internal] load build definition from Dockerfile
+#7 transferring dockerfile: 1.91kB done
+#7 DONE 0.1s
 
-#8 [shippingservice internal] load build definition from Dockerfile
-#8 transferring dockerfile: 1.46kB done
-#8 DONE 0.0s
+#8 [adservice internal] load metadata for docker.io/library/eclipse-temurin:19@sha256:f3fbf1ad599d4b5dbdd7ceb55708d10cb9fafb08e094ef91e92aa63b520a232e
+#8 ...
 
-#9 [checkoutservice internal] load build definition from Dockerfile
-#9 transferring dockerfile: 1.43kB done
-#9 DONE 0.0s
+#9 [recommendationservice internal] load build definition from Dockerfile
+#9 transferring dockerfile: 1.78kB done
+#9 WARN: FromAsCasing: 'as' and 'FROM' keywords' casing do not match (line 15)
+#9 WARN: FromAsCasing: 'as' and 'FROM' keywords' casing do not match (line 17)
+#9 WARN: FromAsCasing: 'as' and 'FROM' keywords' casing do not match (line 34)
+#9 DONE 0.1s
 
-#10 [paymentservice internal] load metadata for docker.io/library/alpine:3.20.3@sha256:1e42bbe2508154c9126d48c2b8a75420c3544343bf86fd041fb7527e017a4b4a
-#10 DONE 0.0s
+#10 [checkoutservice internal] load build definition from Dockerfile
+#10 transferring dockerfile: 1.90kB done
+#10 WARN: FromAsCasing: 'as' and 'FROM' keywords' casing do not match (line 15)
+#10 WARN: FromAsCasing: 'as' and 'FROM' keywords' casing do not match (line 30)
+#10 DONE 0.1s
 
-#11 [productcatalogservice internal] load build definition from Dockerfile
-#11 transferring dockerfile: 1.53kB done
+#11 [shippingservice internal] load build definition from Dockerfile
+#11 transferring dockerfile: 1.93kB done
+#11 WARN: FromAsCasing: 'as' and 'FROM' keywords' casing do not match (line 15)
+#11 WARN: FromAsCasing: 'as' and 'FROM' keywords' casing do not match (line 29)
 #11 DONE 0.1s
 
 #12 [frontend internal] load build definition from Dockerfile
-#12 transferring dockerfile: 1.46kB done
+#12 transferring dockerfile: 638B done
 #12 DONE 0.1s
 
-#13 [recommendationservice internal] load build definition from Dockerfile
-#13 transferring dockerfile: 1.37kB done
+#13 [shoppingassistantservice internal] load build definition from Dockerfile
+#13 transferring dockerfile: 1.31kB done
 #13 DONE 0.1s
 
-#14 [paymentservice internal] load metadata for docker.io/library/node:20.18.1-alpine@sha256:24fb6aa7020d9a20b00d6da6d1714187c45ed00d1eb4adb01395843c338b9372
-#14 DONE 0.0s
+#14 [emailservice internal] load build definition from Dockerfile
+#14 transferring dockerfile: 1.76kB done
+#14 WARN: FromAsCasing: 'as' and 'FROM' keywords' casing do not match (line 15)
+#14 WARN: FromAsCasing: 'as' and 'FROM' keywords' casing do not match (line 17)
+#14 WARN: FromAsCasing: 'as' and 'FROM' keywords' casing do not match (line 34)
+#14 DONE 0.1s
 
-#15 [currencyservice internal] load metadata for docker.io/library/node:20.2.0-alpine@sha256:f25b0e9d3d116e267d4ff69a3a99c0f4cf6ae94eadd87f1bf7bd68ea3ff0bef7
-#15 DONE 0.0s
+#15 [shippingservice internal] load metadata for docker.io/library/golang:1.20.4-alpine@sha256:0a03b591c358a0bb02e39b93c30e955358dadd18dc507087a3b7f3912c17fe13
+#15 ...
 
-#16 [paymentservice internal] load .dockerignore
-#16 transferring context: 53B done
+#16 [auth] library/node:pull token for registry-1.docker.io
 #16 DONE 0.0s
 
-#17 [currencyservice internal] load .dockerignore
-#17 transferring context: 64B done
+#17 [auth] library/eclipse-temurin:pull token for registry-1.docker.io
 #17 DONE 0.0s
 
-#18 [emailservice internal] load metadata for docker.io/library/python:3.12.8-alpine@sha256:54bec49592c8455de8d5983d984efff76b6417a6af9b5dcc8d0237bf6ad3bd20
+#18 [auth] library/alpine:pull token for registry-1.docker.io
 #18 DONE 0.0s
 
-#19 [paymentservice stage-1 1/5] FROM docker.io/library/alpine:3.20.3@sha256:1e42bbe2508154c9126d48c2b8a75420c3544343bf86fd041fb7527e017a4b4a
-#19 DONE 0.0s
+#19 [cartservice internal] load metadata for mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936
+#19 DONE 0.9s
 
-#20 [paymentservice builder 1/5] FROM docker.io/library/node:20.18.1-alpine@sha256:24fb6aa7020d9a20b00d6da6d1714187c45ed00d1eb4adb01395843c338b9372
+#20 [auth] library/python:pull token for registry-1.docker.io
 #20 DONE 0.0s
 
-#21 [adservice internal] load metadata for docker.io/library/eclipse-temurin:21.0.5_11-jdk@sha256:a20cfa6afdbf57ff2c4de77ae2d0e3725a6349f1936b5ad7c3d1b06f6d1b840a
-#21 DONE 0.0s
+#21 [cartservice internal] load metadata for mcr.microsoft.com/dotnet/runtime-deps:7.0.4-alpine3.16-amd64@sha256:7141eea9c7be5f4d2f09df427ba37620e50be150fc93015288b3e26c5071af81
+#21 DONE 1.0s
 
-#22 [adservice internal] load metadata for docker.io/library/eclipse-temurin:21.0.5_11-jre-alpine@sha256:4300bfe1e11f3dfc3e3512f39939f9093cf18d0e581d1ab1ccd0512f32fe33f0
+#22 [cartservice internal] load .dockerignore
+#22 transferring context: 92B done
 #22 DONE 0.0s
 
-#23 [currencyservice internal] load build context
+#23 [cartservice internal] load build context
+#23 transferring context: 29.52kB done
 #23 DONE 0.0s
 
-#24 [currencyservice base 1/1] FROM docker.io/library/node:20.2.0-alpine@sha256:f25b0e9d3d116e267d4ff69a3a99c0f4cf6ae94eadd87f1bf7bd68ea3ff0bef7
+#24 [auth] library/golang:pull token for registry-1.docker.io
 #24 DONE 0.0s
 
-#25 [checkoutservice internal] load metadata for docker.io/library/golang:1.23.4-alpine@sha256:c23339199a08b0e12032856908589a6d41a0dab141b8b3b21f156fc571a3f1d3
-#25 DONE 0.0s
+#25 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936
+#25 resolve mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936 0.0s done
+#25 sha256:2fc07514f936f722538f7fac2277ea73e9430d15f2e35fd5048b3f7ed9d19862 2.01kB / 2.01kB done
+#25 sha256:0e74d98d5e5afaa3d10472b88803c5b29fd61a51d18c8a301c0d04a4554605ae 7.16kB / 7.16kB done
+#25 sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 0B / 31.40MB 0.1s
+#25 sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936 1.82kB / 1.82kB done
+#25 sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 2.10MB / 31.40MB 1.6s
+#25 sha256:2436f232d04089283ab348e14d6430f339b3b2652272096252202ea0c337aac4 0B / 15.17MB 2.4s
+#25 sha256:9a2730c0a140be53b336b97bb17edad079ea5fcf128447d1c8ee2ef7fb59d048 0B / 32.45MB 3.0s
+#25 ...
 
-#26 [paymentservice internal] load build context
-#26 transferring context: 501B done
-#26 DONE 0.0s
+#26 [cartservice without-grpc-health-probe-bin 1/3] FROM mcr.microsoft.com/dotnet/runtime-deps:7.0.4-alpine3.16-amd64@sha256:7141eea9c7be5f4d2f09df427ba37620e50be150fc93015288b3e26c5071af81
+#26 resolve mcr.microsoft.com/dotnet/runtime-deps:7.0.4-alpine3.16-amd64@sha256:7141eea9c7be5f4d2f09df427ba37620e50be150fc93015288b3e26c5071af81 0.0s done
+#26 sha256:7141eea9c7be5f4d2f09df427ba37620e50be150fc93015288b3e26c5071af81 739B / 739B done
+#26 sha256:ca64b46173f0a02b460ac8bd18cd6d78a71350a286231e18d89ada6c1da83e77 2.28kB / 2.28kB done
+#26 sha256:91d30c5bc19582de1415b18f1ec5bcbf52a558b62cf6cc201c9669df9f748c22 2.81MB / 2.81MB 2.3s done
+#26 sha256:3e3bcf7e4c31a23cc3757ebf2502093ae73c8369e511a56e8d8da5e90da54e8e 1.85MB / 1.85MB 2.9s done
+#26 extracting sha256:91d30c5bc19582de1415b18f1ec5bcbf52a558b62cf6cc201c9669df9f748c22 0.1s done
+#26 extracting sha256:3e3bcf7e4c31a23cc3757ebf2502093ae73c8369e511a56e8d8da5e90da54e8e 0.1s done
+#26 DONE 3.2s
 
-#27 [emailservice internal] load .dockerignore
-#27 transferring context: 2B done
-#27 DONE 0.0s
+#25 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936
+#25 ...
 
-#28 [shippingservice internal] load .dockerignore
-#28 DONE 0.0s
+#27 [cartservice without-grpc-health-probe-bin 2/3] WORKDIR /app
+#27 DONE 0.1s
 
-#29 [loadgenerator internal] load .dockerignore
-#29 transferring context: 2B done
+#25 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936
+#25 ...
+
+#8 [adservice internal] load metadata for docker.io/library/eclipse-temurin:19@sha256:f3fbf1ad599d4b5dbdd7ceb55708d10cb9fafb08e094ef91e92aa63b520a232e
+#8 DONE 5.6s
+
+#25 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936
+#25 sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 4.19MB / 31.40MB 5.3s
+#25 ...
+
+#28 [currencyservice internal] load metadata for docker.io/library/node:20.2.0-alpine@sha256:f25b0e9d3d116e267d4ff69a3a99c0f4cf6ae94eadd87f1bf7bd68ea3ff0bef7
+#28 DONE 6.7s
+
+#29 [paymentservice internal] load .dockerignore
+#29 transferring context: 53B done
 #29 DONE 0.0s
 
-#30 [recommendationservice internal] load .dockerignore
-#30 transferring context: 2B done
+#30 [currencyservice internal] load .dockerignore
+#30 transferring context: 64B done
 #30 DONE 0.0s
 
-#31 [adservice internal] load .dockerignore
-#31 transferring context: 2B done
+#31 [currencyservice internal] load build context
+#31 transferring context: 164.14kB 0.0s done
 #31 DONE 0.0s
 
-#32 [loadgenerator base 1/1] FROM docker.io/library/python:3.12.8-alpine@sha256:54bec49592c8455de8d5983d984efff76b6417a6af9b5dcc8d0237bf6ad3bd20
+#32 [paymentservice internal] load build context
+#32 transferring context: 269.26kB 0.0s done
 #32 DONE 0.0s
 
-#33 [paymentservice stage-1 4/5] COPY --from=builder /usr/src/app/node_modules ./node_modules
-#33 CACHED
+#25 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936
+#25 ...
 
-#34 [paymentservice stage-1 2/5] RUN apk add --no-cache nodejs
-#34 CACHED
+#33 [adservice internal] load metadata for docker.io/library/eclipse-temurin:19.0.1_10-jre-alpine@sha256:a75ea64f676041562cd7d3a54a9764bbfb357b2bf1bebf46e2af73e62d32e36c
+#33 DONE 6.9s
 
-#35 [paymentservice stage-1 3/5] WORKDIR /usr/src/app
-#35 CACHED
+#34 [adservice internal] load .dockerignore
+#34 transferring context: 2B done
+#34 DONE 0.0s
 
-#36 [paymentservice builder 5/5] RUN npm install --only=production
-#36 CACHED
+#35 [adservice internal] load build context
+#35 transferring context: 100.98kB done
+#35 DONE 0.0s
 
-#37 [paymentservice builder 3/5] WORKDIR /usr/src/app
-#37 CACHED
+#15 [shippingservice internal] load metadata for docker.io/library/golang:1.20.4-alpine@sha256:0a03b591c358a0bb02e39b93c30e955358dadd18dc507087a3b7f3912c17fe13
+#15 DONE 7.0s
 
-#38 [paymentservice builder 4/5] COPY package*.json ./
-#38 CACHED
+#25 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936
+#25 ...
 
-#39 [paymentservice builder 2/5] RUN apk add --update --no-cache     python3     make     g++
-#39 CACHED
+#36 [emailservice internal] load metadata for docker.io/library/python:3.10.8-slim@sha256:49749648f4426b31b20fca55ad854caa55ff59dc604f2f76b57d814e0a47c181
+#36 DONE 7.2s
 
-#23 [currencyservice internal] load build context
-#23 transferring context: 517B done
-#23 DONE 0.0s
+#37 [emailservice internal] load .dockerignore
+#37 transferring context: 2B done
+#37 DONE 0.0s
 
-#40 [paymentservice stage-1 5/5] COPY . .
-#40 CACHED
+#38 [recommendationservice internal] load .dockerignore
+#38 transferring context: 2B done
+#38 DONE 0.0s
 
-#28 [shippingservice internal] load .dockerignore
-#28 transferring context: 48B done
-#28 DONE 0.0s
+#39 [emailservice internal] load build context
+#39 transferring context: 58.56kB done
+#39 DONE 0.0s
 
-#41 [recommendationservice internal] load build context
-#41 transferring context: 304B done
-#41 DONE 0.0s
+#40 [recommendationservice internal] load build context
+#40 transferring context: 55.58kB done
+#40 DONE 0.0s
 
-#42 [paymentservice] exporting to image
-#42 exporting layers done
-#42 writing image sha256:979496de1492544e8bfaf8af859aa3ed3e5eb0cc0da9f0326adb1a4d740f5145 done
-#42 naming to docker.io/library/google-microservices-devsecops-paymentservice done
+#25 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936
+#25 sha256:9a2730c0a140be53b336b97bb17edad079ea5fcf128447d1c8ee2ef7fb59d048 2.10MB / 32.45MB 6.5s
+#25 ...
+
+#41 [shoppingassistantservice internal] load metadata for docker.io/library/python:3.12.8-slim@sha256:123be5684f39d8476e64f47a5fddf38f5e9d839baff5c023c815ae5bdfae0df7
+#41 DONE 7.8s
+
+#25 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936
+#25 ...
+
+#42 [shoppingassistantservice internal] load .dockerignore
+#42 transferring context: 48B done
 #42 DONE 0.0s
 
-#43 [emailservice internal] load build context
-#43 transferring context: 377B done
+#43 [shoppingassistantservice internal] load build context
+#43 transferring context: 12.29kB done
 #43 DONE 0.0s
 
-#44 [frontend internal] load .dockerignore
-#44 transferring context: 48B done
-#44 DONE 0.0s
+#25 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936
+#25 ...
 
-#45 [productcatalogservice internal] load .dockerignore
-#45 transferring context: 48B done
-#45 DONE 0.0s
+#44 [frontend internal] load metadata for docker.io/library/alpine:3.19
+#44 DONE 8.1s
 
-#46 [checkoutservice internal] load .dockerignore
-#46 transferring context: 48B done
+#45 [loadgenerator internal] load metadata for docker.io/library/python:3.12.8-alpine@sha256:54bec49592c8455de8d5983d984efff76b6417a6af9b5dcc8d0237bf6ad3bd20
+#45 DONE 8.3s
+
+#25 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936
+#25 ...
+
+#46 [loadgenerator internal] load .dockerignore
+#46 transferring context: 2B done
 #46 DONE 0.0s
 
-#47 [currencyservice without-grpc-health-probe-bin 3/3] COPY . .
-#47 CACHED
+#47 [loadgenerator internal] load build context
+#47 transferring context: 4.81kB done
+#47 DONE 0.0s
 
-#48 [currencyservice builder 3/4] COPY package*.json ./
-#48 CACHED
+#25 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936
+#25 sha256:9a2730c0a140be53b336b97bb17edad079ea5fcf128447d1c8ee2ef7fb59d048 4.19MB / 32.45MB 7.5s
+#25 ...
 
-#49 [currencyservice builder 1/4] RUN apk add --update --no-cache     python3     make     g++
-#49 CACHED
+#48 [frontend internal] load metadata for docker.io/library/golang:1.23.4-alpine
+#48 DONE 8.4s
 
-#50 [currencyservice builder 4/4] RUN npm install --only=production
-#50 CACHED
+#49 [frontend internal] load .dockerignore
+#49 transferring context: 48B done
+#49 DONE 0.0s
 
-#51 [currencyservice without-grpc-health-probe-bin 2/3] COPY --from=builder /usr/src/app/node_modules ./node_modules
-#51 CACHED
+#50 [frontend internal] load build context
+#50 transferring context: 4.45MB 0.1s done
+#50 DONE 0.1s
 
-#52 [currencyservice builder 2/4] WORKDIR /usr/src/app
-#52 CACHED
+#25 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936
+#25 ...
 
-#53 [currencyservice without-grpc-health-probe-bin 1/3] WORKDIR /usr/src/app
-#53 CACHED
+#51 [productcatalogservice internal] load metadata for docker.io/library/alpine:3.18.0@sha256:02bb6f428431fbc2809c5d1b41eab5a68350194fb508869a33cb1af4444c9b11
+#51 DONE 8.9s
 
-#54 [currencyservice stage-3 1/1] RUN wget -qO/bin/grpc_health_probe https://github.com/grpc-ecosystem/grpc-health-probe/releases/download/v0.4.18/grpc_health_probe-linux-amd64 &&     chmod +x /bin/grpc_health_probe
-#54 CACHED
+#25 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936
+#25 ...
 
-#55 [adservice stage-1 1/3] FROM docker.io/library/eclipse-temurin:21.0.5_11-jre-alpine@sha256:4300bfe1e11f3dfc3e3512f39939f9093cf18d0e581d1ab1ccd0512f32fe33f0
+#52 [productcatalogservice internal] load .dockerignore
+#52 transferring context: 48B done
+#52 DONE 0.0s
+
+#53 [checkoutservice internal] load .dockerignore
+#53 transferring context: 48B done
+#53 DONE 0.0s
+
+#54 [shippingservice internal] load .dockerignore
+#54 transferring context: 48B done
+#54 DONE 0.0s
+
+#55 [productcatalogservice internal] load build context
+#55 transferring context: 159.45kB done
 #55 DONE 0.0s
 
-#56 [loadgenerator internal] load build context
-#56 transferring context: 71B done
+#56 [shippingservice internal] load build context
+#56 transferring context: 119.54kB done
 #56 DONE 0.0s
 
-#57 [recommendationservice stage-2 2/4] WORKDIR /recommendationservice
-#57 CACHED
+#57 [checkoutservice internal] load build context
+#57 transferring context: 168.85kB done
+#57 DONE 0.0s
 
-#58 [recommendationservice stage-2 1/4] RUN apk update     && apk add --no-cache libstdc++     && rm -rf /var/cache/apk/*
-#58 CACHED
+#25 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936
+#25 sha256:9a2730c0a140be53b336b97bb17edad079ea5fcf128447d1c8ee2ef7fb59d048 6.29MB / 32.45MB 9.2s
+#25 sha256:2436f232d04089283ab348e14d6430f339b3b2652272096252202ea0c337aac4 0B / 15.17MB 9.6s
+#25 sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 5.24MB / 31.40MB 10.4s
+#25 sha256:9a2730c0a140be53b336b97bb17edad079ea5fcf128447d1c8ee2ef7fb59d048 8.39MB / 32.45MB 10.4s
+#25 sha256:9a2730c0a140be53b336b97bb17edad079ea5fcf128447d1c8ee2ef7fb59d048 10.49MB / 32.45MB 11.5s
+#25 sha256:2436f232d04089283ab348e14d6430f339b3b2652272096252202ea0c337aac4 1.05MB / 15.17MB 12.3s
+#25 sha256:9a2730c0a140be53b336b97bb17edad079ea5fcf128447d1c8ee2ef7fb59d048 12.58MB / 32.45MB 12.3s
+#25 sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 7.34MB / 31.40MB 13.1s
+#25 sha256:2436f232d04089283ab348e14d6430f339b3b2652272096252202ea0c337aac4 2.10MB / 15.17MB 13.1s
+#25 sha256:9a2730c0a140be53b336b97bb17edad079ea5fcf128447d1c8ee2ef7fb59d048 14.68MB / 32.45MB 13.1s
+#25 sha256:2436f232d04089283ab348e14d6430f339b3b2652272096252202ea0c337aac4 3.15MB / 15.17MB 14.1s
+#25 sha256:9a2730c0a140be53b336b97bb17edad079ea5fcf128447d1c8ee2ef7fb59d048 16.78MB / 32.45MB 14.1s
+#25 sha256:2436f232d04089283ab348e14d6430f339b3b2652272096252202ea0c337aac4 4.19MB / 15.17MB 14.9s
+#25 sha256:9a2730c0a140be53b336b97bb17edad079ea5fcf128447d1c8ee2ef7fb59d048 18.87MB / 32.45MB 14.9s
+#25 sha256:2436f232d04089283ab348e14d6430f339b3b2652272096252202ea0c337aac4 5.24MB / 15.17MB 15.6s
+#25 sha256:9a2730c0a140be53b336b97bb17edad079ea5fcf128447d1c8ee2ef7fb59d048 20.97MB / 32.45MB 15.8s
+#25 ...
 
-#59 [recommendationservice stage-2 3/4] COPY --from=builder /usr/local/lib/python3.12/ /usr/local/lib/python3.12/
-#59 CACHED
+#58 [paymentservice base 1/1] FROM docker.io/library/node:20.2.0-alpine@sha256:f25b0e9d3d116e267d4ff69a3a99c0f4cf6ae94eadd87f1bf7bd68ea3ff0bef7
+#58 resolve docker.io/library/node:20.2.0-alpine@sha256:f25b0e9d3d116e267d4ff69a3a99c0f4cf6ae94eadd87f1bf7bd68ea3ff0bef7 done
+#58 sha256:f25b0e9d3d116e267d4ff69a3a99c0f4cf6ae94eadd87f1bf7bd68ea3ff0bef7 1.16kB / 1.16kB done
+#58 sha256:e7ddd0a27a0c68123af8d03ffec4921305f9b1cf5e49283b84cfdf112fced2f5 6.48kB / 6.48kB done
+#58 ...
 
-#60 [recommendationservice builder 2/3] COPY requirements.txt .
-#60 CACHED
+#25 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936
+#25 ...
 
-#61 [recommendationservice builder 3/3] RUN pip install -r requirements.txt
-#61 CACHED
+#59 [adservice builder 1/9] FROM docker.io/library/eclipse-temurin:19@sha256:f3fbf1ad599d4b5dbdd7ceb55708d10cb9fafb08e094ef91e92aa63b520a232e
+#59 resolve docker.io/library/eclipse-temurin:19@sha256:f3fbf1ad599d4b5dbdd7ceb55708d10cb9fafb08e094ef91e92aa63b520a232e 0.0s done
+#59 sha256:81b8481b570155419ec2b057f4a367d6f0f22a5700aa01b7de7ceaa731519b1f 1.16kB / 1.16kB done
+#59 sha256:f546b418bb3af906a8180260ea58f79cb49c6e88e9d08b014fbd3bf4eb542093 6.31kB / 6.31kB done
+#59 sha256:f3fbf1ad599d4b5dbdd7ceb55708d10cb9fafb08e094ef91e92aa63b520a232e 1.70kB / 1.70kB done
+#59 ...
 
-#62 [emailservice stage-2 3/4] COPY --from=builder /usr/local/lib/python3.12/ /usr/local/lib/python3.12/
-#62 CACHED
+#60 [adservice without-grpc-health-probe-bin 1/5] FROM docker.io/library/eclipse-temurin:19.0.1_10-jre-alpine@sha256:a75ea64f676041562cd7d3a54a9764bbfb357b2bf1bebf46e2af73e62d32e36c
+#60 resolve docker.io/library/eclipse-temurin:19.0.1_10-jre-alpine@sha256:a75ea64f676041562cd7d3a54a9764bbfb357b2bf1bebf46e2af73e62d32e36c done
+#60 sha256:a75ea64f676041562cd7d3a54a9764bbfb357b2bf1bebf46e2af73e62d32e36c 1.16kB / 1.16kB done
+#60 sha256:f10fe2918b92d0aa69fc06c5f77b81ccdba3e188b047524031e4cb20d602cba7 4.22kB / 4.22kB done
+#60 ...
 
-#63 [emailservice stage-2 2/4] WORKDIR /email_server
-#63 CACHED
+#61 [recommendationservice base 1/1] FROM docker.io/library/python:3.10.8-slim@sha256:49749648f4426b31b20fca55ad854caa55ff59dc604f2f76b57d814e0a47c181
+#61 resolve docker.io/library/python:3.10.8-slim@sha256:49749648f4426b31b20fca55ad854caa55ff59dc604f2f76b57d814e0a47c181 done
+#61 sha256:49749648f4426b31b20fca55ad854caa55ff59dc604f2f76b57d814e0a47c181 1.37kB / 1.37kB done
+#61 sha256:a13ecd10097355ee7230103423eed92fd2fc99e85692bc8e48b5d907a600f24c 7.50kB / 7.50kB done
+#61 ...
 
-#64 [emailservice builder 2/3] COPY requirements.txt .
-#64 CACHED
+#25 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936
+#25 sha256:2436f232d04089283ab348e14d6430f339b3b2652272096252202ea0c337aac4 6.29MB / 15.17MB 16.5s
+#25 sha256:9a2730c0a140be53b336b97bb17edad079ea5fcf128447d1c8ee2ef7fb59d048 23.07MB / 32.45MB 16.7s
+#25 ...
 
-#65 [emailservice stage-2 1/4] RUN apk update     && apk add --no-cache libstdc++     && rm -rf /var/cache/apk/*
-#65 CACHED
+#62 [shoppingassistantservice base 1/1] FROM docker.io/library/python:3.12.8-slim@sha256:123be5684f39d8476e64f47a5fddf38f5e9d839baff5c023c815ae5bdfae0df7
+#62 resolve docker.io/library/python:3.12.8-slim@sha256:123be5684f39d8476e64f47a5fddf38f5e9d839baff5c023c815ae5bdfae0df7 0.0s done
+#62 sha256:df5d1b3c256a63d04a3add558c3577c834e36543807ed2275b1900586b247e56 5.17kB / 5.17kB done
+#62 sha256:123be5684f39d8476e64f47a5fddf38f5e9d839baff5c023c815ae5bdfae0df7 9.12kB / 9.12kB done
+#62 sha256:5f2c5f90ca7eb67a3f42967bcbe1490fb43297b12bec50e23b081c9b93be298f 1.75kB / 1.75kB done
+#62 ...
 
-#66 [emailservice builder 3/3] RUN pip install -r requirements.txt
-#66 CACHED
+#25 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936
+#25 sha256:2436f232d04089283ab348e14d6430f339b3b2652272096252202ea0c337aac4 7.34MB / 15.17MB 17.2s
+#25 sha256:2436f232d04089283ab348e14d6430f339b3b2652272096252202ea0c337aac4 8.39MB / 15.17MB 17.6s
+#25 sha256:9a2730c0a140be53b336b97bb17edad079ea5fcf128447d1c8ee2ef7fb59d048 25.17MB / 32.45MB 17.6s
+#25 ...
 
-#67 [emailservice builder 1/3] RUN apk update     && apk add --no-cache g++ linux-headers     && rm -rf /var/cache/apk/*
-#67 CACHED
+#63 [frontend builder 1/6] FROM docker.io/library/golang:1.23.4-alpine@sha256:c23339199a08b0e12032856908589a6d41a0dab141b8b3b21f156fc571a3f1d3
+#63 resolve docker.io/library/golang:1.23.4-alpine@sha256:c23339199a08b0e12032856908589a6d41a0dab141b8b3b21f156fc571a3f1d3 0.0s done
+#63 sha256:c23339199a08b0e12032856908589a6d41a0dab141b8b3b21f156fc571a3f1d3 10.29kB / 10.29kB done
+#63 sha256:b4743faf9518405c68649c29f1c9e29f43872a5e882c61e411347e73ef64a0b5 1.92kB / 1.92kB done
+#63 sha256:27643ed1a1295923d6fe10201051cd0f058bea8284540c6260745eb9b5622e3a 2.08kB / 2.08kB done
+#63 ...
 
-#68 [shippingservice stage-1 1/2] WORKDIR /src
-#68 DONE 0.0s
+#64 [frontend stage-1 1/6] FROM docker.io/library/alpine:3.19@sha256:3be987e6cde1d07e873c012bf6cfe941e6e85d16ca5fc5b8bedc675451d2de67
+#64 resolve docker.io/library/alpine:3.19@sha256:3be987e6cde1d07e873c012bf6cfe941e6e85d16ca5fc5b8bedc675451d2de67 0.0s done
+#64 sha256:3be987e6cde1d07e873c012bf6cfe941e6e85d16ca5fc5b8bedc675451d2de67 8.08kB / 8.08kB done
+#64 sha256:cc5c89e0981cd165d5fca56a4fea9de734e76800c61df61b61c52cc041a81f1b 1.02kB / 1.02kB done
+#64 sha256:f23794abfe89e369030e97c15f8fbeda474e57780fc03926511c172ce360715b 581B / 581B done
+#64 ...
 
-#69 [adservice builder 1/9] FROM docker.io/library/eclipse-temurin:21.0.5_11-jdk@sha256:a20cfa6afdbf57ff2c4de77ae2d0e3725a6349f1936b5ad7c3d1b06f6d1b840a
-#69 DONE 0.0s
+#65 [loadgenerator base 1/1] FROM docker.io/library/python:3.12.8-alpine@sha256:54bec49592c8455de8d5983d984efff76b6417a6af9b5dcc8d0237bf6ad3bd20
+#65 resolve docker.io/library/python:3.12.8-alpine@sha256:54bec49592c8455de8d5983d984efff76b6417a6af9b5dcc8d0237bf6ad3bd20 done
+#65 sha256:451fdb03e17285d3263d88f0f3bed692c82556935490d233096974386cd0381b 4.96kB / 4.96kB done
+#65 sha256:54bec49592c8455de8d5983d984efff76b6417a6af9b5dcc8d0237bf6ad3bd20 9.02kB / 9.02kB done
+#65 sha256:d76caa28f543e3a79719bc0088cb64bab36aef67e455e3e35adc7bf24cccf670 1.73kB / 1.73kB done
+#65 ...
 
-#70 [emailservice stage-2 4/4] COPY . .
-#70 CACHED
+#66 [shippingservice without-grpc-health-probe-bin 1/5] FROM docker.io/library/alpine:3.18.0@sha256:02bb6f428431fbc2809c5d1b41eab5a68350194fb508869a33cb1af4444c9b11
+#66 resolve docker.io/library/alpine:3.18.0@sha256:02bb6f428431fbc2809c5d1b41eab5a68350194fb508869a33cb1af4444c9b11 0.0s done
+#66 sha256:c0669ef34cdc14332c0f1ab0c2c01acb91d96014b172f1a76f3a39e63d1f0bda 528B / 528B done
+#66 sha256:5e2b554c1c45d22c9d1aa836828828e320a26011b76c08631ac896cbc3625e3e 1.47kB / 1.47kB done
+#66 sha256:02bb6f428431fbc2809c5d1b41eab5a68350194fb508869a33cb1af4444c9b11 1.64kB / 1.64kB done
+#66 ...
 
-#71 [recommendationservice stage-2 4/4] COPY . .
-#71 CACHED
+#67 [shippingservice builder 1/8] FROM docker.io/library/golang:1.20.4-alpine@sha256:0a03b591c358a0bb02e39b93c30e955358dadd18dc507087a3b7f3912c17fe13
+#67 resolve docker.io/library/golang:1.20.4-alpine@sha256:0a03b591c358a0bb02e39b93c30e955358dadd18dc507087a3b7f3912c17fe13 done
+#67 sha256:0a03b591c358a0bb02e39b93c30e955358dadd18dc507087a3b7f3912c17fe13 1.16kB / 1.16kB done
+#67 sha256:98045bb148f1a5be15cdccc3c15f9c377a5eef737fc3cb901b910709c281ed9b 5.11kB / 5.11kB done
+#67 ...
 
-#72 [productcatalogservice builder 1/6] FROM docker.io/library/golang:1.23.4-alpine@sha256:c23339199a08b0e12032856908589a6d41a0dab141b8b3b21f156fc571a3f1d3
+#25 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936
+#25 sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 8.39MB / 31.40MB 18.5s
+#25 sha256:2436f232d04089283ab348e14d6430f339b3b2652272096252202ea0c337aac4 9.44MB / 15.17MB 18.5s
+#25 sha256:9a2730c0a140be53b336b97bb17edad079ea5fcf128447d1c8ee2ef7fb59d048 27.26MB / 32.45MB 19.0s
+#25 sha256:2436f232d04089283ab348e14d6430f339b3b2652272096252202ea0c337aac4 10.49MB / 15.17MB 19.3s
+#25 sha256:2436f232d04089283ab348e14d6430f339b3b2652272096252202ea0c337aac4 11.53MB / 15.17MB 19.8s
+#25 sha256:9a2730c0a140be53b336b97bb17edad079ea5fcf128447d1c8ee2ef7fb59d048 29.36MB / 32.45MB 20.2s
+#25 sha256:2436f232d04089283ab348e14d6430f339b3b2652272096252202ea0c337aac4 12.58MB / 15.17MB 20.4s
+#25 sha256:2436f232d04089283ab348e14d6430f339b3b2652272096252202ea0c337aac4 13.63MB / 15.17MB 20.9s
+#25 sha256:2436f232d04089283ab348e14d6430f339b3b2652272096252202ea0c337aac4 14.68MB / 15.17MB 21.3s
+#25 sha256:9a2730c0a140be53b336b97bb17edad079ea5fcf128447d1c8ee2ef7fb59d048 31.46MB / 32.45MB 21.3s
+#25 sha256:2436f232d04089283ab348e14d6430f339b3b2652272096252202ea0c337aac4 15.17MB / 15.17MB 21.4s done
+#25 sha256:6bb6cfc8813743a8fc9cdb51e497b0262dfb4e44f4a5d50841b1b0a1b2677c1d 0B / 155B 21.4s
+#25 sha256:6bb6cfc8813743a8fc9cdb51e497b0262dfb4e44f4a5d50841b1b0a1b2677c1d 155B / 155B 21.6s done
+#25 sha256:8bc8046fd854f48a06a552ccc34dcb7c37121a0f7b3de373697ffdcf803aa5f1 0B / 10.11MB 21.7s
+#25 sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 10.49MB / 31.40MB 21.9s
+#25 sha256:9a2730c0a140be53b336b97bb17edad079ea5fcf128447d1c8ee2ef7fb59d048 32.45MB / 32.45MB 21.7s done
+#25 sha256:a2116531d77be68dcf9c6e4fdefd4d5834f4dc06eaf6ab67a2d78b00a0140e6f 0B / 25.37MB 21.9s
+#25 sha256:8bc8046fd854f48a06a552ccc34dcb7c37121a0f7b3de373697ffdcf803aa5f1 1.05MB / 10.11MB 22.3s
+#25 sha256:8bc8046fd854f48a06a552ccc34dcb7c37121a0f7b3de373697ffdcf803aa5f1 2.10MB / 10.11MB 23.0s
+#25 sha256:a2116531d77be68dcf9c6e4fdefd4d5834f4dc06eaf6ab67a2d78b00a0140e6f 2.10MB / 25.37MB 23.0s
+#25 sha256:8bc8046fd854f48a06a552ccc34dcb7c37121a0f7b3de373697ffdcf803aa5f1 3.15MB / 10.11MB 23.7s
+#25 sha256:a2116531d77be68dcf9c6e4fdefd4d5834f4dc06eaf6ab67a2d78b00a0140e6f 4.19MB / 25.37MB 24.1s
+#25 sha256:8bc8046fd854f48a06a552ccc34dcb7c37121a0f7b3de373697ffdcf803aa5f1 4.19MB / 10.11MB 24.5s
+#25 sha256:a2116531d77be68dcf9c6e4fdefd4d5834f4dc06eaf6ab67a2d78b00a0140e6f 6.29MB / 25.37MB 25.0s
+#25 sha256:8bc8046fd854f48a06a552ccc34dcb7c37121a0f7b3de373697ffdcf803aa5f1 5.24MB / 10.11MB 25.4s
+#25 sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 11.53MB / 31.40MB 26.9s
+#25 sha256:8bc8046fd854f48a06a552ccc34dcb7c37121a0f7b3de373697ffdcf803aa5f1 6.29MB / 10.11MB 27.2s
+#25 sha256:a2116531d77be68dcf9c6e4fdefd4d5834f4dc06eaf6ab67a2d78b00a0140e6f 8.39MB / 25.37MB 27.6s
+#25 sha256:8bc8046fd854f48a06a552ccc34dcb7c37121a0f7b3de373697ffdcf803aa5f1 7.34MB / 10.11MB 28.0s
+#25 sha256:8bc8046fd854f48a06a552ccc34dcb7c37121a0f7b3de373697ffdcf803aa5f1 8.39MB / 10.11MB 28.9s
+#25 sha256:a2116531d77be68dcf9c6e4fdefd4d5834f4dc06eaf6ab67a2d78b00a0140e6f 10.49MB / 25.37MB 29.3s
+#25 sha256:8bc8046fd854f48a06a552ccc34dcb7c37121a0f7b3de373697ffdcf803aa5f1 9.44MB / 10.11MB 30.3s
+#25 sha256:8bc8046fd854f48a06a552ccc34dcb7c37121a0f7b3de373697ffdcf803aa5f1 10.11MB / 10.11MB 30.9s done
+#25 sha256:09e83a5196b608e2e21c45389f9b49f72d219416ae0e506f599e68eedf55e74d 0B / 166.14MB 31.0s
+#25 sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 11.53MB / 31.40MB 32.0s
+#25 sha256:a2116531d77be68dcf9c6e4fdefd4d5834f4dc06eaf6ab67a2d78b00a0140e6f 12.58MB / 25.37MB 32.7s
+#25 sha256:a2116531d77be68dcf9c6e4fdefd4d5834f4dc06eaf6ab67a2d78b00a0140e6f 14.68MB / 25.37MB 34.0s
+#25 sha256:a2116531d77be68dcf9c6e4fdefd4d5834f4dc06eaf6ab67a2d78b00a0140e6f 16.78MB / 25.37MB 34.8s
+#25 sha256:a2116531d77be68dcf9c6e4fdefd4d5834f4dc06eaf6ab67a2d78b00a0140e6f 18.87MB / 25.37MB 35.6s
+#25 sha256:09e83a5196b608e2e21c45389f9b49f72d219416ae0e506f599e68eedf55e74d 4.19MB / 166.14MB 36.1s
+#25 sha256:a2116531d77be68dcf9c6e4fdefd4d5834f4dc06eaf6ab67a2d78b00a0140e6f 20.97MB / 25.37MB 36.5s
+#25 sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 11.53MB / 31.40MB 37.0s
+#25 sha256:a2116531d77be68dcf9c6e4fdefd4d5834f4dc06eaf6ab67a2d78b00a0140e6f 23.07MB / 25.37MB 37.8s
+#25 sha256:a2116531d77be68dcf9c6e4fdefd4d5834f4dc06eaf6ab67a2d78b00a0140e6f 25.37MB / 25.37MB 39.6s done
+#25 sha256:d27b1102a054e718fa168d0babe461a0ef7eacc3e0eafe9bdeb7098ce27ab03a 0B / 14.19MB 39.6s
+#25 sha256:d27b1102a054e718fa168d0babe461a0ef7eacc3e0eafe9bdeb7098ce27ab03a 1.05MB / 14.19MB 40.7s
+#25 sha256:d27b1102a054e718fa168d0babe461a0ef7eacc3e0eafe9bdeb7098ce27ab03a 2.10MB / 14.19MB 41.0s
+#25 sha256:09e83a5196b608e2e21c45389f9b49f72d219416ae0e506f599e68eedf55e74d 10.49MB / 166.14MB 41.2s
+#25 sha256:d27b1102a054e718fa168d0babe461a0ef7eacc3e0eafe9bdeb7098ce27ab03a 3.15MB / 14.19MB 41.6s
+#25 sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 12.58MB / 31.40MB 42.1s
+#25 sha256:d27b1102a054e718fa168d0babe461a0ef7eacc3e0eafe9bdeb7098ce27ab03a 4.19MB / 14.19MB 42.1s
+#25 sha256:d27b1102a054e718fa168d0babe461a0ef7eacc3e0eafe9bdeb7098ce27ab03a 5.24MB / 14.19MB 43.0s
+#25 sha256:d27b1102a054e718fa168d0babe461a0ef7eacc3e0eafe9bdeb7098ce27ab03a 6.29MB / 14.19MB 43.5s
+#25 sha256:d27b1102a054e718fa168d0babe461a0ef7eacc3e0eafe9bdeb7098ce27ab03a 7.34MB / 14.19MB 43.9s
+#25 sha256:d27b1102a054e718fa168d0babe461a0ef7eacc3e0eafe9bdeb7098ce27ab03a 8.39MB / 14.19MB 45.1s
+#25 sha256:d27b1102a054e718fa168d0babe461a0ef7eacc3e0eafe9bdeb7098ce27ab03a 9.44MB / 14.19MB 45.3s
+#25 sha256:d27b1102a054e718fa168d0babe461a0ef7eacc3e0eafe9bdeb7098ce27ab03a 10.49MB / 14.19MB 45.8s
+#25 sha256:d27b1102a054e718fa168d0babe461a0ef7eacc3e0eafe9bdeb7098ce27ab03a 11.53MB / 14.19MB 46.0s
+#25 sha256:09e83a5196b608e2e21c45389f9b49f72d219416ae0e506f599e68eedf55e74d 15.73MB / 166.14MB 46.2s
+#25 sha256:d27b1102a054e718fa168d0babe461a0ef7eacc3e0eafe9bdeb7098ce27ab03a 12.58MB / 14.19MB 46.5s
+#25 sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 12.58MB / 31.40MB 47.1s
+#25 sha256:d27b1102a054e718fa168d0babe461a0ef7eacc3e0eafe9bdeb7098ce27ab03a 13.63MB / 14.19MB 47.6s
+#25 sha256:d27b1102a054e718fa168d0babe461a0ef7eacc3e0eafe9bdeb7098ce27ab03a 14.19MB / 14.19MB 48.0s done
+#25 sha256:09e83a5196b608e2e21c45389f9b49f72d219416ae0e506f599e68eedf55e74d 23.07MB / 166.14MB 51.4s
+#25 sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 12.58MB / 31.40MB 52.1s
+#25 sha256:09e83a5196b608e2e21c45389f9b49f72d219416ae0e506f599e68eedf55e74d 26.21MB / 166.14MB 56.4s
+#25 sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 13.63MB / 31.40MB 57.2s
+#25 ...
+
+#58 [paymentservice base 1/1] FROM docker.io/library/node:20.2.0-alpine@sha256:f25b0e9d3d116e267d4ff69a3a99c0f4cf6ae94eadd87f1bf7bd68ea3ff0bef7
+#58 sha256:f56be85fc22e46face30e2c3de3f7fe7c15f8fd7c4e5add29d7f64b87abdaa09 2.10MB / 3.37MB 52.3s
+#58 ...
+
+#25 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936
+#25 sha256:09e83a5196b608e2e21c45389f9b49f72d219416ae0e506f599e68eedf55e74d 30.41MB / 166.14MB 61.5s
+#25 sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 13.63MB / 31.40MB 62.3s
+#25 sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 15.73MB / 31.40MB 66.2s
+#25 sha256:09e83a5196b608e2e21c45389f9b49f72d219416ae0e506f599e68eedf55e74d 36.70MB / 166.14MB 66.5s
+#25 ...
+
+#58 [paymentservice base 1/1] FROM docker.io/library/node:20.2.0-alpine@sha256:f25b0e9d3d116e267d4ff69a3a99c0f4cf6ae94eadd87f1bf7bd68ea3ff0bef7
+#58 sha256:f56be85fc22e46face30e2c3de3f7fe7c15f8fd7c4e5add29d7f64b87abdaa09 3.37MB / 3.37MB 54.1s done
+#58 extracting sha256:f56be85fc22e46face30e2c3de3f7fe7c15f8fd7c4e5add29d7f64b87abdaa09 0.1s done
+#58 sha256:761cd71a92baaebace8515f2cca9222cf31d2d60ec505bd1ed18534aedba7d7c 2.10MB / 49.48MB 62.2s
+#58 ...
+
+#25 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936
+#25 sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 17.83MB / 31.40MB 71.0s
+#25 sha256:09e83a5196b608e2e21c45389f9b49f72d219416ae0e506f599e68eedf55e74d 39.85MB / 166.14MB 71.6s
+#25 sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 19.92MB / 31.40MB 75.4s
+#25 sha256:09e83a5196b608e2e21c45389f9b49f72d219416ae0e506f599e68eedf55e74d 46.14MB / 166.14MB 76.7s
+#25 ...
+
+#58 [paymentservice base 1/1] FROM docker.io/library/node:20.2.0-alpine@sha256:f25b0e9d3d116e267d4ff69a3a99c0f4cf6ae94eadd87f1bf7bd68ea3ff0bef7
+#58 sha256:761cd71a92baaebace8515f2cca9222cf31d2d60ec505bd1ed18534aedba7d7c 10.49MB / 49.48MB 72.5s
+#58 ...
+
+#25 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936
+#25 sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 20.97MB / 31.40MB 80.5s
+#25 sha256:09e83a5196b608e2e21c45389f9b49f72d219416ae0e506f599e68eedf55e74d 54.53MB / 166.14MB 81.1s
+#25 sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 20.97MB / 31.40MB 85.5s
+#25 sha256:09e83a5196b608e2e21c45389f9b49f72d219416ae0e506f599e68eedf55e74d 62.91MB / 166.14MB 85.9s
+#25 ...
+
+#58 [paymentservice base 1/1] FROM docker.io/library/node:20.2.0-alpine@sha256:f25b0e9d3d116e267d4ff69a3a99c0f4cf6ae94eadd87f1bf7bd68ea3ff0bef7
+#58 sha256:761cd71a92baaebace8515f2cca9222cf31d2d60ec505bd1ed18534aedba7d7c 23.07MB / 49.48MB 82.6s
+#58 ...
+
+#25 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936
+#25 sha256:09e83a5196b608e2e21c45389f9b49f72d219416ae0e506f599e68eedf55e74d 71.30MB / 166.14MB 90.3s
+#25 sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 20.97MB / 31.40MB 90.6s
+#25 sha256:09e83a5196b608e2e21c45389f9b49f72d219416ae0e506f599e68eedf55e74d 79.69MB / 166.14MB 94.4s
+#25 sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 20.97MB / 31.40MB 95.7s
+#25 ...
+
+#58 [paymentservice base 1/1] FROM docker.io/library/node:20.2.0-alpine@sha256:f25b0e9d3d116e267d4ff69a3a99c0f4cf6ae94eadd87f1bf7bd68ea3ff0bef7
+#58 sha256:761cd71a92baaebace8515f2cca9222cf31d2d60ec505bd1ed18534aedba7d7c 33.55MB / 49.48MB 92.9s
+#58 ...
+
+#25 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936
+#25 sha256:09e83a5196b608e2e21c45389f9b49f72d219416ae0e506f599e68eedf55e74d 84.93MB / 166.14MB 99.4s
+#25 sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 20.97MB / 31.40MB 100.7s
+#25 sha256:09e83a5196b608e2e21c45389f9b49f72d219416ae0e506f599e68eedf55e74d 90.18MB / 166.14MB 104.5s
+#25 sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 22.02MB / 31.40MB 105.9s
+#25 ...
+
+#58 [paymentservice base 1/1] FROM docker.io/library/node:20.2.0-alpine@sha256:f25b0e9d3d116e267d4ff69a3a99c0f4cf6ae94eadd87f1bf7bd68ea3ff0bef7
+#58 sha256:761cd71a92baaebace8515f2cca9222cf31d2d60ec505bd1ed18534aedba7d7c 38.80MB / 49.48MB 103.1s
+#58 ...
+
+#25 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936
+#25 sha256:09e83a5196b608e2e21c45389f9b49f72d219416ae0e506f599e68eedf55e74d 96.47MB / 166.14MB 109.6s
+#25 sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 22.02MB / 31.40MB 111.0s
+#25 sha256:09e83a5196b608e2e21c45389f9b49f72d219416ae0e506f599e68eedf55e74d 102.76MB / 166.14MB 114.7s
+#25 sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 22.02MB / 31.40MB 116.0s
+#25 ...
+
+#58 [paymentservice base 1/1] FROM docker.io/library/node:20.2.0-alpine@sha256:f25b0e9d3d116e267d4ff69a3a99c0f4cf6ae94eadd87f1bf7bd68ea3ff0bef7
+#58 sha256:761cd71a92baaebace8515f2cca9222cf31d2d60ec505bd1ed18534aedba7d7c 46.14MB / 49.48MB 113.3s
+#58 ...
+
+#25 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936
+#25 sha256:09e83a5196b608e2e21c45389f9b49f72d219416ae0e506f599e68eedf55e74d 108.00MB / 166.14MB 119.8s
+#25 sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 22.02MB / 31.40MB 121.1s
+#25 sha256:09e83a5196b608e2e21c45389f9b49f72d219416ae0e506f599e68eedf55e74d 111.15MB / 166.14MB 124.8s
+#25 sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 23.07MB / 31.40MB 126.1s
+#25 ...
+
+#58 [paymentservice base 1/1] FROM docker.io/library/node:20.2.0-alpine@sha256:f25b0e9d3d116e267d4ff69a3a99c0f4cf6ae94eadd87f1bf7bd68ea3ff0bef7
+#58 sha256:761cd71a92baaebace8515f2cca9222cf31d2d60ec505bd1ed18534aedba7d7c 49.48MB / 49.48MB 119.9s done
+#58 extracting sha256:761cd71a92baaebace8515f2cca9222cf31d2d60ec505bd1ed18534aedba7d7c 2.3s done
+#58 sha256:e460fd2efeda5f10001bda704768610fba7ac2df61fdeac057c1672944d7b5a3 0B / 2.35MB 122.4s
+#58 ...
+
+#25 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936
+#25 sha256:09e83a5196b608e2e21c45389f9b49f72d219416ae0e506f599e68eedf55e74d 114.29MB / 166.14MB 130.0s
+#25 ...
+
+#58 [paymentservice base 1/1] FROM docker.io/library/node:20.2.0-alpine@sha256:f25b0e9d3d116e267d4ff69a3a99c0f4cf6ae94eadd87f1bf7bd68ea3ff0bef7
+#58 sha256:e460fd2efeda5f10001bda704768610fba7ac2df61fdeac057c1672944d7b5a3 2.35MB / 2.35MB 124.7s done
+#58 extracting sha256:e460fd2efeda5f10001bda704768610fba7ac2df61fdeac057c1672944d7b5a3 0.1s done
+#58 sha256:ff35990e24b76cd57db5a995923f34254e58cb82b459a636911836ff886f33a8 449B / 449B 125.3s done
+#58 extracting sha256:ff35990e24b76cd57db5a995923f34254e58cb82b459a636911836ff886f33a8 done
+#58 DONE 125.4s
+
+#25 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936
+#25 sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 23.07MB / 31.40MB 131.2s
+#25 ...
+
+#68 [paymentservice without-grpc-health-probe-bin 1/3] WORKDIR /usr/src/app
+#68 DONE 0.2s
+
+#25 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936
+#25 sha256:09e83a5196b608e2e21c45389f9b49f72d219416ae0e506f599e68eedf55e74d 116.39MB / 166.14MB 135.1s
+#25 sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 24.12MB / 31.40MB 136.4s
+#25 sha256:09e83a5196b608e2e21c45389f9b49f72d219416ae0e506f599e68eedf55e74d 118.49MB / 166.14MB 140.2s
+#25 ...
+
+#60 [adservice without-grpc-health-probe-bin 1/5] FROM docker.io/library/eclipse-temurin:19.0.1_10-jre-alpine@sha256:a75ea64f676041562cd7d3a54a9764bbfb357b2bf1bebf46e2af73e62d32e36c
+#60 sha256:8921db27df2831fa6eaa85321205a2470c669b855f3ec95d5a3c2b46de0442c9 3.37MB / 3.37MB 130.7s done
+#60 extracting sha256:8921db27df2831fa6eaa85321205a2470c669b855f3ec95d5a3c2b46de0442c9 0.1s done
+#60 sha256:846e3b32ee5a149e3ccb99051cdb52e96e11488293cdf72ee88168c88dd335c7 5.24MB / 12.02MB 135.1s
+#60 sha256:846e3b32ee5a149e3ccb99051cdb52e96e11488293cdf72ee88168c88dd335c7 6.29MB / 12.02MB 135.2s
+#60 ...
+
+#69 [paymentservice builder 1/4] RUN apk add --update --no-cache     python3     make     g++
+#69 0.371 fetch https://dl-cdn.alpinelinux.org/alpine/v3.17/main/x86_64/APKINDEX.tar.gz
+#69 4.766 fetch https://dl-cdn.alpinelinux.org/alpine/v3.17/community/x86_64/APKINDEX.tar.gz
+#69 10.15 (1/25) Upgrading musl (1.2.3-r4 -> 1.2.3-r6)
+#69 ...
+
+#25 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936
+#25 sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 24.12MB / 31.40MB 141.6s
+#25 sha256:09e83a5196b608e2e21c45389f9b49f72d219416ae0e506f599e68eedf55e74d 121.63MB / 166.14MB 145.4s
+#25 sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 25.17MB / 31.40MB 146.7s
+#25 sha256:09e83a5196b608e2e21c45389f9b49f72d219416ae0e506f599e68eedf55e74d 123.73MB / 166.14MB 150.4s
+#25 ...
+
+#60 [adservice without-grpc-health-probe-bin 1/5] FROM docker.io/library/eclipse-temurin:19.0.1_10-jre-alpine@sha256:a75ea64f676041562cd7d3a54a9764bbfb357b2bf1bebf46e2af73e62d32e36c
+#60 sha256:846e3b32ee5a149e3ccb99051cdb52e96e11488293cdf72ee88168c88dd335c7 12.02MB / 12.02MB 140.1s done
+#60 extracting sha256:846e3b32ee5a149e3ccb99051cdb52e96e11488293cdf72ee88168c88dd335c7 0.5s done
+#60 sha256:a8cf960fcec52565486b0993f2f077c7cffdb436a39203d7e5eaa86d76100240 0B / 49.14MB 145.3s
+#60 ...
+
+#25 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936
+#25 sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 25.17MB / 31.40MB 151.7s
+#25 ...
+
+#69 [paymentservice builder 1/4] RUN apk add --update --no-cache     python3     make     g++
+#69 11.37 (2/25) Installing libstdc++-dev (12.2.1_git20220924-r4)
+#69 ...
+
+#25 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936
+#25 sha256:09e83a5196b608e2e21c45389f9b49f72d219416ae0e506f599e68eedf55e74d 124.78MB / 166.14MB 155.5s
+#25 sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 26.21MB / 31.40MB 156.7s
+#25 sha256:09e83a5196b608e2e21c45389f9b49f72d219416ae0e506f599e68eedf55e74d 126.88MB / 166.14MB 160.5s
+#25 ...
+
+#60 [adservice without-grpc-health-probe-bin 1/5] FROM docker.io/library/eclipse-temurin:19.0.1_10-jre-alpine@sha256:a75ea64f676041562cd7d3a54a9764bbfb357b2bf1bebf46e2af73e62d32e36c
+#60 sha256:a8cf960fcec52565486b0993f2f077c7cffdb436a39203d7e5eaa86d76100240 5.24MB / 49.14MB 155.6s
+#60 ...
+
+#25 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936
+#25 sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 26.21MB / 31.40MB 161.9s
+#25 sha256:09e83a5196b608e2e21c45389f9b49f72d219416ae0e506f599e68eedf55e74d 128.97MB / 166.14MB 165.6s
+#25 sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 27.26MB / 31.40MB 167.0s
+#25 sha256:09e83a5196b608e2e21c45389f9b49f72d219416ae0e506f599e68eedf55e74d 131.07MB / 166.14MB 170.8s
+#25 ...
+
+#60 [adservice without-grpc-health-probe-bin 1/5] FROM docker.io/library/eclipse-temurin:19.0.1_10-jre-alpine@sha256:a75ea64f676041562cd7d3a54a9764bbfb357b2bf1bebf46e2af73e62d32e36c
+#60 sha256:a8cf960fcec52565486b0993f2f077c7cffdb436a39203d7e5eaa86d76100240 7.34MB / 49.14MB 165.9s
+#60 ...
+
+#69 [paymentservice builder 1/4] RUN apk add --update --no-cache     python3     make     g++
+#69 30.84 (3/25) Installing binutils (2.39-r2)
+#69 32.51 (4/25) Installing libgomp (12.2.1_git20220924-r4)
+#69 33.24 (5/25) Installing libatomic (12.2.1_git20220924-r4)
+#69 33.47 (6/25) Installing gmp (6.2.1-r2)
+#69 34.01 (7/25) Installing isl25 (0.25-r1)
+#69 35.18 (8/25) Installing mpfr4 (4.1.0-r0)
+#69 35.98 (9/25) Installing mpc1 (1.2.1-r1)
+#69 36.08 (10/25) Installing gcc (12.2.1_git20220924-r4)
+#69 ...
+
+#25 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936
+#25 sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 27.26MB / 31.40MB 172.2s
+#25 sha256:09e83a5196b608e2e21c45389f9b49f72d219416ae0e506f599e68eedf55e74d 133.17MB / 166.14MB 176.0s
+#25 sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 28.31MB / 31.40MB 177.3s
+#25 sha256:09e83a5196b608e2e21c45389f9b49f72d219416ae0e506f599e68eedf55e74d 135.27MB / 166.14MB 181.2s
+#25 ...
+
+#60 [adservice without-grpc-health-probe-bin 1/5] FROM docker.io/library/eclipse-temurin:19.0.1_10-jre-alpine@sha256:a75ea64f676041562cd7d3a54a9764bbfb357b2bf1bebf46e2af73e62d32e36c
+#60 sha256:a8cf960fcec52565486b0993f2f077c7cffdb436a39203d7e5eaa86d76100240 8.39MB / 49.14MB 176.1s
+#60 ...
+
+#25 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936
+#25 sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 28.31MB / 31.40MB 182.3s
+#25 sha256:09e83a5196b608e2e21c45389f9b49f72d219416ae0e506f599e68eedf55e74d 138.41MB / 166.14MB 186.4s
+#25 sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 29.36MB / 31.40MB 187.4s
+#25 sha256:09e83a5196b608e2e21c45389f9b49f72d219416ae0e506f599e68eedf55e74d 143.65MB / 166.14MB 191.5s
+#25 ...
+
+#60 [adservice without-grpc-health-probe-bin 1/5] FROM docker.io/library/eclipse-temurin:19.0.1_10-jre-alpine@sha256:a75ea64f676041562cd7d3a54a9764bbfb357b2bf1bebf46e2af73e62d32e36c
+#60 sha256:a8cf960fcec52565486b0993f2f077c7cffdb436a39203d7e5eaa86d76100240 8.39MB / 49.14MB 186.3s
+#60 ...
+
+#25 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936
+#25 sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 30.41MB / 31.40MB 192.5s
+#25 sha256:09e83a5196b608e2e21c45389f9b49f72d219416ae0e506f599e68eedf55e74d 147.85MB / 166.14MB 196.5s
+#25 sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 31.40MB / 31.40MB 197.1s done
+#25 extracting sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c
+#25 extracting sha256:9e3ea8720c6de96cc9ad544dddc695a3ab73f5581c5d954e0504cc4f80fb5e5c 3.3s done
+#25 extracting sha256:2436f232d04089283ab348e14d6430f339b3b2652272096252202ea0c337aac4
+#25 extracting sha256:2436f232d04089283ab348e14d6430f339b3b2652272096252202ea0c337aac4 0.6s done
+#25 extracting sha256:9a2730c0a140be53b336b97bb17edad079ea5fcf128447d1c8ee2ef7fb59d048 0.1s
+#25 sha256:09e83a5196b608e2e21c45389f9b49f72d219416ae0e506f599e68eedf55e74d 153.09MB / 166.14MB 201.6s
+#25 extracting sha256:9a2730c0a140be53b336b97bb17edad079ea5fcf128447d1c8ee2ef7fb59d048 1.3s done
+#25 extracting sha256:6bb6cfc8813743a8fc9cdb51e497b0262dfb4e44f4a5d50841b1b0a1b2677c1d done
+#25 extracting sha256:8bc8046fd854f48a06a552ccc34dcb7c37121a0f7b3de373697ffdcf803aa5f1
+#25 ...
+
+#60 [adservice without-grpc-health-probe-bin 1/5] FROM docker.io/library/eclipse-temurin:19.0.1_10-jre-alpine@sha256:a75ea64f676041562cd7d3a54a9764bbfb357b2bf1bebf46e2af73e62d32e36c
+#60 sha256:a8cf960fcec52565486b0993f2f077c7cffdb436a39203d7e5eaa86d76100240 9.44MB / 49.14MB 196.5s
+#60 sha256:02a6b95e438483873516c83dc94ee69d3c89fcd42b797ad18464ed512fefca8e 160B / 160B 195.2s done
+#60 ...
+
+#25 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936
+#25 extracting sha256:8bc8046fd854f48a06a552ccc34dcb7c37121a0f7b3de373697ffdcf803aa5f1 0.3s done
+#25 extracting sha256:a2116531d77be68dcf9c6e4fdefd4d5834f4dc06eaf6ab67a2d78b00a0140e6f
+#25 extracting sha256:a2116531d77be68dcf9c6e4fdefd4d5834f4dc06eaf6ab67a2d78b00a0140e6f 1.7s done
+#25 sha256:09e83a5196b608e2e21c45389f9b49f72d219416ae0e506f599e68eedf55e74d 159.38MB / 166.14MB 206.7s
+#25 ...
+
+#69 [paymentservice builder 1/4] RUN apk add --update --no-cache     python3     make     g++
+#69 66.22 (11/25) Installing musl-dev (1.2.3-r6)
+#69 67.71 (12/25) Installing libc-dev (0.7.2-r3)
+#69 67.91 (13/25) Installing g++ (12.2.1_git20220924-r4)
+#69 73.46 (14/25) Installing make (4.3-r1)
+#69 73.60 (15/25) Installing libexpat (2.6.4-r0)
+#69 73.67 (16/25) Installing libbz2 (1.0.8-r4)
+#69 73.78 (17/25) Installing libffi (3.4.4-r0)
+#69 73.92 (18/25) Installing gdbm (1.23-r0)
+#69 74.09 (19/25) Installing xz-libs (5.2.9-r0)
+#69 74.29 (20/25) Installing mpdecimal (2.5.1-r1)
+#69 74.54 (21/25) Installing ncurses-terminfo-base (6.3_p20221119-r1)
+#69 74.70 (22/25) Installing ncurses-libs (6.3_p20221119-r1)
+#69 74.93 (23/25) Installing readline (8.2.0-r0)
+#69 75.10 (24/25) Installing sqlite-libs (3.40.1-r1)
+#69 75.44 (25/25) Installing python3 (3.10.15-r0)
+#69 ...
+
+#25 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936
+#25 ...
+
+#59 [adservice builder 1/9] FROM docker.io/library/eclipse-temurin:19@sha256:f3fbf1ad599d4b5dbdd7ceb55708d10cb9fafb08e094ef91e92aa63b520a232e
+#59 sha256:74ac377868f863e123f24c409f79709f7563fa464557c36a09cf6f85c8b92b7f 5.24MB / 30.43MB 205.3s
+#59 ...
+
+#25 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936
+#25 sha256:09e83a5196b608e2e21c45389f9b49f72d219416ae0e506f599e68eedf55e74d 163.58MB / 166.14MB 211.9s
+#25 ...
+
+#69 [paymentservice builder 1/4] RUN apk add --update --no-cache     python3     make     g++
+#69 81.38 Executing busybox-1.35.0-r29.trigger
+#69 81.40 OK: 287 MiB in 41 packages
+#69 DONE 81.6s
+
+#70 [paymentservice builder 2/4] WORKDIR /usr/src/app
+#70 DONE 0.0s
+
+#25 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936
+#25 ...
+
+#60 [adservice without-grpc-health-probe-bin 1/5] FROM docker.io/library/eclipse-temurin:19.0.1_10-jre-alpine@sha256:a75ea64f676041562cd7d3a54a9764bbfb357b2bf1bebf46e2af73e62d32e36c
+#60 sha256:a8cf960fcec52565486b0993f2f077c7cffdb436a39203d7e5eaa86d76100240 10.49MB / 49.14MB 206.7s
+#60 ...
+
+#71 [paymentservice builder 3/4] COPY package*.json ./
+#71 DONE 0.0s
+
+#72 [currencyservice builder 3/4] COPY package*.json ./
 #72 DONE 0.0s
 
-#73 [currencyservice] exporting to image
-#73 exporting layers done
-#73 writing image sha256:0d53dcd9517609c4e8fd76d16e1bb754e42536c4cc3a88957a16e0dbc2ddd394 done
-#73 naming to docker.io/library/google-microservices-devsecops-currencyservice done
-#73 DONE 0.0s
+#60 [adservice without-grpc-health-probe-bin 1/5] FROM docker.io/library/eclipse-temurin:19.0.1_10-jre-alpine@sha256:a75ea64f676041562cd7d3a54a9764bbfb357b2bf1bebf46e2af73e62d32e36c
+#60 ...
 
-#74 [loadgenerator stage-2 3/4] COPY --from=builder /install /usr/local
-#74 CACHED
+#25 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936
+#25 sha256:09e83a5196b608e2e21c45389f9b49f72d219416ae0e506f599e68eedf55e74d 166.14MB / 166.14MB 213.7s done
+#25 extracting sha256:09e83a5196b608e2e21c45389f9b49f72d219416ae0e506f599e68eedf55e74d
+#25 extracting sha256:09e83a5196b608e2e21c45389f9b49f72d219416ae0e506f599e68eedf55e74d 5.1s
+#25 ...
 
-#75 [loadgenerator builder 1/3] RUN apk update     && apk add --no-cache wget g++ linux-headers     && rm -rf /var/cache/apk/*
-#75 CACHED
+#59 [adservice builder 1/9] FROM docker.io/library/eclipse-temurin:19@sha256:f3fbf1ad599d4b5dbdd7ceb55708d10cb9fafb08e094ef91e92aa63b520a232e
+#59 sha256:74ac377868f863e123f24c409f79709f7563fa464557c36a09cf6f85c8b92b7f 12.58MB / 30.43MB 213.3s
+#59 sha256:a182a611d05b01879f065473c49fb968b8d30312f931350ea07af1c46aa8b4f9 5.24MB / 16.98MB 213.3s
+#59 sha256:a182a611d05b01879f065473c49fb968b8d30312f931350ea07af1c46aa8b4f9 6.29MB / 16.98MB 213.5s
+#59 sha256:a182a611d05b01879f065473c49fb968b8d30312f931350ea07af1c46aa8b4f9 7.34MB / 16.98MB 215.5s
+#59 sha256:74ac377868f863e123f24c409f79709f7563fa464557c36a09cf6f85c8b92b7f 14.68MB / 30.43MB 215.9s
+#59 ...
 
-#76 [loadgenerator stage-2 1/4] RUN apk update     && apk add --no-cache libstdc++     && rm -rf /var/cache/apk/*
-#76 CACHED
+#25 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:7.0.302@sha256:5c638e77052b5ae4f6f1da3885035b510fc379d2ce4be274c70679114bcdb936
+#25 extracting sha256:09e83a5196b608e2e21c45389f9b49f72d219416ae0e506f599e68eedf55e74d 7.3s done
+#25 extracting sha256:d27b1102a054e718fa168d0babe461a0ef7eacc3e0eafe9bdeb7098ce27ab03a 0.9s done
+#25 DONE 222.2s
 
-#77 [loadgenerator stage-2 2/4] WORKDIR /loadgen
-#77 CACHED
+#59 [adservice builder 1/9] FROM docker.io/library/eclipse-temurin:19@sha256:f3fbf1ad599d4b5dbdd7ceb55708d10cb9fafb08e094ef91e92aa63b520a232e
+#59 ...
 
-#78 [loadgenerator builder 3/3] RUN pip install --prefix="/install" -r requirements.txt
-#78 CACHED
+#60 [adservice without-grpc-health-probe-bin 1/5] FROM docker.io/library/eclipse-temurin:19.0.1_10-jre-alpine@sha256:a75ea64f676041562cd7d3a54a9764bbfb357b2bf1bebf46e2af73e62d32e36c
+#60 sha256:a8cf960fcec52565486b0993f2f077c7cffdb436a39203d7e5eaa86d76100240 14.68MB / 49.14MB 216.1s
+#60 ...
 
-#79 [loadgenerator builder 2/3] COPY requirements.txt .
-#79 CACHED
+#59 [adservice builder 1/9] FROM docker.io/library/eclipse-temurin:19@sha256:f3fbf1ad599d4b5dbdd7ceb55708d10cb9fafb08e094ef91e92aa63b520a232e
+#59 sha256:a182a611d05b01879f065473c49fb968b8d30312f931350ea07af1c46aa8b4f9 8.39MB / 16.98MB 216.4s
+#59 ...
 
-#80 [productcatalogservice internal] load build context
-#80 transferring context: 470B done
-#80 DONE 0.0s
+#73 [cartservice builder 2/6] WORKDIR /app
+#73 DONE 0.5s
 
-#81 [paymentservice] resolving provenance for metadata file
+#59 [adservice builder 1/9] FROM docker.io/library/eclipse-temurin:19@sha256:f3fbf1ad599d4b5dbdd7ceb55708d10cb9fafb08e094ef91e92aa63b520a232e
+#59 ...
+
+#74 [cartservice builder 3/6] COPY cartservice.csproj .
+#74 DONE 0.0s
+
+#59 [adservice builder 1/9] FROM docker.io/library/eclipse-temurin:19@sha256:f3fbf1ad599d4b5dbdd7ceb55708d10cb9fafb08e094ef91e92aa63b520a232e
+#59 ...
+
+#75 [paymentservice builder 4/4] RUN npm install --only=production
+#75 1.328 npm WARN config only Use `--omit=dev` to omit dev dependencies from the install.
+#75 ...
+
+#76 [currencyservice builder 4/4] RUN npm install --only=production
+#76 1.455 npm WARN config only Use `--omit=dev` to omit dev dependencies from the install.
+#76 ...
+
+#59 [adservice builder 1/9] FROM docker.io/library/eclipse-temurin:19@sha256:f3fbf1ad599d4b5dbdd7ceb55708d10cb9fafb08e094ef91e92aa63b520a232e
+#59 sha256:a182a611d05b01879f065473c49fb968b8d30312f931350ea07af1c46aa8b4f9 9.44MB / 16.98MB 220.1s
+#59 sha256:74ac377868f863e123f24c409f79709f7563fa464557c36a09cf6f85c8b92b7f 15.73MB / 30.43MB 221.1s
+#59 sha256:a182a611d05b01879f065473c49fb968b8d30312f931350ea07af1c46aa8b4f9 10.49MB / 16.98MB 223.3s
+#59 ...
+
+#76 [currencyservice builder 4/4] RUN npm install --only=production
+#76 17.60 npm WARN deprecated @opentelemetry/sdk-metrics-base@0.26.0: Please use @opentelemetry/sdk-metrics
+#76 18.46 npm WARN deprecated @opentelemetry/exporter-otlp-grpc@0.26.0: Please use trace and metric specific exporters @opentelemetry/exporter-trace-otlp-grpc and @opentelemetry/exporter-metrics-otlp-grpc
+#76 18.47 npm WARN deprecated @opentelemetry/api-metrics@0.26.0: Please use @opentelemetry/api >= 1.3.0
+#76 18.65 npm WARN deprecated @opentelemetry/exporter-otlp-http@0.26.0: Please use trace and metric specific exporters @opentelemetry/exporter-trace-otlp-http and @opentelemetry/exporter-metrics-otlp-http
+#76 ...
+
+#60 [adservice without-grpc-health-probe-bin 1/5] FROM docker.io/library/eclipse-temurin:19.0.1_10-jre-alpine@sha256:a75ea64f676041562cd7d3a54a9764bbfb357b2bf1bebf46e2af73e62d32e36c
+#60 sha256:a8cf960fcec52565486b0993f2f077c7cffdb436a39203d7e5eaa86d76100240 15.73MB / 49.14MB 226.4s
+#60 ...
+
+#59 [adservice builder 1/9] FROM docker.io/library/eclipse-temurin:19@sha256:f3fbf1ad599d4b5dbdd7ceb55708d10cb9fafb08e094ef91e92aa63b520a232e
+#59 sha256:74ac377868f863e123f24c409f79709f7563fa464557c36a09cf6f85c8b92b7f 17.83MB / 30.43MB 226.5s
+#59 sha256:a182a611d05b01879f065473c49fb968b8d30312f931350ea07af1c46aa8b4f9 11.53MB / 16.98MB 226.5s
+#59 ...
+
+#77 [cartservice builder 4/6] RUN dotnet restore cartservice.csproj -r linux-musl-x64
+#77 4.259   Determining projects to restore...
+#77 ...
+
+#59 [adservice builder 1/9] FROM docker.io/library/eclipse-temurin:19@sha256:f3fbf1ad599d4b5dbdd7ceb55708d10cb9fafb08e094ef91e92aa63b520a232e
+#59 sha256:a182a611d05b01879f065473c49fb968b8d30312f931350ea07af1c46aa8b4f9 12.58MB / 16.98MB 230.8s
+#59 sha256:74ac377868f863e123f24c409f79709f7563fa464557c36a09cf6f85c8b92b7f 18.87MB / 30.43MB 231.5s
+#59 sha256:a182a611d05b01879f065473c49fb968b8d30312f931350ea07af1c46aa8b4f9 13.63MB / 16.98MB 235.1s
+#59 ...
+
+#75 [paymentservice builder 4/4] RUN npm install --only=production
+#75 18.97 npm WARN deprecated @opentelemetry/sdk-metrics-base@0.26.0: Please use @opentelemetry/sdk-metrics
+#75 22.38 npm WARN deprecated @opentelemetry/exporter-otlp-grpc@0.26.0: Please use trace and metric specific exporters @opentelemetry/exporter-trace-otlp-grpc and @opentelemetry/exporter-metrics-otlp-grpc
+#75 22.39 npm WARN deprecated @opentelemetry/api-metrics@0.26.0: Please use @opentelemetry/api >= 1.3.0
+#75 22.47 npm WARN deprecated @opentelemetry/exporter-otlp-http@0.26.0: Please use trace and metric specific exporters @opentelemetry/exporter-trace-otlp-http and @opentelemetry/exporter-metrics-otlp-http
+#75 ...
+
+#59 [adservice builder 1/9] FROM docker.io/library/eclipse-temurin:19@sha256:f3fbf1ad599d4b5dbdd7ceb55708d10cb9fafb08e094ef91e92aa63b520a232e
+#59 ...
+
+#60 [adservice without-grpc-health-probe-bin 1/5] FROM docker.io/library/eclipse-temurin:19.0.1_10-jre-alpine@sha256:a75ea64f676041562cd7d3a54a9764bbfb357b2bf1bebf46e2af73e62d32e36c
+#60 sha256:a8cf960fcec52565486b0993f2f077c7cffdb436a39203d7e5eaa86d76100240 16.78MB / 49.14MB 236.6s
+#60 ...
+
+#59 [adservice builder 1/9] FROM docker.io/library/eclipse-temurin:19@sha256:f3fbf1ad599d4b5dbdd7ceb55708d10cb9fafb08e094ef91e92aa63b520a232e
+#59 sha256:74ac377868f863e123f24c409f79709f7563fa464557c36a09cf6f85c8b92b7f 19.92MB / 30.43MB 236.6s
+#59 sha256:a182a611d05b01879f065473c49fb968b8d30312f931350ea07af1c46aa8b4f9 14.68MB / 16.98MB 237.1s
+#59 sha256:a182a611d05b01879f065473c49fb968b8d30312f931350ea07af1c46aa8b4f9 15.73MB / 16.98MB 238.7s
+#59 sha256:74ac377868f863e123f24c409f79709f7563fa464557c36a09cf6f85c8b92b7f 22.02MB / 30.43MB 239.5s
+#59 sha256:a182a611d05b01879f065473c49fb968b8d30312f931350ea07af1c46aa8b4f9 16.78MB / 16.98MB 239.8s
+#59 sha256:a182a611d05b01879f065473c49fb968b8d30312f931350ea07af1c46aa8b4f9 16.98MB / 16.98MB 240.0s done
+#59 sha256:426329e266e460bc5ce7cd2ad6d6841e68381cc09efc53c243182eb221cce102 0B / 201.12MB 240.1s
+#59 sha256:74ac377868f863e123f24c409f79709f7563fa464557c36a09cf6f85c8b92b7f 24.12MB / 30.43MB 241.4s
+#59 sha256:74ac377868f863e123f24c409f79709f7563fa464557c36a09cf6f85c8b92b7f 26.21MB / 30.43MB 243.6s
+#59 sha256:74ac377868f863e123f24c409f79709f7563fa464557c36a09cf6f85c8b92b7f 28.31MB / 30.43MB 244.7s
+#59 sha256:426329e266e460bc5ce7cd2ad6d6841e68381cc09efc53c243182eb221cce102 2.10MB / 201.12MB 245.2s
+#59 sha256:74ac377868f863e123f24c409f79709f7563fa464557c36a09cf6f85c8b92b7f 30.43MB / 30.43MB 246.4s done
+#59 sha256:5f4059624ea044152b112a63a260d905e9e04009d3d4bdc57dd873c36824574d 0B / 174B 246.5s
+#59 extracting sha256:74ac377868f863e123f24c409f79709f7563fa464557c36a09cf6f85c8b92b7f
+#59 ...
+
+#60 [adservice without-grpc-health-probe-bin 1/5] FROM docker.io/library/eclipse-temurin:19.0.1_10-jre-alpine@sha256:a75ea64f676041562cd7d3a54a9764bbfb357b2bf1bebf46e2af73e62d32e36c
+#60 sha256:a8cf960fcec52565486b0993f2f077c7cffdb436a39203d7e5eaa86d76100240 20.97MB / 49.14MB 246.8s
+#60 ...
+
+#59 [adservice builder 1/9] FROM docker.io/library/eclipse-temurin:19@sha256:f3fbf1ad599d4b5dbdd7ceb55708d10cb9fafb08e094ef91e92aa63b520a232e
+#59 sha256:5f4059624ea044152b112a63a260d905e9e04009d3d4bdc57dd873c36824574d 174B / 174B 247.2s done
+#59 sha256:426329e266e460bc5ce7cd2ad6d6841e68381cc09efc53c243182eb221cce102 5.24MB / 201.12MB 250.2s
+#59 extracting sha256:74ac377868f863e123f24c409f79709f7563fa464557c36a09cf6f85c8b92b7f 5.0s
+#59 extracting sha256:74ac377868f863e123f24c409f79709f7563fa464557c36a09cf6f85c8b92b7f 5.5s done
+#59 extracting sha256:a182a611d05b01879f065473c49fb968b8d30312f931350ea07af1c46aa8b4f9
+#59 extracting sha256:a182a611d05b01879f065473c49fb968b8d30312f931350ea07af1c46aa8b4f9 1.7s done
+#59 ...
+
+#61 [recommendationservice base 1/1] FROM docker.io/library/python:3.10.8-slim@sha256:49749648f4426b31b20fca55ad854caa55ff59dc604f2f76b57d814e0a47c181
+#61 sha256:025c56f98b679f70b7a54241917e56da7b59ab9d2defecc6ebdb0bf2750484bb 5.24MB / 31.41MB 254.3s
+#61 sha256:025c56f98b679f70b7a54241917e56da7b59ab9d2defecc6ebdb0bf2750484bb 7.34MB / 31.41MB 255.3s
+#61 ...
+
+#60 [adservice without-grpc-health-probe-bin 1/5] FROM docker.io/library/eclipse-temurin:19.0.1_10-jre-alpine@sha256:a75ea64f676041562cd7d3a54a9764bbfb357b2bf1bebf46e2af73e62d32e36c
+#60 sha256:a8cf960fcec52565486b0993f2f077c7cffdb436a39203d7e5eaa86d76100240 29.36MB / 49.14MB 257.1s
+#60 ...
+
+#61 [recommendationservice base 1/1] FROM docker.io/library/python:3.10.8-slim@sha256:49749648f4426b31b20fca55ad854caa55ff59dc604f2f76b57d814e0a47c181
+#61 sha256:025c56f98b679f70b7a54241917e56da7b59ab9d2defecc6ebdb0bf2750484bb 9.44MB / 31.41MB 258.1s
+#61 sha256:025c56f98b679f70b7a54241917e56da7b59ab9d2defecc6ebdb0bf2750484bb 11.53MB / 31.41MB 260.5s
+#61 ...
+
+#75 [paymentservice builder 4/4] RUN npm install --only=production
+#75 55.18 
+#75 55.18 added 325 packages, and audited 326 packages in 54s
+#75 55.18 
+#75 55.18 25 packages are looking for funding
+#75 55.18   run `npm fund` for details
+#75 55.24 
+#75 55.24 15 vulnerabilities (4 low, 3 moderate, 6 high, 2 critical)
+#75 55.24 
+#75 55.24 To address issues that do not require attention, run:
+#75 55.24   npm audit fix
+#75 55.24 
+#75 55.24 To address all issues (including breaking changes), run:
+#75 55.24   npm audit fix --force
+#75 55.24 
+#75 55.24 Run `npm audit` for details.
+#75 55.25 npm notice 
+#75 55.25 npm notice New major version of npm available! 9.6.6 -> 11.6.1
+#75 55.25 npm notice Changelog: <https://github.com/npm/cli/releases/tag/v11.6.1>
+#75 55.25 npm notice Run `npm install -g npm@11.6.1` to update!
+#75 55.25 npm notice 
+#75 DONE 55.7s
+
+#61 [recommendationservice base 1/1] FROM docker.io/library/python:3.10.8-slim@sha256:49749648f4426b31b20fca55ad854caa55ff59dc604f2f76b57d814e0a47c181
+#61 ...
+
+#60 [adservice without-grpc-health-probe-bin 1/5] FROM docker.io/library/eclipse-temurin:19.0.1_10-jre-alpine@sha256:a75ea64f676041562cd7d3a54a9764bbfb357b2bf1bebf46e2af73e62d32e36c
+#60 sha256:a8cf960fcec52565486b0993f2f077c7cffdb436a39203d7e5eaa86d76100240 32.51MB / 49.14MB 262.5s
+#60 ...
+
+#61 [recommendationservice base 1/1] FROM docker.io/library/python:3.10.8-slim@sha256:49749648f4426b31b20fca55ad854caa55ff59dc604f2f76b57d814e0a47c181
+#61 sha256:025c56f98b679f70b7a54241917e56da7b59ab9d2defecc6ebdb0bf2750484bb 13.63MB / 31.41MB 264.1s
+#61 ...
+
+#59 [adservice builder 1/9] FROM docker.io/library/eclipse-temurin:19@sha256:f3fbf1ad599d4b5dbdd7ceb55708d10cb9fafb08e094ef91e92aa63b520a232e
+#59 sha256:426329e266e460bc5ce7cd2ad6d6841e68381cc09efc53c243182eb221cce102 14.68MB / 201.12MB 264.8s
+#59 ...
+
+#61 [recommendationservice base 1/1] FROM docker.io/library/python:3.10.8-slim@sha256:49749648f4426b31b20fca55ad854caa55ff59dc604f2f76b57d814e0a47c181
+#61 sha256:025c56f98b679f70b7a54241917e56da7b59ab9d2defecc6ebdb0bf2750484bb 15.73MB / 31.41MB 265.9s
+#61 ...
+
+#78 [paymentservice without-grpc-health-probe-bin 2/3] COPY --from=builder /usr/src/app/node_modules ./node_modules
+#78 DONE 2.9s
+
+#79 [paymentservice without-grpc-health-probe-bin 3/3] COPY . .
+#79 DONE 0.0s
+
+#61 [recommendationservice base 1/1] FROM docker.io/library/python:3.10.8-slim@sha256:49749648f4426b31b20fca55ad854caa55ff59dc604f2f76b57d814e0a47c181
+#61 sha256:025c56f98b679f70b7a54241917e56da7b59ab9d2defecc6ebdb0bf2750484bb 17.83MB / 31.41MB 269.7s
+#61 ...
+
+#76 [currencyservice builder 4/4] RUN npm install --only=production
+#76 64.08 
+#76 64.08 added 348 packages in 1m
+#76 64.08 
+#76 64.08 26 packages are looking for funding
+#76 64.08   run `npm fund` for details
+#76 64.09 npm notice 
+#76 64.09 npm notice New major version of npm available! 9.6.6 -> 11.6.1
+#76 64.09 npm notice Changelog: <https://github.com/npm/cli/releases/tag/v11.6.1>
+#76 64.09 npm notice Run `npm install -g npm@11.6.1` to update!
+#76 64.09 npm notice 
+#76 DONE 64.2s
+
+#61 [recommendationservice base 1/1] FROM docker.io/library/python:3.10.8-slim@sha256:49749648f4426b31b20fca55ad854caa55ff59dc604f2f76b57d814e0a47c181
+#61 sha256:025c56f98b679f70b7a54241917e56da7b59ab9d2defecc6ebdb0bf2750484bb 19.92MB / 31.41MB 271.5s
+#61 sha256:025c56f98b679f70b7a54241917e56da7b59ab9d2defecc6ebdb0bf2750484bb 22.02MB / 31.41MB 272.9s
+#61 ...
+
+#60 [adservice without-grpc-health-probe-bin 1/5] FROM docker.io/library/eclipse-temurin:19.0.1_10-jre-alpine@sha256:a75ea64f676041562cd7d3a54a9764bbfb357b2bf1bebf46e2af73e62d32e36c
+#60 sha256:a8cf960fcec52565486b0993f2f077c7cffdb436a39203d7e5eaa86d76100240 39.85MB / 49.14MB 274.0s
+#60 ...
+
+#61 [recommendationservice base 1/1] FROM docker.io/library/python:3.10.8-slim@sha256:49749648f4426b31b20fca55ad854caa55ff59dc604f2f76b57d814e0a47c181
+#61 ...
+
+#59 [adservice builder 1/9] FROM docker.io/library/eclipse-temurin:19@sha256:f3fbf1ad599d4b5dbdd7ceb55708d10cb9fafb08e094ef91e92aa63b520a232e
+#59 sha256:426329e266e460bc5ce7cd2ad6d6841e68381cc09efc53c243182eb221cce102 17.83MB / 201.12MB 275.0s
+#59 ...
+
+#61 [recommendationservice base 1/1] FROM docker.io/library/python:3.10.8-slim@sha256:49749648f4426b31b20fca55ad854caa55ff59dc604f2f76b57d814e0a47c181
+#61 ...
+
+#80 [currencyservice without-grpc-health-probe-bin 2/3] COPY --from=builder /usr/src/app/node_modules ./node_modules
+#80 DONE 2.9s
+
+#61 [recommendationservice base 1/1] FROM docker.io/library/python:3.10.8-slim@sha256:49749648f4426b31b20fca55ad854caa55ff59dc604f2f76b57d814e0a47c181
+#61 ...
+
+#81 [currencyservice without-grpc-health-probe-bin 3/3] COPY . .
 #81 DONE 0.0s
 
-#82 [loadgenerator stage-2 4/4] COPY locustfile.py .
-#82 CACHED
+#61 [recommendationservice base 1/1] FROM docker.io/library/python:3.10.8-slim@sha256:49749648f4426b31b20fca55ad854caa55ff59dc604f2f76b57d814e0a47c181
+#61 sha256:025c56f98b679f70b7a54241917e56da7b59ab9d2defecc6ebdb0bf2750484bb 24.12MB / 31.41MB 277.0s
+#61 ...
 
-#83 [frontend internal] load build context
-#83 transferring context: 3.74kB done
+#82 [paymentservice stage-3 1/1] RUN wget -qO/bin/grpc_health_probe https://github.com/grpc-ecosystem/grpc-health-probe/releases/download/v0.4.18/grpc_health_probe-linux-amd64 &&     chmod +x /bin/grpc_health_probe
+#82 ...
+
+#61 [recommendationservice base 1/1] FROM docker.io/library/python:3.10.8-slim@sha256:49749648f4426b31b20fca55ad854caa55ff59dc604f2f76b57d814e0a47c181
+#61 sha256:025c56f98b679f70b7a54241917e56da7b59ab9d2defecc6ebdb0bf2750484bb 26.21MB / 31.41MB 280.8s
+#61 sha256:025c56f98b679f70b7a54241917e56da7b59ab9d2defecc6ebdb0bf2750484bb 28.31MB / 31.41MB 282.1s
+#61 ...
+
+#83 [auth] library/python:pull token for registry-1.docker.io
 #83 DONE 0.0s
 
-#84 [productcatalogservice builder 2/6] WORKDIR /src
-#84 CACHED
+#61 [recommendationservice base 1/1] FROM docker.io/library/python:3.10.8-slim@sha256:49749648f4426b31b20fca55ad854caa55ff59dc604f2f76b57d814e0a47c181
+#61 sha256:778656c04542093db6d3b6e07bffbcf6ec4b24709276be7cdf177fcb3666663a 0B / 1.08MB 283.2s
+#61 sha256:025c56f98b679f70b7a54241917e56da7b59ab9d2defecc6ebdb0bf2750484bb 30.41MB / 31.41MB 283.9s
+#61 ...
 
-#85 [productcatalogservice builder 5/6] COPY . .
-#85 CACHED
+#60 [adservice without-grpc-health-probe-bin 1/5] FROM docker.io/library/eclipse-temurin:19.0.1_10-jre-alpine@sha256:a75ea64f676041562cd7d3a54a9764bbfb357b2bf1bebf46e2af73e62d32e36c
+#60 sha256:a8cf960fcec52565486b0993f2f077c7cffdb436a39203d7e5eaa86d76100240 49.14MB / 49.14MB 283.5s done
+#60 extracting sha256:a8cf960fcec52565486b0993f2f077c7cffdb436a39203d7e5eaa86d76100240 0.7s
+#60 ...
 
-#86 [productcatalogservice builder 3/6] COPY go.mod go.sum ./
-#86 CACHED
+#61 [recommendationservice base 1/1] FROM docker.io/library/python:3.10.8-slim@sha256:49749648f4426b31b20fca55ad854caa55ff59dc604f2f76b57d814e0a47c181
+#61 sha256:025c56f98b679f70b7a54241917e56da7b59ab9d2defecc6ebdb0bf2750484bb 31.41MB / 31.41MB 284.3s done
+#61 extracting sha256:025c56f98b679f70b7a54241917e56da7b59ab9d2defecc6ebdb0bf2750484bb
+#61 sha256:85485c9f43dd36ee0fed497dc211a745fe7f0f47ad544481b7c5fafd34773a44 0B / 12.10MB 284.4s
+#61 ...
 
-#87 [productcatalogservice stage-1 2/4] COPY --from=builder /productcatalogservice ./server
-#87 CACHED
+#60 [adservice without-grpc-health-probe-bin 1/5] FROM docker.io/library/eclipse-temurin:19.0.1_10-jre-alpine@sha256:a75ea64f676041562cd7d3a54a9764bbfb357b2bf1bebf46e2af73e62d32e36c
+#60 extracting sha256:a8cf960fcec52565486b0993f2f077c7cffdb436a39203d7e5eaa86d76100240 1.5s done
+#60 extracting sha256:02a6b95e438483873516c83dc94ee69d3c89fcd42b797ad18464ed512fefca8e done
+#60 DONE 285.0s
 
-#88 [productcatalogservice builder 4/6] RUN go mod download
-#88 CACHED
+#61 [recommendationservice base 1/1] FROM docker.io/library/python:3.10.8-slim@sha256:49749648f4426b31b20fca55ad854caa55ff59dc604f2f76b57d814e0a47c181
+#61 ...
 
-#89 [productcatalogservice stage-1 3/4] COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
-#89 CACHED
+#59 [adservice builder 1/9] FROM docker.io/library/eclipse-temurin:19@sha256:f3fbf1ad599d4b5dbdd7ceb55708d10cb9fafb08e094ef91e92aa63b520a232e
+#59 sha256:426329e266e460bc5ce7cd2ad6d6841e68381cc09efc53c243182eb221cce102 26.21MB / 201.12MB 285.2s
+#59 ...
 
-#90 [productcatalogservice builder 6/6] RUN GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -gcflags="${SKAFFOLD_GO_GCFLAGS}" -o /productcatalogservice .
-#90 CACHED
+#61 [recommendationservice base 1/1] FROM docker.io/library/python:3.10.8-slim@sha256:49749648f4426b31b20fca55ad854caa55ff59dc604f2f76b57d814e0a47c181
+#61 sha256:778656c04542093db6d3b6e07bffbcf6ec4b24709276be7cdf177fcb3666663a 1.08MB / 1.08MB 286.0s done
+#61 sha256:23b3c91f0de248655a26d99432d9d67eded63500ba4219dc0cec368033f9b054 0B / 233B 286.0s
+#61 sha256:778656c04542093db6d3b6e07bffbcf6ec4b24709276be7cdf177fcb3666663a 1.08MB / 1.08MB 286.0s done
+#61 extracting sha256:025c56f98b679f70b7a54241917e56da7b59ab9d2defecc6ebdb0bf2750484bb 2.0s done
+#61 extracting sha256:025c56f98b679f70b7a54241917e56da7b59ab9d2defecc6ebdb0bf2750484bb 2.0s done
+#61 extracting sha256:778656c04542093db6d3b6e07bffbcf6ec4b24709276be7cdf177fcb3666663a
+#61 ...
 
-#91 [productcatalogservice stage-1 4/4] COPY products.json .
-#91 CACHED
+#84 [currencyservice stage-3 1/1] RUN wget -qO/bin/grpc_health_probe https://github.com/grpc-ecosystem/grpc-health-probe/releases/download/v0.4.18/grpc_health_probe-linux-amd64 &&     chmod +x /bin/grpc_health_probe
+#84 ...
 
-#92 [adservice internal] load build context
-#92 transferring context: 811B done
-#92 DONE 0.0s
+#61 [recommendationservice base 1/1] FROM docker.io/library/python:3.10.8-slim@sha256:49749648f4426b31b20fca55ad854caa55ff59dc604f2f76b57d814e0a47c181
+#61 sha256:23b3c91f0de248655a26d99432d9d67eded63500ba4219dc0cec368033f9b054 233B / 233B 286.4s done
+#61 extracting sha256:778656c04542093db6d3b6e07bffbcf6ec4b24709276be7cdf177fcb3666663a 0.1s done
+#61 sha256:fd19b936aab88f0ccbe3b6d5cd5c69be2d46339d01c8c7ad0c84ddcdfcaf0ba5 0B / 3.34MB 286.5s
+#61 sha256:23b3c91f0de248655a26d99432d9d67eded63500ba4219dc0cec368033f9b054 233B / 233B 286.4s done
+#61 sha256:85485c9f43dd36ee0fed497dc211a745fe7f0f47ad544481b7c5fafd34773a44 0B / 12.10MB 289.5s
+#61 sha256:85485c9f43dd36ee0fed497dc211a745fe7f0f47ad544481b7c5fafd34773a44 1.05MB / 12.10MB 289.8s
+#61 sha256:85485c9f43dd36ee0fed497dc211a745fe7f0f47ad544481b7c5fafd34773a44 2.10MB / 12.10MB 290.5s
+#61 sha256:fd19b936aab88f0ccbe3b6d5cd5c69be2d46339d01c8c7ad0c84ddcdfcaf0ba5 1.05MB / 3.34MB 291.3s
+#61 sha256:85485c9f43dd36ee0fed497dc211a745fe7f0f47ad544481b7c5fafd34773a44 3.15MB / 12.10MB 291.5s
+#61 sha256:85485c9f43dd36ee0fed497dc211a745fe7f0f47ad544481b7c5fafd34773a44 4.19MB / 12.10MB 294.0s
+#61 sha256:fd19b936aab88f0ccbe3b6d5cd5c69be2d46339d01c8c7ad0c84ddcdfcaf0ba5 2.10MB / 3.34MB 294.4s
+#61 ...
 
-#93 [shippingservice internal] load build context
-#93 transferring context: 418B done
-#93 DONE 0.0s
+#85 [adservice without-grpc-health-probe-bin 2/5] RUN apk add --no-cache ca-certificates
+#85 0.294 fetch https://dl-cdn.alpinelinux.org/alpine/v3.17/main/x86_64/APKINDEX.tar.gz
+#85 9.603 fetch https://dl-cdn.alpinelinux.org/alpine/v3.17/community/x86_64/APKINDEX.tar.gz
+#85 ...
 
-#94 [recommendationservice] exporting to image
-#94 exporting layers done
-#94 writing image sha256:4fd72b61108f83403715a939bf05e35c0d6e872fa8d9b09e33e5730c20b8cd10 done
-#94 naming to docker.io/library/google-microservices-devsecops-recommendationservice done
-#94 DONE 0.0s
+#61 [recommendationservice base 1/1] FROM docker.io/library/python:3.10.8-slim@sha256:49749648f4426b31b20fca55ad854caa55ff59dc604f2f76b57d814e0a47c181
+#61 ...
 
-#95 [checkoutservice internal] load build context
-#95 transferring context: 414B done
-#95 DONE 0.0s
+#59 [adservice builder 1/9] FROM docker.io/library/eclipse-temurin:19@sha256:f3fbf1ad599d4b5dbdd7ceb55708d10cb9fafb08e094ef91e92aa63b520a232e
+#59 sha256:426329e266e460bc5ce7cd2ad6d6841e68381cc09efc53c243182eb221cce102 33.55MB / 201.12MB 295.5s
+#59 ...
 
-#96 [loadgenerator] exporting to image
-#96 exporting layers done
-#96 writing image sha256:44e70de1842a74cd0d62545a06266e9126074407ad4d484888604bc403d792bd done
-#96 naming to docker.io/library/google-microservices-devsecops-loadgenerator done
+#61 [recommendationservice base 1/1] FROM docker.io/library/python:3.10.8-slim@sha256:49749648f4426b31b20fca55ad854caa55ff59dc604f2f76b57d814e0a47c181
+#61 sha256:85485c9f43dd36ee0fed497dc211a745fe7f0f47ad544481b7c5fafd34773a44 5.24MB / 12.10MB 295.9s
+#61 sha256:fd19b936aab88f0ccbe3b6d5cd5c69be2d46339d01c8c7ad0c84ddcdfcaf0ba5 3.15MB / 3.34MB 299.1s
+#61 sha256:fd19b936aab88f0ccbe3b6d5cd5c69be2d46339d01c8c7ad0c84ddcdfcaf0ba5 3.34MB / 3.34MB 299.8s done
+#61 sha256:85485c9f43dd36ee0fed497dc211a745fe7f0f47ad544481b7c5fafd34773a44 6.29MB / 12.10MB 300.6s
+#61 ...
+
+#59 [adservice builder 1/9] FROM docker.io/library/eclipse-temurin:19@sha256:f3fbf1ad599d4b5dbdd7ceb55708d10cb9fafb08e094ef91e92aa63b520a232e
+#59 sha256:426329e266e460bc5ce7cd2ad6d6841e68381cc09efc53c243182eb221cce102 36.70MB / 201.12MB 305.7s
+#59 ...
+
+#61 [recommendationservice base 1/1] FROM docker.io/library/python:3.10.8-slim@sha256:49749648f4426b31b20fca55ad854caa55ff59dc604f2f76b57d814e0a47c181
+#61 sha256:85485c9f43dd36ee0fed497dc211a745fe7f0f47ad544481b7c5fafd34773a44 6.29MB / 12.10MB 305.7s
+#61 sha256:85485c9f43dd36ee0fed497dc211a745fe7f0f47ad544481b7c5fafd34773a44 7.34MB / 12.10MB 307.2s
+#61 ...
+
+#85 [adservice without-grpc-health-probe-bin 2/5] RUN apk add --no-cache ca-certificates
+#85 21.69 (1/1) Installing ca-certificates (20240226-r0)
+#85 23.33 Executing busybox-1.35.0-r29.trigger
+#85 23.33 Executing ca-certificates-20240226-r0.trigger
+#85 23.48 OK: 33 MiB in 30 packages
+#85 DONE 23.8s
+
+#61 [recommendationservice base 1/1] FROM docker.io/library/python:3.10.8-slim@sha256:49749648f4426b31b20fca55ad854caa55ff59dc604f2f76b57d814e0a47c181
+#61 ...
+
+#82 [paymentservice stage-3 1/1] RUN wget -qO/bin/grpc_health_probe https://github.com/grpc-ecosystem/grpc-health-probe/releases/download/v0.4.18/grpc_health_probe-linux-amd64 &&     chmod +x /bin/grpc_health_probe
+#82 DONE 41.3s
+
+#61 [recommendationservice base 1/1] FROM docker.io/library/python:3.10.8-slim@sha256:49749648f4426b31b20fca55ad854caa55ff59dc604f2f76b57d814e0a47c181
+#61 ...
+
+#62 [shoppingassistantservice base 1/1] FROM docker.io/library/python:3.12.8-slim@sha256:123be5684f39d8476e64f47a5fddf38f5e9d839baff5c023c815ae5bdfae0df7
+#62 sha256:af302e5c37e9dc1dbe2eadc8f5059d82a914066b541b0d1a6daa91d0cc55057d 13.63MB / 28.21MB 309.4s
+#62 ...
+
+#61 [recommendationservice base 1/1] FROM docker.io/library/python:3.10.8-slim@sha256:49749648f4426b31b20fca55ad854caa55ff59dc604f2f76b57d814e0a47c181
+#61 sha256:85485c9f43dd36ee0fed497dc211a745fe7f0f47ad544481b7c5fafd34773a44 7.34MB / 12.10MB 312.4s
+#61 ...
+
+#86 [paymentservice] exporting to image
+#86 exporting layers 4.0s done
+#86 writing image sha256:57516dd76fdfd92f5bbc6104f96bee0fa7d4f9a8eeebc958f8a49d0d886eb407 done
+#86 naming to docker.io/library/google-microservices-devsecops-paymentservice done
+#86 DONE 4.0s
+
+#87 [paymentservice] resolving provenance for metadata file
+#87 DONE 0.0s
+
+#61 [recommendationservice base 1/1] FROM docker.io/library/python:3.10.8-slim@sha256:49749648f4426b31b20fca55ad854caa55ff59dc604f2f76b57d814e0a47c181
+#61 ...
+
+#84 [currencyservice stage-3 1/1] RUN wget -qO/bin/grpc_health_probe https://github.com/grpc-ecosystem/grpc-health-probe/releases/download/v0.4.18/grpc_health_probe-linux-amd64 &&     chmod +x /bin/grpc_health_probe
+#84 DONE 38.2s
+
+#61 [recommendationservice base 1/1] FROM docker.io/library/python:3.10.8-slim@sha256:49749648f4426b31b20fca55ad854caa55ff59dc604f2f76b57d814e0a47c181
+#61 ...
+
+#59 [adservice builder 1/9] FROM docker.io/library/eclipse-temurin:19@sha256:f3fbf1ad599d4b5dbdd7ceb55708d10cb9fafb08e094ef91e92aa63b520a232e
+#59 sha256:426329e266e460bc5ce7cd2ad6d6841e68381cc09efc53c243182eb221cce102 39.85MB / 201.12MB 315.9s
+#59 ...
+
+#61 [recommendationservice base 1/1] FROM docker.io/library/python:3.10.8-slim@sha256:49749648f4426b31b20fca55ad854caa55ff59dc604f2f76b57d814e0a47c181
+#61 sha256:85485c9f43dd36ee0fed497dc211a745fe7f0f47ad544481b7c5fafd34773a44 8.39MB / 12.10MB 316.5s
+#61 ...
+
+#88 [currencyservice] exporting to image
+#88 exporting layers 3.6s done
+#88 writing image sha256:74a89f7b996e76556551bbb8878043dfae998d4498cd4d4f277d25732179c6f7 done
+#88 naming to docker.io/library/google-microservices-devsecops-currencyservice done
+#88 DONE 3.6s
+
+#89 [currencyservice] resolving provenance for metadata file
+#89 DONE 0.0s
+
+#61 [recommendationservice base 1/1] FROM docker.io/library/python:3.10.8-slim@sha256:49749648f4426b31b20fca55ad854caa55ff59dc604f2f76b57d814e0a47c181
+#61 ...
+
+#90 [adservice without-grpc-health-probe-bin 3/5] RUN mkdir -p /opt/cprof &&     wget -q -O- https://storage.googleapis.com/cloud-profiler/java/latest/profiler_java_agent_alpine.tar.gz     | tar xzv -C /opt/cprof &&     rm -rf profiler_java_agent.tar.gz
+#90 5.254 NOTICES
+#90 ...
+
+#61 [recommendationservice base 1/1] FROM docker.io/library/python:3.10.8-slim@sha256:49749648f4426b31b20fca55ad854caa55ff59dc604f2f76b57d814e0a47c181
+#61 ...
+
+#62 [shoppingassistantservice base 1/1] FROM docker.io/library/python:3.12.8-slim@sha256:123be5684f39d8476e64f47a5fddf38f5e9d839baff5c023c815ae5bdfae0df7
+#62 sha256:af302e5c37e9dc1dbe2eadc8f5059d82a914066b541b0d1a6daa91d0cc55057d 24.12MB / 28.21MB 319.7s
+#62 ...
+
+#61 [recommendationservice base 1/1] FROM docker.io/library/python:3.10.8-slim@sha256:49749648f4426b31b20fca55ad854caa55ff59dc604f2f76b57d814e0a47c181
+#61 sha256:85485c9f43dd36ee0fed497dc211a745fe7f0f47ad544481b7c5fafd34773a44 8.39MB / 12.10MB 321.5s
+#61 sha256:85485c9f43dd36ee0fed497dc211a745fe7f0f47ad544481b7c5fafd34773a44 9.44MB / 12.10MB 323.2s
+#61 sha256:85485c9f43dd36ee0fed497dc211a745fe7f0f47ad544481b7c5fafd34773a44 10.49MB / 12.10MB 324.3s
+#61 sha256:85485c9f43dd36ee0fed497dc211a745fe7f0f47ad544481b7c5fafd34773a44 11.53MB / 12.10MB 325.5s
+#61 ...
+
+#59 [adservice builder 1/9] FROM docker.io/library/eclipse-temurin:19@sha256:f3fbf1ad599d4b5dbdd7ceb55708d10cb9fafb08e094ef91e92aa63b520a232e
+#59 sha256:426329e266e460bc5ce7cd2ad6d6841e68381cc09efc53c243182eb221cce102 41.94MB / 201.12MB 326.1s
+#59 ...
+
+#61 [recommendationservice base 1/1] FROM docker.io/library/python:3.10.8-slim@sha256:49749648f4426b31b20fca55ad854caa55ff59dc604f2f76b57d814e0a47c181
+#61 sha256:85485c9f43dd36ee0fed497dc211a745fe7f0f47ad544481b7c5fafd34773a44 12.10MB / 12.10MB 326.7s done
+#61 extracting sha256:85485c9f43dd36ee0fed497dc211a745fe7f0f47ad544481b7c5fafd34773a44
+#61 ...
+
+#90 [adservice without-grpc-health-probe-bin 3/5] RUN mkdir -p /opt/cprof &&     wget -q -O- https://storage.googleapis.com/cloud-profiler/java/latest/profiler_java_agent_alpine.tar.gz     | tar xzv -C /opt/cprof &&     rm -rf profiler_java_agent.tar.gz
+#90 18.64 profiler_java_agent.so
+#90 DONE 18.7s
+
+#61 [recommendationservice base 1/1] FROM docker.io/library/python:3.10.8-slim@sha256:49749648f4426b31b20fca55ad854caa55ff59dc604f2f76b57d814e0a47c181
+#61 ...
+
+#91 [adservice without-grpc-health-probe-bin 4/5] WORKDIR /app
+#91 DONE 0.0s
+
+#61 [recommendationservice base 1/1] FROM docker.io/library/python:3.10.8-slim@sha256:49749648f4426b31b20fca55ad854caa55ff59dc604f2f76b57d814e0a47c181
+#61 extracting sha256:85485c9f43dd36ee0fed497dc211a745fe7f0f47ad544481b7c5fafd34773a44 0.6s done
+#61 extracting sha256:23b3c91f0de248655a26d99432d9d67eded63500ba4219dc0cec368033f9b054
+#61 extracting sha256:23b3c91f0de248655a26d99432d9d67eded63500ba4219dc0cec368033f9b054 done
+#61 extracting sha256:fd19b936aab88f0ccbe3b6d5cd5c69be2d46339d01c8c7ad0c84ddcdfcaf0ba5 0.1s
+#61 extracting sha256:fd19b936aab88f0ccbe3b6d5cd5c69be2d46339d01c8c7ad0c84ddcdfcaf0ba5 0.4s done
+#61 DONE 327.8s
+
+#92 [recommendationservice without-grpc-health-probe-bin 1/3] WORKDIR /recommendationservice
+#92 DONE 0.1s
+
+#93 [emailservice without-grpc-health-probe-bin 1/3] WORKDIR /email_server
+#93 DONE 0.1s
+
+#94 [emailservice builder 1/4] RUN apt-get -qq update     && apt-get install -y --no-install-recommends         wget g++     && rm -rf /var/lib/apt/lists/*
+#94 ...
+
+#62 [shoppingassistantservice base 1/1] FROM docker.io/library/python:3.12.8-slim@sha256:123be5684f39d8476e64f47a5fddf38f5e9d839baff5c023c815ae5bdfae0df7
+#62 sha256:af302e5c37e9dc1dbe2eadc8f5059d82a914066b541b0d1a6daa91d0cc55057d 28.21MB / 28.21MB 326.2s done
+#62 sha256:499051ac08b3a334937e7ed829c944091e47d01f2428dbd2d71fb37d5dc05a87 1.05MB / 3.51MB 330.0s
+#62 extracting sha256:af302e5c37e9dc1dbe2eadc8f5059d82a914066b541b0d1a6daa91d0cc55057d 1.8s done
+#62 sha256:52a8eea45d12c8ebc7133b2db7b6861e900f73b15fff9a94a95d140827ab10ee 0B / 13.65MB 330.0s
+#62 sha256:499051ac08b3a334937e7ed829c944091e47d01f2428dbd2d71fb37d5dc05a87 1.05MB / 3.51MB 335.0s
+#62 sha256:52a8eea45d12c8ebc7133b2db7b6861e900f73b15fff9a94a95d140827ab10ee 0B / 13.65MB 335.0s
+#62 ...
+
+#59 [adservice builder 1/9] FROM docker.io/library/eclipse-temurin:19@sha256:f3fbf1ad599d4b5dbdd7ceb55708d10cb9fafb08e094ef91e92aa63b520a232e
+#59 sha256:426329e266e460bc5ce7cd2ad6d6841e68381cc09efc53c243182eb221cce102 45.09MB / 201.12MB 336.4s
+#59 ...
+
+#62 [shoppingassistantservice base 1/1] FROM docker.io/library/python:3.12.8-slim@sha256:123be5684f39d8476e64f47a5fddf38f5e9d839baff5c023c815ae5bdfae0df7
+#62 sha256:499051ac08b3a334937e7ed829c944091e47d01f2428dbd2d71fb37d5dc05a87 1.05MB / 3.51MB 340.0s
+#62 sha256:52a8eea45d12c8ebc7133b2db7b6861e900f73b15fff9a94a95d140827ab10ee 0B / 13.65MB 340.0s
+#62 sha256:499051ac08b3a334937e7ed829c944091e47d01f2428dbd2d71fb37d5dc05a87 2.10MB / 3.51MB 343.0s
+#62 sha256:52a8eea45d12c8ebc7133b2db7b6861e900f73b15fff9a94a95d140827ab10ee 0B / 13.65MB 345.1s
+#62 ...
+
+#59 [adservice builder 1/9] FROM docker.io/library/eclipse-temurin:19@sha256:f3fbf1ad599d4b5dbdd7ceb55708d10cb9fafb08e094ef91e92aa63b520a232e
+#59 sha256:426329e266e460bc5ce7cd2ad6d6841e68381cc09efc53c243182eb221cce102 45.09MB / 201.12MB 346.6s
+#59 ...
+
+#62 [shoppingassistantservice base 1/1] FROM docker.io/library/python:3.12.8-slim@sha256:123be5684f39d8476e64f47a5fddf38f5e9d839baff5c023c815ae5bdfae0df7
+#62 sha256:52a8eea45d12c8ebc7133b2db7b6861e900f73b15fff9a94a95d140827ab10ee 1.05MB / 13.65MB 347.3s
+#62 sha256:499051ac08b3a334937e7ed829c944091e47d01f2428dbd2d71fb37d5dc05a87 3.15MB / 3.51MB 347.7s
+#62 sha256:499051ac08b3a334937e7ed829c944091e47d01f2428dbd2d71fb37d5dc05a87 3.51MB / 3.51MB 348.3s done
+#62 extracting sha256:499051ac08b3a334937e7ed829c944091e47d01f2428dbd2d71fb37d5dc05a87
+#62 sha256:bc54bb88b02b327bcc18f3d5e561c2c77490f91a580d2dcb9d40f3614511bec6 0B / 250B 348.3s
+#62 extracting sha256:499051ac08b3a334937e7ed829c944091e47d01f2428dbd2d71fb37d5dc05a87 0.2s done
+#62 sha256:bc54bb88b02b327bcc18f3d5e561c2c77490f91a580d2dcb9d40f3614511bec6 250B / 250B 350.1s done
+#62 sha256:52a8eea45d12c8ebc7133b2db7b6861e900f73b15fff9a94a95d140827ab10ee 1.05MB / 13.65MB 352.4s
+#62 ...
+
+#59 [adservice builder 1/9] FROM docker.io/library/eclipse-temurin:19@sha256:f3fbf1ad599d4b5dbdd7ceb55708d10cb9fafb08e094ef91e92aa63b520a232e
+#59 sha256:426329e266e460bc5ce7cd2ad6d6841e68381cc09efc53c243182eb221cce102 49.28MB / 201.12MB 356.8s
+#59 ...
+
+#62 [shoppingassistantservice base 1/1] FROM docker.io/library/python:3.12.8-slim@sha256:123be5684f39d8476e64f47a5fddf38f5e9d839baff5c023c815ae5bdfae0df7
+#62 sha256:52a8eea45d12c8ebc7133b2db7b6861e900f73b15fff9a94a95d140827ab10ee 1.05MB / 13.65MB 357.5s
+#62 sha256:52a8eea45d12c8ebc7133b2db7b6861e900f73b15fff9a94a95d140827ab10ee 2.10MB / 13.65MB 358.8s
+#62 ...
+
+#63 [frontend builder 1/6] FROM docker.io/library/golang:1.23.4-alpine@sha256:c23339199a08b0e12032856908589a6d41a0dab141b8b3b21f156fc571a3f1d3
+#63 sha256:1f3e46996e2966e4faa5846e56e76e3748b7315e2ded61476c24403d592134f0 2.10MB / 3.64MB 359.5s
+#63 ...
+
+#65 [loadgenerator base 1/1] FROM docker.io/library/python:3.12.8-alpine@sha256:54bec49592c8455de8d5983d984efff76b6417a6af9b5dcc8d0237bf6ad3bd20
+#65 ...
+
+#63 [frontend builder 1/6] FROM docker.io/library/golang:1.23.4-alpine@sha256:c23339199a08b0e12032856908589a6d41a0dab141b8b3b21f156fc571a3f1d3
+#63 sha256:1f3e46996e2966e4faa5846e56e76e3748b7315e2ded61476c24403d592134f0 3.15MB / 3.64MB 361.3s
+#63 sha256:1f3e46996e2966e4faa5846e56e76e3748b7315e2ded61476c24403d592134f0 3.64MB / 3.64MB 362.1s done
+#63 extracting sha256:1f3e46996e2966e4faa5846e56e76e3748b7315e2ded61476c24403d592134f0
+#63 extracting sha256:1f3e46996e2966e4faa5846e56e76e3748b7315e2ded61476c24403d592134f0 0.4s done
+#63 ...
+
+#65 [loadgenerator base 1/1] FROM docker.io/library/python:3.12.8-alpine@sha256:54bec49592c8455de8d5983d984efff76b6417a6af9b5dcc8d0237bf6ad3bd20
+#65 sha256:1f3e46996e2966e4faa5846e56e76e3748b7315e2ded61476c24403d592134f0 3.64MB / 3.64MB 362.2s done
+#65 extracting sha256:1f3e46996e2966e4faa5846e56e76e3748b7315e2ded61476c24403d592134f0 0.4s done
+#65 sha256:00bb69fc52357199f58d816281524d1f19bc46505e9e94684008ee0e48a55c36 458.75kB / 458.75kB 364.1s done
+#65 extracting sha256:00bb69fc52357199f58d816281524d1f19bc46505e9e94684008ee0e48a55c36 0.3s done
+#65 sha256:7b104e645578aae3981cee9ab2070a5b8e5e077faa16bcbb13bfc752269cbd1e 0B / 13.61MB 365.6s
+#65 ...
+
+#59 [adservice builder 1/9] FROM docker.io/library/eclipse-temurin:19@sha256:f3fbf1ad599d4b5dbdd7ceb55708d10cb9fafb08e094ef91e92aa63b520a232e
+#59 sha256:426329e266e460bc5ce7cd2ad6d6841e68381cc09efc53c243182eb221cce102 52.43MB / 201.12MB 367.0s
+#59 ...
+
+#65 [loadgenerator base 1/1] FROM docker.io/library/python:3.12.8-alpine@sha256:54bec49592c8455de8d5983d984efff76b6417a6af9b5dcc8d0237bf6ad3bd20
+#65 sha256:7b104e645578aae3981cee9ab2070a5b8e5e077faa16bcbb13bfc752269cbd1e 1.05MB / 13.61MB 367.9s
+#65 sha256:7b104e645578aae3981cee9ab2070a5b8e5e077faa16bcbb13bfc752269cbd1e 2.10MB / 13.61MB 369.5s
+#65 ...
+
+#62 [shoppingassistantservice base 1/1] FROM docker.io/library/python:3.12.8-slim@sha256:123be5684f39d8476e64f47a5fddf38f5e9d839baff5c023c815ae5bdfae0df7
+#62 sha256:52a8eea45d12c8ebc7133b2db7b6861e900f73b15fff9a94a95d140827ab10ee 3.15MB / 13.65MB 370.2s
+#62 ...
+
+#65 [loadgenerator base 1/1] FROM docker.io/library/python:3.12.8-alpine@sha256:54bec49592c8455de8d5983d984efff76b6417a6af9b5dcc8d0237bf6ad3bd20
+#65 sha256:7b104e645578aae3981cee9ab2070a5b8e5e077faa16bcbb13bfc752269cbd1e 3.15MB / 13.61MB 371.8s
+#65 sha256:7b104e645578aae3981cee9ab2070a5b8e5e077faa16bcbb13bfc752269cbd1e 4.19MB / 13.61MB 373.1s
+#65 sha256:7b104e645578aae3981cee9ab2070a5b8e5e077faa16bcbb13bfc752269cbd1e 5.24MB / 13.61MB 374.8s
+#65 ...
+
+#94 [emailservice builder 1/4] RUN apt-get -qq update     && apt-get install -y --no-install-recommends         wget g++     && rm -rf /var/lib/apt/lists/*
+#94 38.75 Reading package lists...
+#94 40.09 Building dependency tree...
+#94 40.36 Reading state information...
+#94 40.64 The following additional packages will be installed:
+#94 40.64   binutils binutils-common binutils-x86-64-linux-gnu cpp cpp-10 g++-10 gcc
+#94 40.64   gcc-10 libasan6 libatomic1 libbinutils libc-dev-bin libc6 libc6-dev libcc1-0
+#94 40.64   libcrypt-dev libctf-nobfd0 libctf0 libgcc-10-dev libgomp1 libisl23 libitm1
+#94 40.64   liblsan0 libmpc3 libmpfr6 libnsl-dev libpsl5 libquadmath0 libstdc++-10-dev
+#94 40.64   libtirpc-dev libtsan0 libubsan1 linux-libc-dev
+#94 40.64 Suggested packages:
+#94 40.64   binutils-doc cpp-doc gcc-10-locales g++-multilib g++-10-multilib gcc-10-doc
+#94 40.64   gcc-multilib make manpages-dev autoconf automake libtool flex bison gdb
+#94 40.64   gcc-doc gcc-10-multilib glibc-doc libc-l10n locales libstdc++-10-doc
+#94 40.64 Recommended packages:
+#94 40.64   manpages manpages-dev libc-devtools libnss-nis libnss-nisplus publicsuffix
+#94 40.89 The following NEW packages will be installed:
+#94 40.89   binutils binutils-common binutils-x86-64-linux-gnu cpp cpp-10 g++ g++-10 gcc
+#94 40.89   gcc-10 libasan6 libatomic1 libbinutils libc-dev-bin libc6-dev libcc1-0
+#94 40.89   libcrypt-dev libctf-nobfd0 libctf0 libgcc-10-dev libgomp1 libisl23 libitm1
+#94 40.89   liblsan0 libmpc3 libmpfr6 libnsl-dev libpsl5 libquadmath0 libstdc++-10-dev
+#94 40.89   libtirpc-dev libtsan0 libubsan1 linux-libc-dev wget
+#94 40.89 The following packages will be upgraded:
+#94 40.89   libc6
+#94 46.04 1 upgraded, 34 newly installed, 0 to remove and 44 not upgraded.
+#94 46.04 Need to get 61.2 MB of archives.
+#94 46.04 After this operation, 224 MB of additional disk space will be used.
+#94 46.04 Get:1 http://deb.debian.org/debian-security bullseye-security/main amd64 libc6 amd64 2.31-13+deb11u13 [2823 kB]
+#94 ...
+
+#65 [loadgenerator base 1/1] FROM docker.io/library/python:3.12.8-alpine@sha256:54bec49592c8455de8d5983d984efff76b6417a6af9b5dcc8d0237bf6ad3bd20
+#65 ...
+
+#59 [adservice builder 1/9] FROM docker.io/library/eclipse-temurin:19@sha256:f3fbf1ad599d4b5dbdd7ceb55708d10cb9fafb08e094ef91e92aa63b520a232e
+#59 sha256:426329e266e460bc5ce7cd2ad6d6841e68381cc09efc53c243182eb221cce102 56.62MB / 201.12MB 377.2s
+#59 ...
+
+#65 [loadgenerator base 1/1] FROM docker.io/library/python:3.12.8-alpine@sha256:54bec49592c8455de8d5983d984efff76b6417a6af9b5dcc8d0237bf6ad3bd20
+#65 sha256:7b104e645578aae3981cee9ab2070a5b8e5e077faa16bcbb13bfc752269cbd1e 6.29MB / 13.61MB 378.9s
+#65 ...
+
+#62 [shoppingassistantservice base 1/1] FROM docker.io/library/python:3.12.8-slim@sha256:123be5684f39d8476e64f47a5fddf38f5e9d839baff5c023c815ae5bdfae0df7
+#62 sha256:52a8eea45d12c8ebc7133b2db7b6861e900f73b15fff9a94a95d140827ab10ee 5.24MB / 13.65MB 380.4s
+#62 ...
+
+#65 [loadgenerator base 1/1] FROM docker.io/library/python:3.12.8-alpine@sha256:54bec49592c8455de8d5983d984efff76b6417a6af9b5dcc8d0237bf6ad3bd20
+#65 sha256:7b104e645578aae3981cee9ab2070a5b8e5e077faa16bcbb13bfc752269cbd1e 6.29MB / 13.61MB 384.0s
+#65 ...
+
+#59 [adservice builder 1/9] FROM docker.io/library/eclipse-temurin:19@sha256:f3fbf1ad599d4b5dbdd7ceb55708d10cb9fafb08e094ef91e92aa63b520a232e
+#59 sha256:426329e266e460bc5ce7cd2ad6d6841e68381cc09efc53c243182eb221cce102 60.82MB / 201.12MB 387.6s
+#59 ...
+
+#94 [emailservice builder 1/4] RUN apt-get -qq update     && apt-get install -y --no-install-recommends         wget g++     && rm -rf /var/lib/apt/lists/*
+#94 49.41 Get:2 http://deb.debian.org/debian bullseye/main amd64 libpsl5 amd64 0.21.0-1.2 [57.3 kB]
+#94 49.44 Get:3 http://deb.debian.org/debian-security bullseye-security/main amd64 wget amd64 1.21-1+deb11u2 [964 kB]
+#94 50.91 Get:4 http://deb.debian.org/debian bullseye/main amd64 binutils-common amd64 2.35.2-2 [2220 kB]
+#94 ...
+
+#65 [loadgenerator base 1/1] FROM docker.io/library/python:3.12.8-alpine@sha256:54bec49592c8455de8d5983d984efff76b6417a6af9b5dcc8d0237bf6ad3bd20
+#65 sha256:7b104e645578aae3981cee9ab2070a5b8e5e077faa16bcbb13bfc752269cbd1e 7.34MB / 13.61MB 386.6s
+#65 ...
+
+#62 [shoppingassistantservice base 1/1] FROM docker.io/library/python:3.12.8-slim@sha256:123be5684f39d8476e64f47a5fddf38f5e9d839baff5c023c815ae5bdfae0df7
+#62 sha256:52a8eea45d12c8ebc7133b2db7b6861e900f73b15fff9a94a95d140827ab10ee 9.44MB / 13.65MB 390.6s
+#62 ...
+
+#65 [loadgenerator base 1/1] FROM docker.io/library/python:3.12.8-alpine@sha256:54bec49592c8455de8d5983d984efff76b6417a6af9b5dcc8d0237bf6ad3bd20
+#65 sha256:7b104e645578aae3981cee9ab2070a5b8e5e077faa16bcbb13bfc752269cbd1e 8.39MB / 13.61MB 391.6s
+#65 ...
+
+#59 [adservice builder 1/9] FROM docker.io/library/eclipse-temurin:19@sha256:f3fbf1ad599d4b5dbdd7ceb55708d10cb9fafb08e094ef91e92aa63b520a232e
+#59 sha256:426329e266e460bc5ce7cd2ad6d6841e68381cc09efc53c243182eb221cce102 66.06MB / 201.12MB 397.8s
+#59 ...
+
+#65 [loadgenerator base 1/1] FROM docker.io/library/python:3.12.8-alpine@sha256:54bec49592c8455de8d5983d984efff76b6417a6af9b5dcc8d0237bf6ad3bd20
+#65 sha256:7b104e645578aae3981cee9ab2070a5b8e5e077faa16bcbb13bfc752269cbd1e 8.39MB / 13.61MB 396.6s
+#65 sha256:7b104e645578aae3981cee9ab2070a5b8e5e077faa16bcbb13bfc752269cbd1e 9.44MB / 13.61MB 397.3s
+#65 sha256:e846654b130a37fac6bbf43513baaa39ee275a53f433eb550f994062f51ad3e6 0B / 248B 398.0s
+#65 ...
+
+#62 [shoppingassistantservice base 1/1] FROM docker.io/library/python:3.12.8-slim@sha256:123be5684f39d8476e64f47a5fddf38f5e9d839baff5c023c815ae5bdfae0df7
+#62 sha256:52a8eea45d12c8ebc7133b2db7b6861e900f73b15fff9a94a95d140827ab10ee 13.65MB / 13.65MB 398.4s done
+#62 extracting sha256:52a8eea45d12c8ebc7133b2db7b6861e900f73b15fff9a94a95d140827ab10ee 0.8s done
+#62 extracting sha256:bc54bb88b02b327bcc18f3d5e561c2c77490f91a580d2dcb9d40f3614511bec6 done
+#62 DONE 399.3s
+
+#65 [loadgenerator base 1/1] FROM docker.io/library/python:3.12.8-alpine@sha256:54bec49592c8455de8d5983d984efff76b6417a6af9b5dcc8d0237bf6ad3bd20
+#65 ...
+
+#95 [shoppingassistantservice stage-2 1/3] WORKDIR /shoppingassistantservice
+#95 DONE 0.1s
+
+#65 [loadgenerator base 1/1] FROM docker.io/library/python:3.12.8-alpine@sha256:54bec49592c8455de8d5983d984efff76b6417a6af9b5dcc8d0237bf6ad3bd20
+#65 sha256:7b104e645578aae3981cee9ab2070a5b8e5e077faa16bcbb13bfc752269cbd1e 10.49MB / 13.61MB 399.0s
+#65 ...
+
+#94 [emailservice builder 1/4] RUN apt-get -qq update     && apt-get install -y --no-install-recommends         wget g++     && rm -rf /var/lib/apt/lists/*
+#94 62.70 Get:5 http://deb.debian.org/debian bullseye/main amd64 libbinutils amd64 2.35.2-2 [570 kB]
+#94 69.32 Get:6 http://deb.debian.org/debian bullseye/main amd64 libctf-nobfd0 amd64 2.35.2-2 [110 kB]
+#94 70.05 Get:7 http://deb.debian.org/debian bullseye/main amd64 libctf0 amd64 2.35.2-2 [53.2 kB]
+#94 70.14 Get:8 http://deb.debian.org/debian bullseye/main amd64 binutils-x86-64-linux-gnu amd64 2.35.2-2 [1809 kB]
+#94 ...
+
+#65 [loadgenerator base 1/1] FROM docker.io/library/python:3.12.8-alpine@sha256:54bec49592c8455de8d5983d984efff76b6417a6af9b5dcc8d0237bf6ad3bd20
+#65 ...
+
+#96 [auth] library/golang:pull token for registry-1.docker.io
 #96 DONE 0.0s
 
-#97 [emailservice] exporting to image
-#97 exporting layers done
-#97 writing image sha256:2ab4ed8a2c197d3585db0b5d64d721b2f3f65ec22d6e5c551c008043adcc96a3 done
-#97 naming to docker.io/library/google-microservices-devsecops-emailservice done
+#65 [loadgenerator base 1/1] FROM docker.io/library/python:3.12.8-alpine@sha256:54bec49592c8455de8d5983d984efff76b6417a6af9b5dcc8d0237bf6ad3bd20
+#65 sha256:e846654b130a37fac6bbf43513baaa39ee275a53f433eb550f994062f51ad3e6 248B / 248B 399.8s done
+#65 sha256:7b104e645578aae3981cee9ab2070a5b8e5e077faa16bcbb13bfc752269cbd1e 11.53MB / 13.61MB 401.1s
+#65 sha256:7b104e645578aae3981cee9ab2070a5b8e5e077faa16bcbb13bfc752269cbd1e 12.58MB / 13.61MB 402.6s
+#65 sha256:7b104e645578aae3981cee9ab2070a5b8e5e077faa16bcbb13bfc752269cbd1e 13.61MB / 13.61MB 404.0s done
+#65 extracting sha256:7b104e645578aae3981cee9ab2070a5b8e5e077faa16bcbb13bfc752269cbd1e 0.1s
+#65 extracting sha256:7b104e645578aae3981cee9ab2070a5b8e5e077faa16bcbb13bfc752269cbd1e 0.8s done
+#65 extracting sha256:e846654b130a37fac6bbf43513baaa39ee275a53f433eb550f994062f51ad3e6 done
+#65 DONE 404.9s
+
+#63 [frontend builder 1/6] FROM docker.io/library/golang:1.23.4-alpine@sha256:c23339199a08b0e12032856908589a6d41a0dab141b8b3b21f156fc571a3f1d3
+#63 sha256:41974eb6247ff167f48feeffaab7631eee2557375ee5c6d1a79d8ea55055c773 294.88kB / 294.88kB 404.1s done
+#63 sha256:06f05ace1117d62b655e04f6f73c83617e3e0febc38681dbedf58f477dd0658c 0B / 74.05MB 404.9s
+#63 extracting sha256:41974eb6247ff167f48feeffaab7631eee2557375ee5c6d1a79d8ea55055c773 0.1s done
+#63 sha256:0a2ab5391ffc9d65666b85647cf0e14eb454a907445434cd657e3b25133b4020 0B / 126B 404.9s
+#63 ...
+
+#59 [adservice builder 1/9] FROM docker.io/library/eclipse-temurin:19@sha256:f3fbf1ad599d4b5dbdd7ceb55708d10cb9fafb08e094ef91e92aa63b520a232e
+#59 sha256:426329e266e460bc5ce7cd2ad6d6841e68381cc09efc53c243182eb221cce102 74.45MB / 201.12MB 408.0s
+#59 ...
+
+#63 [frontend builder 1/6] FROM docker.io/library/golang:1.23.4-alpine@sha256:c23339199a08b0e12032856908589a6d41a0dab141b8b3b21f156fc571a3f1d3
+#63 sha256:0a2ab5391ffc9d65666b85647cf0e14eb454a907445434cd657e3b25133b4020 126B / 126B 407.3s done
+#63 sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 0B / 32B 407.4s
+#63 ...
+
+#97 [auth] library/alpine:pull token for registry-1.docker.io
 #97 DONE 0.0s
 
-#98 [frontend stage-1 2/4] COPY --from=builder /go/bin/frontend /src/server
-#98 CACHED
+#63 [frontend builder 1/6] FROM docker.io/library/golang:1.23.4-alpine@sha256:c23339199a08b0e12032856908589a6d41a0dab141b8b3b21f156fc571a3f1d3
+#63 sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 32B / 32B 408.7s done
+#63 ...
 
-#99 [frontend stage-1 3/4] COPY ./templates ./templates
-#99 CACHED
+#98 [shoppingassistantservice builder 1/3] RUN apt-get -qq update     && apt-get install -y --no-install-recommends g++     && rm -rf /var/lib/apt/lists/*
+#98 ...
 
-#100 [frontend builder 5/6] COPY . .
-#100 CACHED
+#63 [frontend builder 1/6] FROM docker.io/library/golang:1.23.4-alpine@sha256:c23339199a08b0e12032856908589a6d41a0dab141b8b3b21f156fc571a3f1d3
+#63 sha256:06f05ace1117d62b655e04f6f73c83617e3e0febc38681dbedf58f477dd0658c 3.15MB / 74.05MB 410.0s
+#63 ...
 
-#101 [frontend builder 6/6] RUN GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -gcflags="${SKAFFOLD_GO_GCFLAGS}" -o /go/bin/frontend .
-#101 CACHED
+#94 [emailservice builder 1/4] RUN apt-get -qq update     && apt-get install -y --no-install-recommends         wget g++     && rm -rf /var/lib/apt/lists/*
+#94 74.68 Get:9 http://deb.debian.org/debian bullseye/main amd64 binutils amd64 2.35.2-2 [61.2 kB]
+#94 74.90 Get:10 http://deb.debian.org/debian bullseye/main amd64 libisl23 amd64 0.23-1 [676 kB]
+#94 77.50 Get:11 http://deb.debian.org/debian bullseye/main amd64 libmpfr6 amd64 4.1.0-3 [2012 kB]
+#94 ...
 
-#102 [frontend builder 3/6] COPY go.mod go.sum ./
-#102 CACHED
+#63 [frontend builder 1/6] FROM docker.io/library/golang:1.23.4-alpine@sha256:c23339199a08b0e12032856908589a6d41a0dab141b8b3b21f156fc571a3f1d3
+#63 ...
 
-#103 [frontend builder 4/6] RUN go mod download
-#103 CACHED
+#77 [cartservice builder 4/6] RUN dotnet restore cartservice.csproj -r linux-musl-x64
+#77 198.2   Restored /app/cartservice.csproj (in 3.22 min).
+#77 DONE 198.7s
 
-#104 [frontend stage-1 4/4] COPY ./static ./static
-#104 CACHED
+#99 [cartservice builder 5/6] COPY . .
+#99 DONE 0.1s
 
-#105 [productcatalogservice] exporting to image
-#105 exporting layers done
-#105 writing image sha256:8d2ad9a9d03705b5336ca6329f91bd53d274122fefb70267c63f1ba723b1ca8c done
-#105 naming to docker.io/library/google-microservices-devsecops-productcatalogservice done
-#105 DONE 0.0s
+#63 [frontend builder 1/6] FROM docker.io/library/golang:1.23.4-alpine@sha256:c23339199a08b0e12032856908589a6d41a0dab141b8b3b21f156fc571a3f1d3
+#63 ...
 
-#106 [checkoutservice builder 3/6] COPY go.mod go.sum ./
-#106 CACHED
+#100 [loadgenerator stage-2 1/4] RUN apk update     && apk add --no-cache libstdc++     && rm -rf /var/cache/apk/*
+#100 0.381 fetch https://dl-cdn.alpinelinux.org/alpine/v3.21/main/x86_64/APKINDEX.tar.gz
+#100 3.868 fetch https://dl-cdn.alpinelinux.org/alpine/v3.21/community/x86_64/APKINDEX.tar.gz
+#100 8.259 v3.21.4-164-g56903aa1289 [https://dl-cdn.alpinelinux.org/alpine/v3.21/main]
+#100 8.259 v3.21.4-163-g960a1254289 [https://dl-cdn.alpinelinux.org/alpine/v3.21/community]
+#100 8.259 OK: 25414 distinct packages available
+#100 8.414 fetch https://dl-cdn.alpinelinux.org/alpine/v3.21/main/x86_64/APKINDEX.tar.gz
+#100 ...
 
-#107 [checkoutservice builder 4/6] RUN go mod download
-#107 CACHED
+#101 [loadgenerator builder 1/3] RUN apk update     && apk add --no-cache wget g++ linux-headers     && rm -rf /var/cache/apk/*
+#101 0.379 fetch https://dl-cdn.alpinelinux.org/alpine/v3.21/main/x86_64/APKINDEX.tar.gz
+#101 3.949 fetch https://dl-cdn.alpinelinux.org/alpine/v3.21/community/x86_64/APKINDEX.tar.gz
+#101 8.316 v3.21.4-164-g56903aa1289 [https://dl-cdn.alpinelinux.org/alpine/v3.21/main]
+#101 8.316 v3.21.4-163-g960a1254289 [https://dl-cdn.alpinelinux.org/alpine/v3.21/community]
+#101 8.316 OK: 25414 distinct packages available
+#101 8.517 fetch https://dl-cdn.alpinelinux.org/alpine/v3.21/main/x86_64/APKINDEX.tar.gz
+#101 ...
 
-#108 [checkoutservice builder 5/6] COPY . .
-#108 CACHED
+#63 [frontend builder 1/6] FROM docker.io/library/golang:1.23.4-alpine@sha256:c23339199a08b0e12032856908589a6d41a0dab141b8b3b21f156fc571a3f1d3
+#63 sha256:06f05ace1117d62b655e04f6f73c83617e3e0febc38681dbedf58f477dd0658c 6.29MB / 74.05MB 415.1s
+#63 ...
 
-#109 [checkoutservice builder 6/6] RUN GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -gcflags="${SKAFFOLD_GO_GCFLAGS}" -o /checkoutservice .
-#109 CACHED
+#64 [frontend stage-1 1/6] FROM docker.io/library/alpine:3.19@sha256:3be987e6cde1d07e873c012bf6cfe941e6e85d16ca5fc5b8bedc675451d2de67
+#64 sha256:1747dece94917ce1b0256ecd60138ce4deaea1bd35dcb6b2e8afe697dd2f5b71 3.42MB / 3.42MB 415.2s done
+#64 extracting sha256:1747dece94917ce1b0256ecd60138ce4deaea1bd35dcb6b2e8afe697dd2f5b71 0.2s done
+#64 DONE 415.5s
 
-#110 [shippingservice builder 4/6] RUN go mod download
-#110 CACHED
+#102 [frontend stage-1 2/6] WORKDIR /src
+#102 DONE 0.0s
 
-#111 [shippingservice builder 6/6] RUN GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -gcflags="${SKAFFOLD_GO_GCFLAGS}" -o /go/bin/shippingservice .
-#111 CACHED
+#63 [frontend builder 1/6] FROM docker.io/library/golang:1.23.4-alpine@sha256:c23339199a08b0e12032856908589a6d41a0dab141b8b3b21f156fc571a3f1d3
+#63 ...
 
-#112 [shippingservice builder 3/6] COPY go.mod go.sum ./
-#112 CACHED
+#59 [adservice builder 1/9] FROM docker.io/library/eclipse-temurin:19@sha256:f3fbf1ad599d4b5dbdd7ceb55708d10cb9fafb08e094ef91e92aa63b520a232e
+#59 sha256:426329e266e460bc5ce7cd2ad6d6841e68381cc09efc53c243182eb221cce102 81.79MB / 201.12MB 418.2s
+#59 ...
 
-#84 [checkoutservice builder 2/6] WORKDIR /src
-#84 CACHED
+#63 [frontend builder 1/6] FROM docker.io/library/golang:1.23.4-alpine@sha256:c23339199a08b0e12032856908589a6d41a0dab141b8b3b21f156fc571a3f1d3
+#63 ...
 
-#113 [shippingservice builder 5/6] COPY . .
-#113 CACHED
+#66 [shippingservice without-grpc-health-probe-bin 1/5] FROM docker.io/library/alpine:3.18.0@sha256:02bb6f428431fbc2809c5d1b41eab5a68350194fb508869a33cb1af4444c9b11
+#66 sha256:8a49fdb3b6a5ff2bd8ec6a86c05b2922a0f7454579ecc07637e94dfd1d0639b6 3.40MB / 3.40MB 418.7s done
+#66 extracting sha256:8a49fdb3b6a5ff2bd8ec6a86c05b2922a0f7454579ecc07637e94dfd1d0639b6 0.1s done
+#66 DONE 418.9s
 
-#114 [shippingservice stage-1 2/2] COPY --from=builder /go/bin/shippingservice /src/shippingservice
-#114 CACHED
+#63 [frontend builder 1/6] FROM docker.io/library/golang:1.23.4-alpine@sha256:c23339199a08b0e12032856908589a6d41a0dab141b8b3b21f156fc571a3f1d3
+#63 sha256:06f05ace1117d62b655e04f6f73c83617e3e0febc38681dbedf58f477dd0658c 9.44MB / 74.05MB 420.1s
+#63 ...
 
-#115 [checkoutservice stage-1 2/2] COPY --from=builder /checkoutservice /src/checkoutservice
-#115 CACHED
+#100 [loadgenerator stage-2 1/4] RUN apk update     && apk add --no-cache libstdc++     && rm -rf /var/cache/apk/*
+#100 10.63 fetch https://dl-cdn.alpinelinux.org/alpine/v3.21/community/x86_64/APKINDEX.tar.gz
+#100 14.17 (1/2) Installing libgcc (14.2.0-r4)
+#100 14.38 (2/2) Installing libstdc++ (14.2.0-r4)
+#100 15.58 OK: 15 MiB in 39 packages
+#100 DONE 15.8s
 
-#116 [adservice builder 5/9] RUN chmod +x gradlew
-#116 CACHED
+#63 [frontend builder 1/6] FROM docker.io/library/golang:1.23.4-alpine@sha256:c23339199a08b0e12032856908589a6d41a0dab141b8b3b21f156fc571a3f1d3
+#63 ...
 
-#117 [adservice builder 6/9] RUN ./gradlew downloadRepos
-#117 CACHED
+#103 [loadgenerator stage-2 2/4] WORKDIR /loadgen
+#103 DONE 0.0s
 
-#118 [adservice builder 7/9] COPY . .
-#118 CACHED
+#63 [frontend builder 1/6] FROM docker.io/library/golang:1.23.4-alpine@sha256:c23339199a08b0e12032856908589a6d41a0dab141b8b3b21f156fc571a3f1d3
+#63 ...
 
-#119 [adservice builder 9/9] RUN ./gradlew installDist
-#119 CACHED
+#94 [emailservice builder 1/4] RUN apt-get -qq update     && apt-get install -y --no-install-recommends         wget g++     && rm -rf /var/lib/apt/lists/*
+#94 86.84 Get:12 http://deb.debian.org/debian bullseye/main amd64 libmpc3 amd64 1.2.0-1 [45.0 kB]
+#94 87.01 Get:13 http://deb.debian.org/debian bullseye/main amd64 cpp-10 amd64 10.2.1-6 [8528 kB]
+#94 ...
 
-#120 [adservice builder 3/9] COPY [build.gradle, gradlew, ./]
-#120 CACHED
+#67 [shippingservice builder 1/8] FROM docker.io/library/golang:1.20.4-alpine@sha256:0a03b591c358a0bb02e39b93c30e955358dadd18dc507087a3b7f3912c17fe13
+#67 sha256:8a49fdb3b6a5ff2bd8ec6a86c05b2922a0f7454579ecc07637e94dfd1d0639b6 3.40MB / 3.40MB 418.7s done
+#67 extracting sha256:8a49fdb3b6a5ff2bd8ec6a86c05b2922a0f7454579ecc07637e94dfd1d0639b6 0.1s done
+#67 sha256:58116d8bf56953e5f30b7f50257c5bb2b5ba4aba460cb69f2ac57eea00aaa5dc 284.69kB / 284.69kB 420.3s done
+#67 extracting sha256:58116d8bf56953e5f30b7f50257c5bb2b5ba4aba460cb69f2ac57eea00aaa5dc 0.2s done
+#67 sha256:00664777e466f6e514b4234fa4469f2ab6a5ff56e1a61dbec52b1308993bcb89 2.10MB / 100.88MB 423.1s
+#67 ...
 
-#121 [adservice builder 4/9] COPY gradle gradle
-#121 CACHED
+#104 [cartservice builder 6/6] RUN dotnet publish cartservice.csproj -p:PublishSingleFile=true -r linux-musl-x64 --self-contained true -p:PublishTrimmed=True -p:TrimMode=Link -c release -o /cartservice --no-restore
+#104 1.061 MSBuild version 17.6.1+8ffc3fe3d for .NET
+#104 ...
 
-#122 [adservice builder 8/9] RUN chmod +x gradlew
-#122 CACHED
+#67 [shippingservice builder 1/8] FROM docker.io/library/golang:1.20.4-alpine@sha256:0a03b591c358a0bb02e39b93c30e955358dadd18dc507087a3b7f3912c17fe13
+#67 ...
 
-#123 [adservice stage-1 2/3] WORKDIR /app
-#123 CACHED
+#105 [frontend stage-1 3/6] RUN apk --no-cache add ca-certificates
+#105 0.294 fetch https://dl-cdn.alpinelinux.org/alpine/v3.19/main/x86_64/APKINDEX.tar.gz
+#105 3.329 fetch https://dl-cdn.alpinelinux.org/alpine/v3.19/community/x86_64/APKINDEX.tar.gz
+#105 9.974 (1/1) Installing ca-certificates (20250911-r0)
+#105 ...
 
-#124 [adservice builder 2/9] WORKDIR /app
-#124 CACHED
+#67 [shippingservice builder 1/8] FROM docker.io/library/golang:1.20.4-alpine@sha256:0a03b591c358a0bb02e39b93c30e955358dadd18dc507087a3b7f3912c17fe13
+#67 ...
 
-#125 [adservice stage-1 3/3] COPY --from=builder /app .
-#125 CACHED
+#101 [loadgenerator builder 1/3] RUN apk update     && apk add --no-cache wget g++ linux-headers     && rm -rf /var/cache/apk/*
+#101 11.15 fetch https://dl-cdn.alpinelinux.org/alpine/v3.21/community/x86_64/APKINDEX.tar.gz
+#101 17.84 (1/21) Upgrading musl (1.2.5-r8 -> 1.2.5-r9)
+#101 18.84 (2/21) Installing libgcc (14.2.0-r4)
+#101 19.24 (3/21) Installing libstdc++ (14.2.0-r4)
+#101 ...
 
-#126 [frontend] exporting to image
-#126 exporting layers done
-#126 writing image sha256:373efc424d8a7794ceb9c3665132ee65407db65ba8ca4e591b3eb1f97142b7f7 done
-#126 naming to docker.io/library/google-microservices-devsecops-frontend done
-#126 DONE 0.0s
+#67 [shippingservice builder 1/8] FROM docker.io/library/golang:1.20.4-alpine@sha256:0a03b591c358a0bb02e39b93c30e955358dadd18dc507087a3b7f3912c17fe13
+#67 ...
 
-#127 [adservice] exporting to image
-#127 exporting layers done
-#127 writing image sha256:f90225d4135eedf55566f8e771a2152191c61ff65086955b121048f94f6e89e5 done
-#127 naming to docker.io/library/google-microservices-devsecops-adservice done
-#127 DONE 0.0s
+#106 [productcatalogservice without-grpc-health-probe-bin 2/5] RUN apk add --no-cache ca-certificates
+#106 0.302 fetch https://dl-cdn.alpinelinux.org/alpine/v3.18/main/x86_64/APKINDEX.tar.gz
+#106 2.466 fetch https://dl-cdn.alpinelinux.org/alpine/v3.18/community/x86_64/APKINDEX.tar.gz
+#106 6.085 (1/1) Installing ca-certificates (20241121-r1)
+#106 6.964 Executing busybox-1.36.0-r9.trigger
+#106 6.975 Executing ca-certificates-20241121-r1.trigger
+#106 7.064 OK: 8 MiB in 16 packages
+#106 DONE 7.2s
 
-#128 [shippingservice] exporting to image
-#128 exporting layers done
-#128 writing image sha256:9955df94ec321b98f4b17a6ac26b9214d202a02f2fb4f8aadf284535f339abe6 done
-#128 naming to docker.io/library/google-microservices-devsecops-shippingservice done
-#128 DONE 0.0s
+#107 [shippingservice without-grpc-health-probe-bin 3/5] WORKDIR /src
+#107 DONE 0.0s
 
-#129 [checkoutservice] exporting to image
-#129 exporting layers done
-#129 writing image sha256:2fe0cf0e9e5c1aa5b9056bef3766c131e7024998fd60081cc23f369b804b3613 done
-#129 naming to docker.io/library/google-microservices-devsecops-checkoutservice done
-#129 DONE 0.0s
+#67 [shippingservice builder 1/8] FROM docker.io/library/golang:1.20.4-alpine@sha256:0a03b591c358a0bb02e39b93c30e955358dadd18dc507087a3b7f3912c17fe13
+#67 ...
 
-#130 [recommendationservice] resolving provenance for metadata file
-#130 DONE 0.1s
+#105 [frontend stage-1 3/6] RUN apk --no-cache add ca-certificates
+#105 11.00 Executing busybox-1.36.1-r19.trigger
+#105 11.01 Executing ca-certificates-20250911-r0.trigger
+#105 11.09 OK: 8 MiB in 16 packages
+#105 DONE 11.3s
 
-#131 [currencyservice] resolving provenance for metadata file
-#131 DONE 0.1s
+#67 [shippingservice builder 1/8] FROM docker.io/library/golang:1.20.4-alpine@sha256:0a03b591c358a0bb02e39b93c30e955358dadd18dc507087a3b7f3912c17fe13
+#67 ...
 
-#132 [shippingservice] resolving provenance for metadata file
-#132 DONE 0.0s
+#59 [adservice builder 1/9] FROM docker.io/library/eclipse-temurin:19@sha256:f3fbf1ad599d4b5dbdd7ceb55708d10cb9fafb08e094ef91e92aa63b520a232e
+#59 sha256:426329e266e460bc5ce7cd2ad6d6841e68381cc09efc53c243182eb221cce102 87.03MB / 201.12MB 428.5s
+#59 ...
 
-#133 [loadgenerator] resolving provenance for metadata file
-#133 DONE 0.0s
+#67 [shippingservice builder 1/8] FROM docker.io/library/golang:1.20.4-alpine@sha256:0a03b591c358a0bb02e39b93c30e955358dadd18dc507087a3b7f3912c17fe13
+#67 sha256:00664777e466f6e514b4234fa4469f2ab6a5ff56e1a61dbec52b1308993bcb89 6.29MB / 100.88MB 428.2s
+#67 ...
 
-#134 [emailservice] resolving provenance for metadata file
-#134 DONE 0.1s
+#63 [frontend builder 1/6] FROM docker.io/library/golang:1.23.4-alpine@sha256:c23339199a08b0e12032856908589a6d41a0dab141b8b3b21f156fc571a3f1d3
+#63 sha256:06f05ace1117d62b655e04f6f73c83617e3e0febc38681dbedf58f477dd0658c 13.63MB / 74.05MB 433.6s
+#63 ...
 
-#135 [productcatalogservice] resolving provenance for metadata file
-#135 DONE 0.0s
+#67 [shippingservice builder 1/8] FROM docker.io/library/golang:1.20.4-alpine@sha256:0a03b591c358a0bb02e39b93c30e955358dadd18dc507087a3b7f3912c17fe13
+#67 sha256:00664777e466f6e514b4234fa4469f2ab6a5ff56e1a61dbec52b1308993bcb89 10.49MB / 100.88MB 433.3s
+#67 ...
 
-#136 [frontend] resolving provenance for metadata file
-#136 DONE 0.0s
+#104 [cartservice builder 6/6] RUN dotnet publish cartservice.csproj -p:PublishSingleFile=true -r linux-musl-x64 --self-contained true -p:PublishTrimmed=True -p:TrimMode=Link -c release -o /cartservice --no-restore
+#104 10.71   cartservice -> /app/bin/release/net7.0/linux-musl-x64/cartservice.dll
+#104 11.49   Optimizing assemblies for size. This process might take a while.
+#104 ...
 
-#137 [adservice] resolving provenance for metadata file
-#137 DONE 0.0s
+#67 [shippingservice builder 1/8] FROM docker.io/library/golang:1.20.4-alpine@sha256:0a03b591c358a0bb02e39b93c30e955358dadd18dc507087a3b7f3912c17fe13
+#67 ...
 
-#138 [checkoutservice] resolving provenance for metadata file
-#138 DONE 0.0s
+#101 [loadgenerator builder 1/3] RUN apk update     && apk add --no-cache wget g++ linux-headers     && rm -rf /var/cache/apk/*
+#101 21.45 (4/21) Installing libstdc++-dev (14.2.0-r4)
+#101 24.20 (5/21) Installing jansson (2.14-r4)
+#101 24.24 (6/21) Installing zstd-libs (1.5.6-r2)
+#101 24.63 (7/21) Installing binutils (2.43.1-r3)
+#101 26.90 (8/21) Installing libgomp (14.2.0-r4)
+#101 27.02 (9/21) Installing libatomic (14.2.0-r4)
+#101 27.12 (10/21) Installing gmp (6.3.0-r2)
+#101 27.71 (11/21) Installing isl26 (0.26-r1)
+#101 28.29 (12/21) Installing mpfr4 (4.2.1-r0)
+#101 28.44 (13/21) Installing mpc1 (1.3.1-r1)
+#101 28.50 (14/21) Installing gcc (14.2.0-r4)
+#101 ...
 
-#139 [cartservice internal] load metadata for mcr.microsoft.com/dotnet/runtime-deps:9.0.1-noble-chiseled@sha256:6f7466eda39e24efaf7eab2325e15d776a685d13cc93b4ea0cde9ee4f7982210
-#139 DONE 0.5s
+#67 [shippingservice builder 1/8] FROM docker.io/library/golang:1.20.4-alpine@sha256:0a03b591c358a0bb02e39b93c30e955358dadd18dc507087a3b7f3912c17fe13
+#67 ...
 
-#140 [cartservice internal] load metadata for mcr.microsoft.com/dotnet/sdk:9.0.101-noble@sha256:1f13e67d295e02abdfd187c341f887442bad611eda536766172ced401fc8b9fa
-#140 DONE 0.5s
+#59 [adservice builder 1/9] FROM docker.io/library/eclipse-temurin:19@sha256:f3fbf1ad599d4b5dbdd7ceb55708d10cb9fafb08e094ef91e92aa63b520a232e
+#59 sha256:426329e266e460bc5ce7cd2ad6d6841e68381cc09efc53c243182eb221cce102 93.32MB / 201.12MB 438.7s
+#59 ...
 
-#141 [cartservice internal] load .dockerignore
-#141 transferring context: 92B done
-#141 DONE 0.0s
+#67 [shippingservice builder 1/8] FROM docker.io/library/golang:1.20.4-alpine@sha256:0a03b591c358a0bb02e39b93c30e955358dadd18dc507087a3b7f3912c17fe13
+#67 sha256:00664777e466f6e514b4234fa4469f2ab6a5ff56e1a61dbec52b1308993bcb89 12.58MB / 100.88MB 438.3s
+#67 sha256:00664777e466f6e514b4234fa4469f2ab6a5ff56e1a61dbec52b1308993bcb89 14.68MB / 100.88MB 443.3s
+#67 ...
 
-#142 [cartservice builder 1/6] FROM mcr.microsoft.com/dotnet/sdk:9.0.101-noble@sha256:1f13e67d295e02abdfd187c341f887442bad611eda536766172ced401fc8b9fa
-#142 DONE 0.0s
+#63 [frontend builder 1/6] FROM docker.io/library/golang:1.23.4-alpine@sha256:c23339199a08b0e12032856908589a6d41a0dab141b8b3b21f156fc571a3f1d3
+#63 sha256:06f05ace1117d62b655e04f6f73c83617e3e0febc38681dbedf58f477dd0658c 14.68MB / 74.05MB 443.8s
+#63 ...
 
-#143 [cartservice stage-1 1/3] FROM mcr.microsoft.com/dotnet/runtime-deps:9.0.1-noble-chiseled@sha256:6f7466eda39e24efaf7eab2325e15d776a685d13cc93b4ea0cde9ee4f7982210
-#143 DONE 0.0s
+#67 [shippingservice builder 1/8] FROM docker.io/library/golang:1.20.4-alpine@sha256:0a03b591c358a0bb02e39b93c30e955358dadd18dc507087a3b7f3912c17fe13
+#67 ...
 
-#144 [cartservice internal] load build context
-#144 transferring context: 569B done
-#144 DONE 0.0s
+#59 [adservice builder 1/9] FROM docker.io/library/eclipse-temurin:19@sha256:f3fbf1ad599d4b5dbdd7ceb55708d10cb9fafb08e094ef91e92aa63b520a232e
+#59 sha256:426329e266e460bc5ce7cd2ad6d6841e68381cc09efc53c243182eb221cce102 97.52MB / 201.12MB 448.9s
+#59 ...
 
-#145 [cartservice builder 5/6] COPY . .
-#145 CACHED
+#67 [shippingservice builder 1/8] FROM docker.io/library/golang:1.20.4-alpine@sha256:0a03b591c358a0bb02e39b93c30e955358dadd18dc507087a3b7f3912c17fe13
+#67 sha256:00664777e466f6e514b4234fa4469f2ab6a5ff56e1a61dbec52b1308993bcb89 16.78MB / 100.88MB 448.4s
+#67 ...
 
-#146 [cartservice stage-1 2/3] WORKDIR /app
-#146 CACHED
+#104 [cartservice builder 6/6] RUN dotnet publish cartservice.csproj -p:PublishSingleFile=true -r linux-musl-x64 --self-contained true -p:PublishTrimmed=True -p:TrimMode=Link -c release -o /cartservice --no-restore
+#104 31.05 ILLink : Trim analysis warning IL2026: System.Data.DataSet.System.Xml.Serialization.IXmlSerializable.GetSchema(): Using member 'System.Data.DataSet.WriteXmlSchema(DataSet, XmlWriter)' which has 'RequiresUnreferencedCodeAttribute' can break functionality when trimming application code. DataSet.GetSchema uses TypeDescriptor and XmlSerialization underneath which are not trimming safe. Members from serialized types may be trimmed if not referenced directly. [/app/cartservice.csproj]
+#104 31.05 ILLink : Trim analysis warning IL2026: System.Data.DataSet.System.Xml.Serialization.IXmlSerializable.ReadXml(XmlReader): Using member 'System.Data.DataSet.ReadXmlSerializableInternal(XmlReader)' which has 'RequiresUnreferencedCodeAttribute' can break functionality when trimming application code. DataSet.ReadXml uses XmlSerialization underneath which is not trimming safe. Members from serialized types may be trimmed if not referenced directly. [/app/cartservice.csproj]
+#104 31.05 ILLink : Trim analysis warning IL2026: System.Data.DataSet.System.Xml.Serialization.IXmlSerializable.WriteXml(XmlWriter): Using member 'System.Data.DataSet.WriteXmlInternal(XmlWriter)' which has 'RequiresUnreferencedCodeAttribute' can break functionality when trimming application code. DataSet.WriteXml uses XmlSerialization underneath which is not trimming safe. Members from serialized types may be trimmed if not referenced directly. [/app/cartservice.csproj]
+#104 31.05 ILLink : Trim analysis warning IL2026: System.Data.DataTable.System.Xml.Serialization.IXmlSerializable.GetSchema(): Using member 'System.Data.DataTable.GetXmlSchema()' which has 'RequiresUnreferencedCodeAttribute' can break functionality when trimming application code. DataTable.GetSchema uses TypeDescriptor and XmlSerialization underneath which are not trimming safe. Members from serialized types may be trimmed if not referenced directly. [/app/cartservice.csproj]
+#104 31.05 ILLink : Trim analysis warning IL2026: System.Data.DataTable.System.Xml.Serialization.IXmlSerializable.ReadXml(XmlReader): Using member 'System.Data.DataTable.ReadXmlSerializableInternal(XmlReader)' which has 'RequiresUnreferencedCodeAttribute' can break functionality when trimming application code. DataTable.ReadXml uses XmlSerialization underneath which is not trimming safe. Members from serialized types may be trimmed if not referenced directly. [/app/cartservice.csproj]
+#104 31.05 ILLink : Trim analysis warning IL2026: System.Data.DataTable.System.Xml.Serialization.IXmlSerializable.WriteXml(XmlWriter): Using member 'System.Data.DataTable.WriteXmlInternal(XmlWriter)' which has 'RequiresUnreferencedCodeAttribute' can break functionality when trimming application code. DataTable.WriteXml uses XmlSerialization underneath which is not trimming safe. Members from serialized types may be trimmed if not referenced directly. [/app/cartservice.csproj]
+#104 31.05 /root/.nuget/packages/google.api.gax.grpc/4.3.1/lib/netstandard2.1/Google.Api.Gax.Grpc.dll : warning IL2104: Assembly 'Google.Api.Gax.Grpc' produced trim warnings. For more information see https://aka.ms/dotnet-illink/libraries [/app/cartservice.csproj]
+#104 31.05 /root/.nuget/packages/google.apis.core/1.58.0/lib/netstandard2.0/Google.Apis.Core.dll : warning IL2104: Assembly 'Google.Apis.Core' produced trim warnings. For more information see https://aka.ms/dotnet-illink/libraries [/app/cartservice.csproj]
+#104 31.05 /root/.nuget/packages/google.cloud.spanner.data/4.5.0/lib/netstandard2.1/Google.Cloud.Spanner.Data.dll : warning IL2104: Assembly 'Google.Cloud.Spanner.Data' produced trim warnings. For more information see https://aka.ms/dotnet-illink/libraries [/app/cartservice.csproj]
+#104 31.05 /root/.nuget/packages/newtonsoft.json/13.0.2/lib/net6.0/Newtonsoft.Json.dll : warning IL2104: Assembly 'Newtonsoft.Json' produced trim warnings. For more information see https://aka.ms/dotnet-illink/libraries [/app/cartservice.csproj]
+#104 31.05 /root/.nuget/packages/npgsql/7.0.4/lib/net7.0/Npgsql.dll : warning IL2104: Assembly 'Npgsql' produced trim warnings. For more information see https://aka.ms/dotnet-illink/libraries [/app/cartservice.csproj]
+#104 31.05 /root/.nuget/packages/pipelines.sockets.unofficial/2.2.2/lib/net5.0/Pipelines.Sockets.Unofficial.dll : warning IL2104: Assembly 'Pipelines.Sockets.Unofficial' produced trim warnings. For more information see https://aka.ms/dotnet-illink/libraries [/app/cartservice.csproj]
+#104 37.30   cartservice -> /cartservice/
+#104 DONE 37.4s
 
-#147 [cartservice builder 3/6] COPY cartservice.csproj .
-#147 CACHED
+#67 [shippingservice builder 1/8] FROM docker.io/library/golang:1.20.4-alpine@sha256:0a03b591c358a0bb02e39b93c30e955358dadd18dc507087a3b7f3912c17fe13
+#67 ...
 
-#148 [cartservice builder 2/6] WORKDIR /app
-#148 CACHED
+#108 [cartservice without-grpc-health-probe-bin 3/3] COPY --from=builder /cartservice .
+#108 DONE 0.1s
 
-#149 [cartservice builder 4/6] RUN dotnet restore cartservice.csproj     -a amd64
-#149 CACHED
+#67 [shippingservice builder 1/8] FROM docker.io/library/golang:1.20.4-alpine@sha256:0a03b591c358a0bb02e39b93c30e955358dadd18dc507087a3b7f3912c17fe13
+#67 sha256:00664777e466f6e514b4234fa4469f2ab6a5ff56e1a61dbec52b1308993bcb89 17.83MB / 100.88MB 453.5s
+#67 ...
 
-#150 [cartservice builder 6/6] RUN dotnet publish cartservice.csproj     -p:PublishSingleFile=true     -a amd64     --self-contained true     -p:PublishTrimmed=true     -p:TrimMode=full     -c release     -o /cartservice
-#150 CACHED
+#63 [frontend builder 1/6] FROM docker.io/library/golang:1.23.4-alpine@sha256:c23339199a08b0e12032856908589a6d41a0dab141b8b3b21f156fc571a3f1d3
+#63 sha256:06f05ace1117d62b655e04f6f73c83617e3e0febc38681dbedf58f477dd0658c 15.73MB / 74.05MB 454.1s
+#63 ...
 
-#151 [cartservice stage-1 3/3] COPY --from=builder /cartservice .
-#151 CACHED
+#67 [shippingservice builder 1/8] FROM docker.io/library/golang:1.20.4-alpine@sha256:0a03b591c358a0bb02e39b93c30e955358dadd18dc507087a3b7f3912c17fe13
+#67 ...
 
-#152 [cartservice] exporting to image
-#152 exporting layers done
-#152 writing image sha256:f58197e879333a7a8df979ffe6281b95f65d2da5bc771609c63c57a56bbd63cb done
-#152 naming to docker.io/library/google-microservices-devsecops-cartservice done
-#152 DONE 0.0s
+#59 [adservice builder 1/9] FROM docker.io/library/eclipse-temurin:19@sha256:f3fbf1ad599d4b5dbdd7ceb55708d10cb9fafb08e094ef91e92aa63b520a232e
+#59 sha256:426329e266e460bc5ce7cd2ad6d6841e68381cc09efc53c243182eb221cce102 97.52MB / 201.12MB 459.1s
+#59 ...
 
-#153 [cartservice] resolving provenance for metadata file
-#153 DONE 0.0s
+#67 [shippingservice builder 1/8] FROM docker.io/library/golang:1.20.4-alpine@sha256:0a03b591c358a0bb02e39b93c30e955358dadd18dc507087a3b7f3912c17fe13
+#67 sha256:00664777e466f6e514b4234fa4469f2ab6a5ff56e1a61dbec52b1308993bcb89 17.83MB / 100.88MB 458.6s
+#67 ...
+
+#109 [cartservice stage-2 1/1] RUN wget -qO/bin/grpc_health_probe https://github.com/grpc-ecosystem/grpc-health-probe/releases/download/v0.4.18/grpc_health_probe-linux-amd64 &&     chmod +x /bin/grpc_health_probe
+#109 ...
+
+#67 [shippingservice builder 1/8] FROM docker.io/library/golang:1.20.4-alpine@sha256:0a03b591c358a0bb02e39b93c30e955358dadd18dc507087a3b7f3912c17fe13
+#67 sha256:00664777e466f6e514b4234fa4469f2ab6a5ff56e1a61dbec52b1308993bcb89 17.83MB / 100.88MB 463.8s
+#67 ...
+
+#63 [frontend builder 1/6] FROM docker.io/library/golang:1.23.4-alpine@sha256:c23339199a08b0e12032856908589a6d41a0dab141b8b3b21f156fc571a3f1d3
+#63 sha256:06f05ace1117d62b655e04f6f73c83617e3e0febc38681dbedf58f477dd0658c 15.73MB / 74.05MB 464.2s
+#63 ...
+
+#67 [shippingservice builder 1/8] FROM docker.io/library/golang:1.20.4-alpine@sha256:0a03b591c358a0bb02e39b93c30e955358dadd18dc507087a3b7f3912c17fe13
+#67 CANCELED
+
+#109 [cartservice stage-2 1/1] RUN wget -qO/bin/grpc_health_probe https://github.com/grpc-ecosystem/grpc-health-probe/releases/download/v0.4.18/grpc_health_probe-linux-amd64 &&     chmod +x /bin/grpc_health_probe
+#109 14.79 wget: error getting response: Resource temporarily unavailable
+#109 ERROR: process "/bin/sh -c wget -qO/bin/grpc_health_probe https://github.com/grpc-ecosystem/grpc-health-probe/releases/download/${GRPC_HEALTH_PROBE_VERSION}/grpc_health_probe-linux-amd64 &&     chmod +x /bin/grpc_health_probe" did not complete successfully: exit code: 1
+
+#59 [adservice builder 1/9] FROM docker.io/library/eclipse-temurin:19@sha256:f3fbf1ad599d4b5dbdd7ceb55708d10cb9fafb08e094ef91e92aa63b520a232e
+#59 sha256:426329e266e460bc5ce7cd2ad6d6841e68381cc09efc53c243182eb221cce102 98.57MB / 201.12MB 468.2s
+#59 ...
+
+#63 [frontend builder 1/6] FROM docker.io/library/golang:1.23.4-alpine@sha256:c23339199a08b0e12032856908589a6d41a0dab141b8b3b21f156fc571a3f1d3
+#63 CANCELED
+
+#94 [recommendationservice builder 1/4] RUN apt-get -qq update     && apt-get install -y --no-install-recommends         wget g++     && rm -rf /var/lib/apt/lists/*
+#94 ...
+
+#98 [shoppingassistantservice builder 1/3] RUN apt-get -qq update     && apt-get install -y --no-install-recommends g++     && rm -rf /var/lib/apt/lists/*
+#98 CANCELED
+
+#101 [loadgenerator builder 1/3] RUN apk update     && apk add --no-cache wget g++ linux-headers     && rm -rf /var/cache/apk/*
+#101 CANCELED
+
+#94 [emailservice builder 1/4] RUN apt-get -qq update     && apt-get install -y --no-install-recommends         wget g++     && rm -rf /var/lib/apt/lists/*
+#94 CANCELED
+------
+ > [cartservice stage-2 1/1] RUN wget -qO/bin/grpc_health_probe https://github.com/grpc-ecosystem/grpc-health-probe/releases/download/v0.4.18/grpc_health_probe-linux-amd64 &&     chmod +x /bin/grpc_health_probe:
+14.79 wget: error getting response: Resource temporarily unavailable
+------
