@@ -12,9 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM node:20.2.0-alpine@sha256:f25b0e9d3d116e267d4ff69a3a99c0f4cf6ae94eadd87f1bf7bd68ea3ff0bef7 as base
+FROM node:20.2.0-alpine@sha256:f25b0e9d3d116e267d4ff69a3a99c0f4cf6ae94eadd87f1bf7bd68ea3ff0bef7 AS base
 
-FROM base as builder
+FROM base AS builder
 
 # Some packages (e.g. @google-cloud/profiler) require additional
 # deps for post-install scripts
@@ -29,7 +29,7 @@ COPY package*.json ./
 
 RUN npm install --only=production
 
-FROM base as without-grpc-health-probe-bin
+FROM base AS without-grpc-health-probe-bin
 
 WORKDIR /usr/src/app
 

@@ -19,7 +19,7 @@ import (
 	"context"
 	"flag"
 	"fmt"
-	"io/ioutil"
+
 	"net"
 	"os"
 	"os/signal"
@@ -207,7 +207,7 @@ type productCatalog struct{}
 func readCatalogFile(catalog *pb.ListProductsResponse) error {
 	catalogMutex.Lock()
 	defer catalogMutex.Unlock()
-	catalogJSON, err := ioutil.ReadFile("products.json")
+	catalogJSON, err := os.ReadFile("products.json")
 	if err != nil {
 		log.Fatalf("failed to open product catalog json file: %v", err)
 		return err
