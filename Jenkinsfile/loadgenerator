@@ -2,9 +2,14 @@ library('jenkins-shared') _
 pipeline {
     agent any
 
+    environment {
+        DOCKER_REGISTRY = 'namanss'
+        IMAGE_NAME = 'loadgenerator'
+        DOCKERFILE_PATH = 'src/loadgenerator'
+    }
+
     tools {
         jdk 'jdk21'
-        jdk 'jdk17'
     }
 
     stages{
@@ -22,6 +27,20 @@ pipeline {
                 }
             }
         }
+        stage('SAST Scan') {
+            steps {
+                dir('src/loadgenerator') {
+                    script {
+                        sh 'bandit -r . -f json -o bandit-report.json || true'
+                    }
+                }
+            }
+            post {
+                always {
+                    archiveArtifacts artifacts: 'src/loadgenerator/bandit-report.json', allowEmptyArchive: true
+                }
+            }
+        }
         stage('Trivy Fs Scan') {
             steps {
                 dir('src/loadgenerator') {
@@ -32,33 +51,44 @@ pipeline {
             }
             post {
                 always {
-                    archiveArtifacts 'src/loadgenerator/trivy-fs-report.txt'
+                    archiveArtifacts artifacts: 'src/loadgenerator/trivy-fs-report.txt', allowEmptyArchive: true
                 }
             }
         }
         stage('Docker Build') {
             steps {
                 script {
-                    docker_build("loadgenerator", "${BUILD_NUMBER}", "namanss", "src/loadgenerator")
+                    docker_build(env.IMAGE_NAME, "${BUILD_NUMBER}", env.DOCKER_REGISTRY, env.DOCKERFILE_PATH)
                 }
             }
         }
         stage('Trivy Image Scan') {
             steps {
                 script {
-                    trivy_image_scan("loadgenerator","${BUILD_NUMBER}","namanss")
+                    trivy_image_scan(env.IMAGE_NAME, "${BUILD_NUMBER}", env.DOCKER_REGISTRY)
                 }
             }
             post {
                 always {
-                    archiveArtifacts 'loadgenerator-trivy-image-report.txt'
+                    archiveArtifacts artifacts: 'loadgenerator-trivy-image-report.txt', allowEmptyArchive: true
                 }
             }
         }
         stage('Docker Push') {
             steps {
                 script {
-                    docker_push("loadgenerator", "${BUILD_NUMBER}", "namanss")
+                    docker_push(env.IMAGE_NAME, "${BUILD_NUMBER}", env.DOCKER_REGISTRY)
+                }
+            }
+        }
+        stage('Update Deployment') {
+            steps {
+                script {
+                    sh """
+                        sed -i 's|image: ${env.DOCKER_REGISTRY}/${env.IMAGE_NAME}:.*|image: ${env.DOCKER_REGISTRY}/${env.IMAGE_NAME}:${BUILD_NUMBER}|g' k8s-manifests/loadgenerator.yaml
+                        git add k8s-manifests/loadgenerator.yaml
+                        git commit -m "Update ${env.IMAGE_NAME} image to ${BUILD_NUMBER}" || true
+                    """
                 }
             }
         }
