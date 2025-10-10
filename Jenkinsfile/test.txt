@@ -4,9 +4,10 @@ Cartservice
 checkoutservice
 currencyservice
 emailservice
+frontend
 
 [Pending]
-frontend
+
 loadgenerator
 paymentservice
 productcatalogservice
