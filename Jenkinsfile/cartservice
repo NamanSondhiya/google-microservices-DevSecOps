@@ -9,7 +9,7 @@ pipeline {
     }
 
     environment {
-        SONAR_EV = tools 'Sonar'
+        SONAR_EV = tool 'Sonar'
     }
 
     stages{
@@ -64,7 +64,7 @@ pipeline {
             }
             post {
                 always {
-                    archiveArtifacts 'src/cartservice/dependency-check-report.html'
+                    archiveArtifacts 'src/cartservice/dependency-check-report.xml'
                 }
             }
         }
