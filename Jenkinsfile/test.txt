@@ -2,9 +2,9 @@
 ADservice
 Cartservice
 checkoutservice
+currencyservice
 
 [Pending]
-currencyservice
 emailservice
 frontend
 loadgenerator
