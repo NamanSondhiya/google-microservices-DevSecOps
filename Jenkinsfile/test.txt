@@ -7,9 +7,8 @@ emailservice
 frontend
 loadgenerator
 paymentservice
+recommendationservice
+productcatalogservice
 
 [Pending]
-
-productcatalogservice
-recommendationservice
 shippingservice
