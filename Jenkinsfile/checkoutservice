@@ -3,8 +3,14 @@ pipeline {
     agent any
 
     tools {
-        jdk 'jdk21'
         jdk 'jdk17'
+        go 'go1.25'
+    }
+
+    environment {
+        GOPATH = "${HOME}/go"
+        PATH = "${GOPATH}/bin:${PATH}"
+        SONAR_EV = tool 'Sonar'
     }
 
     stages{
@@ -19,6 +25,76 @@ pipeline {
             steps {
                 script {
                     git_clone("https://github.com/NamanSondhiya/google-microservices-DevSecOps.git", "devOps")
+                }
+            }
+        }
+        stage('Go Security Scan (gosec)') {
+            steps {
+                dir('src/checkoutservice') {
+                    script {
+                        gosec_scan("./...")
+                    }
+                }
+            }
+            post {
+                always {
+                    archiveArtifacts 'src/checkoutservice/gosec-report.txt'
+                }
+            }
+        }
+        stage('SonarQube Analysis') {
+            steps {
+                dir('src/checkoutservice') {
+                    script {
+                        sonarqube_analysis("${SONAR_EV}", "checkoutservice", "checkoutservice")
+                    }
+                }
+            }
+        }
+        stage('Quality Gates') {
+            steps {
+                script {
+                    sonarqube_QualityGate(5, false)
+                }
+            }
+        }
+        stage('Go Build') {
+            steps {
+                dir('src/checkoutservice') {
+                    sh '''
+                    export PATH=$GOPATH/bin:$PATH
+                    go mod tidy
+                    go build -o checkoutservice
+                    '''
+                }
+            }
+        }
+        stage('Go Test') {
+            steps {
+                dir('src/checkoutservice') {
+                    sh '''
+                    export PATH=$GOPATH/bin:$PATH
+                    go test -v ./... | tee go-test-report.txt
+                    '''
+                }
+            }
+            post {
+                always {
+                    archiveArtifacts 'src/checkoutservice/go-test-report.txt'
+                }
+            }
+        }
+        stage('Owasp Dependency Check') {
+            steps {
+                dir('src/checkoutservice') {
+                    script {
+                        owasp_scan()
+                    }
+                }
+            }
+            post {
+                always {
+                    archiveArtifacts 'src/checkoutservice/dependency-check-report.xml'
                 }
             }
         }
