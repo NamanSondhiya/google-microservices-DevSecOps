@@ -7,6 +7,10 @@ pipeline {
         jdk 'jdk17'
     }
 
+    environment {
+        SONAR_EV = tools 'Sonar'
+    }
+
     stages{
         stage('Clean the workspace') {
             steps {
@@ -19,6 +23,47 @@ pipeline {
             steps {
                 script {
                     git_clone("https://github.com/NamanSondhiya/google-microservices-DevSecOps.git", "devOps")
+                }
+            }
+        }
+        stage('SonarQube Analysis') {
+            steps {
+                dir('src/cartservice') {
+                    script {
+                        sonarqube_analysis("${SONAR_EV}", "cartservice", "cartservice")
+                    }
+                }
+            }
+        }
+        stage('Quality Gates') {
+            steps {
+                script {
+                    sonarqube_QuatityGate("5", false)
+                }
+            }
+        }
+        stage('Dotnet Tests') {
+            steps {
+                dir('src/cartservice/src') {
+                    sh '''
+                    dotnet restore
+                    dotnet build -no-incremental
+                    dotnet test --logger:trx
+                    '''
+                }
+            }
+        }
+        stage('Owasp Dependency Check') {
+            steps {
+                dir('src/cartservice') {
+                    script {
+                        owasp_scan()
+                    }
+                }
+            }
+            post {
+                always {
+                    archiveArtifacts 'src/cartservice/dependency-check-report.html'
                 }
             }
         }
