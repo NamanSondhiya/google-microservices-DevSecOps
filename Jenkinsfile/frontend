@@ -3,8 +3,13 @@ pipeline {
     agent any
 
     tools {
-        jdk 'jdk21'
-        jdk 'jdk17'
+        go 'go1.25'
+    }
+    
+    environment {
+        GOPATH = "${HOME}/go"
+        PATH = "${GOPATH}/bin:${PATH}"
+        SONAR_EV= tool 'Sonar'    
     }
 
     stages{
@@ -19,6 +24,91 @@ pipeline {
             steps {
                 script {
                     git_clone("https://github.com/NamanSondhiya/google-microservices-DevSecOps.git", "devOps")
+                }
+            }
+        }
+        stage('Go Security Scan (gosec)') {
+            steps {
+                dir('src/frontend') {
+                    script {
+                        sh '''
+                        export PATH=$GOPATH/bin:$PATH
+                        go install github.com/securego/gosec/v2/cmd/gosec@latest
+                        gosec ./... | tee gosec-report.txt
+                        '''                    
+                    }
+                }
+            }
+            post {
+                always {
+                    archiveArtifacts 'src/frontend/gosec-report.txt'
+                }
+            }
+        }
+        stage('SonarQube Analysis') {
+            steps {
+                dir('src/frontend') {
+                    script {
+                        sonarqube_analysis("${SONAR_EV}", "frontend", "frontend")
+                    }
+                }
+            }
+        }
+        stage('Quality Gates') {
+            steps {
+                script {
+                    sonarqube_QualityGate(5,true)
+                }
+            }
+        }
+        stage('Go Build') {
+            steps {
+                dir('src/frontend') {
+                    sh '''
+                    export PATH=$GOPATH/bin:$PATH
+                    go mod tidy
+                    go build -o frontend
+                    '''
+                }
+            }
+        }
+        stage('Go Test') {
+            steps {
+                dir('src/frontend') {
+                    sh '''
+                    export PATH=$GOPATH/bin:$PATH
+                    go test -v ./... | tee go-test-report.txt
+                    '''
+                }
+            }
+            post {
+                always {
+                    archiveArtifacts 'src/frontend/go-test-report.txt'
+                }
+            }
+        }
+        stage('Owasp Scan') {
+            steps {
+                dir('src/frontend') {
+                    script {
+                        owasp_scan()
+                    }
+                }
+            }
+        }
+        stage('Go Vulnerability Check') {
+            steps {
+                dir('src/frontend') {
+                    sh '''
+                    export PATH=$GOPATH/bin:$PATH
+                    go install golang.org/x/vuln/cmd/govulncheck@latest
+                    govulncheck ./... | tee govulncheck-report.txt
+                    '''
+                }
+            }
+            post {
+                always {
+                    archiveArtifacts 'src/frontend/govulncheck-report.txt'
                 }
             }
         }
