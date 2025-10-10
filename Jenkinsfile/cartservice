@@ -3,8 +3,6 @@ pipeline {
     agent any
 
     tools {
-        jdk 'jdk21'
-        jdk 'jdk17'
         dotnetsdk 'dotnet9'
         dotnetsdk 'dotnet7'
     }
