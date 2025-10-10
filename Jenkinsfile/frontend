@@ -49,7 +49,7 @@ pipeline {
             steps {
                 dir('src/frontend') {
                     script {
-                        sonarqube_analysis("${SONAR_EV}", "frontend", "frontend")
+                        sonarqube_analysis("${SONAR_EV}", "frontend", "frontend", "go")
                     }
                 }
             }
