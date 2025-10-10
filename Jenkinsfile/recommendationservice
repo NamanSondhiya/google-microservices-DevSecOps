@@ -2,8 +2,13 @@ library('jenkins-shared') _
 pipeline {
     agent any
 
+    environment {
+        DOCKER_REGISTRY = 'namanss'
+        IMAGE_NAME = 'recommendationservice'
+        DOCKERFILE_PATH = 'src/recommendationservice'
+    }
+
     tools {
-        jdk 'jdk21'
         jdk 'jdk17'
     }
 
@@ -22,6 +27,20 @@ pipeline {
                 }
             }
         }
+        stage('SAST Scan') {
+            steps {
+                dir('src/recommendationservice') {
+                    script {
+                        sh 'bandit -r . -f json -o bandit-report.json || true'
+                    }
+                }
+            }
+            post {
+                always {
+                    archiveArtifacts artifacts: 'src/recommendationservice/bandit-report.json', allowEmptyArchive: true
+                }
+            }
+        }
         stage('Trivy Fs Scan') {
             steps {
                 dir('src/recommendationservice') {
@@ -32,33 +51,33 @@ pipeline {
             }
             post {
                 always {
-                    archiveArtifacts 'src/recommendationservice/trivy-fs-report.txt'
+                    archiveArtifacts artifacts: 'src/recommendationservice/trivy-fs-report.txt', allowEmptyArchive: true
                 }
             }
         }
         stage('Docker Build') {
             steps {
                 script {
-                    docker_build("recommendationservice", "${BUILD_NUMBER}", "namanss", "src/recommendationservice")
+                    docker_build(env.IMAGE_NAME, "${BUILD_NUMBER}", env.DOCKER_REGISTRY, env.DOCKERFILE_PATH)
                 }
             }
         }
         stage('Trivy Image Scan') {
             steps {
                 script {
-                    trivy_image_scan("recommendationservice","${BUILD_NUMBER}","namanss")
+                    trivy_image_scan(env.IMAGE_NAME, "${BUILD_NUMBER}", env.DOCKER_REGISTRY)
                 }
             }
             post {
                 always {
-                    archiveArtifacts 'recommendationservice-trivy-image-report.txt'
+                    archiveArtifacts artifacts: 'recommendationservice-trivy-image-report.txt', allowEmptyArchive: true
                 }
             }
         }
         stage('Docker Push') {
             steps {
                 script {
-                    docker_push("recommendationservice", "${BUILD_NUMBER}", "namanss")
+                    docker_push(env.IMAGE_NAME, "${BUILD_NUMBER}", env.DOCKER_REGISTRY)
                 }
             }
         }
