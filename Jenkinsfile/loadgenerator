@@ -81,16 +81,5 @@ pipeline {
                 }
             }
         }
-        stage('Update Deployment') {
-            steps {
-                script {
-                    sh """
-                        sed -i 's|image: ${env.DOCKER_REGISTRY}/${env.IMAGE_NAME}:.*|image: ${env.DOCKER_REGISTRY}/${env.IMAGE_NAME}:${BUILD_NUMBER}|g' k8s-manifests/loadgenerator.yaml
-                        git add k8s-manifests/loadgenerator.yaml
-                        git commit -m "Update ${env.IMAGE_NAME} image to ${BUILD_NUMBER}" || true
-                    """
-                }
-            }
-        }
     }
 }
