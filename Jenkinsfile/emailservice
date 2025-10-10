@@ -6,6 +6,10 @@ pipeline {
         jdk 'jdk17'
     }
 
+    environment {
+        SONAR_EV = tool 'Sonar'
+    }
+    
     stages{
         stage('Clean the workspace') {
             steps {
