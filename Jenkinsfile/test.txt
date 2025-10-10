@@ -1,4 +1,4 @@
-[Completed - Email]
+[Completed - no Email]
 ADservice
 Cartservice
 checkoutservice
@@ -9,6 +9,17 @@ loadgenerator
 paymentservice
 recommendationservice
 productcatalogservice
-
-[Pending]
 shippingservice
+
+[Pending + Email]
+--- ADservice
+--- Cartservice
+--- checkoutservice
+--- currencyservice
+--- emailservice
+--- frontend
+--- loadgenerator
+--- paymentservice
+--- recommendationservice
+--- productcatalogservice
+--- shippingservice
