@@ -32,7 +32,11 @@ pipeline {
             steps {
                 dir('src/checkoutservice') {
                     script {
-                        gosec_scan("./...")
+                        sh '''
+                        export PATH=$GOPATH/bin:$PATH
+                        go install github.com/securego/gosec/v2/cmd/gosec@latest
+                        gosec ./... | tee gosec-report.txt
+                        '''                    
                     }
                 }
             }
