@@ -1,8 +1,9 @@
 [Completed - Email]
 ADservice
 Cartservice
-[Pending]
 checkoutservice
+
+[Pending]
 currencyservice
 emailservice
 frontend
