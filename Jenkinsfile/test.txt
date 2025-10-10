@@ -5,10 +5,10 @@ checkoutservice
 currencyservice
 emailservice
 frontend
+loadgenerator
 
 [Pending]
 
-loadgenerator
 paymentservice
 productcatalogservice
 recommendationservice

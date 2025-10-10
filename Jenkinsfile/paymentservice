@@ -3,8 +3,12 @@ pipeline {
     agent any
 
     tools {
-        jdk 'jdk21'
         jdk 'jdk17'
+        nodejs 'nodejs20'
+    }
+
+    environment {
+        SONAR_EV = tool 'Sonar'
     }
 
     stages{
@@ -19,6 +23,29 @@ pipeline {
             steps {
                 script {
                     git_clone("https://github.com/NamanSondhiya/google-microservices-DevSecOps.git", "devOps")
+                }
+            }
+        }
+        stage('SonarQube Analysis') {
+            steps {
+                dir('src/paymentservice') {
+                    script {
+                        sonarqube_analysis("${SONAR_EV}", "paymentservice", "paymentservice", "js")
+                    }
+                }
+            }
+        }
+        stage('Quality Gates') {
+            steps {
+                script {
+                    sonarqube_QualityGate(5, false)
+                }
+            }
+        }
+        stage('Dependencies Install') {
+            steps {
+                dir('src/paymentservice') {
+                    sh 'npm install'
                 }
             }
         }
