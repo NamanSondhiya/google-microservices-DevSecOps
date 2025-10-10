@@ -3,9 +3,9 @@ ADservice
 Cartservice
 checkoutservice
 currencyservice
+emailservice
 
 [Pending]
-emailservice
 frontend
 loadgenerator
 paymentservice
