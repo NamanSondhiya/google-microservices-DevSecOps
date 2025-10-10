@@ -1,0 +1,13 @@
+[Completed - Email]
+ADservice
+Cartservice
+[Pending]
+checkoutservice
+currencyservice
+emailservice
+frontend
+loadgenerator
+paymentservice
+productcatalogservice
+recommendationservice
+shippingservice
