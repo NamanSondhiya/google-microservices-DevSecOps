@@ -5,6 +5,7 @@ pipeline {
     tools {
         jdk 'jdk21'
         jdk 'jdk17'
+        dotnetsdk 'dotnet9'
     }
 
     environment {
