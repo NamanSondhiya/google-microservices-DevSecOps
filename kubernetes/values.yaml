@@ -1,0 +1,5 @@
+namespace: application
+
+adservice:
+  imagetag: 11
+  servicetype: ClusterIP
