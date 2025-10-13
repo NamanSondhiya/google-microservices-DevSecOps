@@ -32,9 +32,8 @@ spec:
                     requests:
                       memory: "180Mi"
                       cpu: "200m"
-                  dependencies:
-                    - name: redis-cart
-                      condition: service_healthy
+                    dependsOn:
+                      - redis-cart
 ---
 kind: Service
 apiVersion: v1
