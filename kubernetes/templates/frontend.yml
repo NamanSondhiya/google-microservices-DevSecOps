@@ -7,7 +7,6 @@ metadata:
     app: frontend
 spec:
   replicas: {{ .Values.frontend.replicasCount }}
-  serviceAccountName: frontend-sa
   selector:
     matchLabels:
       app: frontend
@@ -16,6 +15,7 @@ spec:
       labels:
         app: frontend
     spec:
+      serviceAccountName: frontend-sa
       containers:
         - name: frontend
           image: namanss/frontend:{{ .Values.frontend.imagetag }}

@@ -24,7 +24,7 @@ spec:
                     - name: PORT
                       value: "7070"
                     - name: REDIS_ADDR
-                      value: redis-cart.{{ .Values.namespace }}.svc.cluster.local:6379
+                      value: redis-cart-svc.{{ .Values.namespace }}.svc.cluster.local:6379
                   resources:
                     limits:
                       memory: "300Mi"
