@@ -53,5 +53,5 @@ checkoutservice:
   
 frontend:
   replicasCount: 1
-  imagetag: 1
-  servicetype: ClusterIP
+  imagetag: 4
+  servicetype: NodePort
