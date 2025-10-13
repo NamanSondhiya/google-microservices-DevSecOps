@@ -1,0 +1,54 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: currencyservice-deploy
+  namespace: {{ .Values.namespace }}
+    labels:
+       app: currencyservice
+spec:
+    replicas: {{ .Values.currencyservice.replicasCount }}
+    selector:
+        matchLabels:
+            app: currencyservice
+    template:
+        metadata:
+            labels:
+                app: currencyservice
+        spec:
+            containers:
+                - name: currencyservice
+                  image: docker.io/namanss/currencyservice:{{ .Values.currencyservice.imagetag }}
+                    ports:
+                       - containerPort: 7000
+                    resources:
+                        requests:
+                            memory: "128Mi"
+                            cpu: "100m"
+                        limits:
+                            memory: "300Mi"
+                            cpu: "300m"
+                    restartPolicy: Always
+---
+kind: Service
+apiVersion: v1
+metadata:
+    name: currencyservice
+    namespace: {{ .Values.namespace }}
+    labels:
+        app: currencyservice
+spec:
+    selector:
+        app: currencyservice
+    ports:
+        - protocol: TCP
+          port: 7000
+          targetPort: 7000
+    type: {{ .Values.currencyservice.servicetype }}
+---
+kind: ServiceAccount
+apiVersion: v1
+metadata:
+    name: currencyservice
+    namespace: {{ .Values.namespace }}
+    labels:
+        app: currencyservice

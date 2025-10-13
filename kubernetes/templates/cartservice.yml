@@ -1,0 +1,61 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+    name: cartservice-deploy
+    namespace: {{ .Values.namespace }}
+    labels:
+       app: cartservice
+spec:
+    replicas: {{ .Values.cartservice.replicasCount }}
+    selector:
+        matchLabels:
+            app: cartservice
+    template:
+        metadata:
+            labels:
+                app: cartservice
+        spec:
+            containers:
+                - name: cartservice
+                  image: docker.io/namanss/cartservice:{{ .Values.cartservice.imagetag }}
+                  ports:
+                    - containerPort: 7070
+                  env:
+                    - name: PORT
+                      value: "7070"
+                    - name: REDIS_ADDR
+                      value: "redis-cart:6379"
+                  resources:
+                    limits:
+                      memory: "300Mi"
+                      cpu: "300m"
+                    requests:
+                      memory: "180Mi"
+                      cpu: "200m"
+                  dependencies:
+                    - name: redis-cart
+                      condition: service_healthy
+---
+kind: Service
+apiVersion: v1
+metadata:
+    name: cartservice
+    namespace: {{ .Values.namespace }}
+    labels:
+        app: cartservice
+spec:
+    selector:
+        app: cartservice
+    ports:
+        - protocol: TCP
+          port: 7070
+          targetPort: 7070
+    type: {{ .Values.cartservice.servicetype }}
+---
+kind: ServiceAccount
+apiVersion: v1
+metadata:
+    name: cartservice
+    namespace: {{ .Values.namespace }}
+    labels:
+        app: cartservice

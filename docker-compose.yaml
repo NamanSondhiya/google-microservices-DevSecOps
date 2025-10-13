@@ -1,4 +1,15 @@
 services:
+
+  adservice:
+    build: ./src/adservice
+    ports:
+      - "9555:9555"
+    environment:
+      - PORT=9555
+      - DISABLE_STATS=1
+      - DISABLE_TRACING=1
+    restart: always
+
   redis-cart:
     image: redis:alpine
     ports:
@@ -9,14 +20,12 @@ services:
       timeout: 3s
       retries: 5
 
-  adservice:
-    build: ./src/adservice
+  currencyservice:
+    build: ./src/currencyservice
     ports:
-      - "9555:9555"
+      - "7000:7000"
     environment:
-      - PORT=9555
-      - DISABLE_STATS=1
-      - DISABLE_TRACING=1
+      - PORT=7000
     restart: always
 
   cartservice:
@@ -56,14 +65,6 @@ services:
         condition: service_started
       cartservice:
         condition: service_started
-    restart: always
-
-  currencyservice:
-    build: ./src/currencyservice
-    ports:
-      - "7000:7000"
-    environment:
-      - PORT=7000
     restart: always
 
   emailservice:

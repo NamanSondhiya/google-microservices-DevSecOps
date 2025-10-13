@@ -1,5 +1,21 @@
 namespace: application
 
+redisCart:
+  replicasCount: 1
+  imagetag: alpine
+  servicetype: ClusterIP
+
 adservice:
+  replicasCount: 1
   imagetag: 11
+  servicetype: ClusterIP
+
+cartservice:
+  replicasCount: 1
+  imagetag: 14
+  servicetype: ClusterIP
+
+currencyservice:
+  replicasCount: 1
+  imagetag: 3
   servicetype: ClusterIP

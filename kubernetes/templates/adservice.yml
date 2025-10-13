@@ -6,7 +6,7 @@ metadata:
   labels:
     app: adservice
 spec:
-  replicas: 1
+  replicas: {{ .Values.replicasCount }}
   selector:
     matchLabels:
       app: adservice
