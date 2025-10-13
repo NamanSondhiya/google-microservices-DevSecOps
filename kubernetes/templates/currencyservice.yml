@@ -20,6 +20,9 @@ spec:
                   image: docker.io/namanss/currencyservice:{{ .Values.currencyservice.imagetag }}
                   ports:
                      - containerPort: 7000
+                  env:
+                   - name: PORT
+                     value: "7000"
                   resources:
                       requests:
                           memory: "128Mi"
@@ -27,7 +30,6 @@ spec:
                       limits:
                           memory: "300Mi"
                           cpu: "300m"
-                  restartPolicy: Always
 ---
 kind: Service
 apiVersion: v1

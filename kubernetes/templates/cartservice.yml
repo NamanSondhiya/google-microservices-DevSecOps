@@ -32,8 +32,9 @@ spec:
                     requests:
                       memory: "180Mi"
                       cpu: "200m"
-                    dependsOn:
-                      - redis-cart
+                  restartPolicy: Always
+                  dependsOn:
+                    - redis-cart
 ---
 kind: Service
 apiVersion: v1
