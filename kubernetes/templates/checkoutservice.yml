@@ -1,0 +1,70 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: checkoutservice-deploy
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: checkoutservice
+spec:
+  replicas: {{ .Values.checkoutservice.replicasCount }}
+  selector:
+    matchLabels:
+      app: checkoutservice
+  template:
+    metadata:
+      labels:
+        app: checkoutservice
+    spec:
+      containers:
+        - name: checkoutservice
+          image: namanss/checkoutservice:{{ .Values.checkoutservice.imagetag }}
+          ports:
+            - containerPort: 8080
+          env:
+            - name: PORT
+              value: "8080"
+            - name: PRODUCT_CATALOG_SERVICE_ADDR
+              value: productcatalogservice:3550
+            - name: SHIPPING_SERVICE_ADDR
+              value: shippingservice:50051
+            - name: PAYMENT_SERVICE_ADDR
+              value: paymentservice:50051
+            - name: EMAIL_SERVICE_ADDR
+              value: emailservice:8080
+            - name: CURRENCY_SERVICE_ADDR
+              value: currencyservice:7000
+            - name: CART_SERVICE_ADDR
+              value: cartservice:7070
+            - name: REDIS_ENABLED
+              value: "{{ .Values.checkoutservice.redis }}"
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "200m"
+            limits:
+              memory: "256Mi"
+              cpu: "300m"
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: checkoutservice
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: checkoutservice
+spec:
+  selector:
+    app: checkoutservice
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+  type: {{ .Values.checkoutservice.servicetype }}
+---
+kind: ServiceAccount
+apiVersion: v1
+metadata:
+  name: checkoutservice-sa
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: checkoutservice

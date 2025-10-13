@@ -44,3 +44,14 @@ recommendationservice:
   replicasCount: 1
   imagetag: 1
   servicetype: ClusterIP
+
+checkoutservice:
+  replicasCount: 1
+  imagetag: 1
+  servicetype: ClusterIP
+  redis: true
+  
+frontend:
+  replicasCount: 1
+  imagetag: 1
+  servicetype: ClusterIP
