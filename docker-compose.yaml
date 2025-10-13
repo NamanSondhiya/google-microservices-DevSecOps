@@ -72,6 +72,18 @@ services:
         condition: service_healthy
     restart: always
 
+  recommendationservice:
+    build: ./src/recommendationservice
+    ports:
+      - "8083:8080"
+    environment:
+      - PORT=8080
+      - PRODUCT_CATALOG_SERVICE_ADDR=productcatalogservice:3550
+    depends_on:
+      productcatalogservice:
+        condition: service_started
+    restart: always
+
   checkoutservice:
     build: ./src/checkoutservice
     ports:
@@ -126,18 +138,6 @@ services:
       checkoutservice:
         condition: service_started
       adservice:
-        condition: service_started
-    restart: always
-
-  recommendationservice:
-    build: ./src/recommendationservice
-    ports:
-      - "8083:8080"
-    environment:
-      - PORT=8080
-      - PRODUCT_CATALOG_SERVICE_ADDR=productcatalogservice:3550
-    depends_on:
-      productcatalogservice:
         condition: service_started
     restart: always
 

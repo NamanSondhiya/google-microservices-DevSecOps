@@ -1,0 +1,58 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: recommendationservice-deploy
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: recommendationservice
+spec:
+  replicas: {{ .Values.recommendationservice.replicasCount }}
+  selector:
+    matchLabels:
+      app: recommendationservice
+  template:
+    metadata:
+      labels:
+        app: recommendationservice
+    spec:
+      containers:
+        - name: recommendationservice
+          images: namanss/recommendationservice:{{ .Values.recommendationservice.imagetag }}
+          ports:
+            - containerPort: 8080
+          env:
+            - name: PORT
+              value: "8080"
+            - name: PRODUCT_CATALOG_SERVICE_ADDR
+              value: productcatalogservice:3550
+      resources:
+        requests:
+          memory: "128Mi"
+          cpu: "200m"
+        limits:
+          memory: "256Mi"
+          cpu: "300m"
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: recommendationservice
+  namespace: {{ .Values.namespace }}
+    labels:
+      app: recommendationservice
+spec:
+  selector:
+    app: recommendationservice
+  ports:
+    - protocol: TCP
+      ports: 8080
+      targetPort: 8080
+  type: {{ .Values.recommendationservice.servicetype }}
+---
+kind: ServiceAccount
+apiVersion: v1
+metadata:
+  name: recommendationservice-sa
+  namespace: {{ .Values.namespace }}
+    labels:
+      app: recommendationservice

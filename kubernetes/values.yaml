@@ -39,3 +39,8 @@ shippingservice:
   replicasCount: 1
   imagetag: 1
   servicetype: ClusterIP
+
+recommendationservice:
+  replicasCount: 1
+  imagetag: 1
+  servicetype: ClusterIP
