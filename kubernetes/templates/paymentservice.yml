@@ -2,11 +2,11 @@ kind: Deployment
 apiVersion: apps/v1
 metadata:
   name: paymentservice-deploy
-  namespace: { { .Values.namespace } }
+  namespace: {{ .Values.namespace }}
   labels:
     app: paymentservice
 spec:
-  replicas: { { .Values.paymentservice.replicasCount } }
+  replicas: {{ .Values.paymentservice.replicasCount }}
   selector:
     matchLabels:
       app: paymentservice
@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: paymentservice
-          image: namanss/paymentservice:{{ .Values.paymentservice.imagetaga }}
+          image: namanss/paymentservice:{{ .Values.paymentservice.imagetag }}
           ports:
             - containerPort: 50051
           env:
@@ -35,7 +35,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: paymentservice
-  namespace: { { .Values.namespace } }
+  namespace: {{ .Values.namespace }}
   labels:
     app: paymentservice
 spec:
@@ -45,10 +45,10 @@ spec:
     - protocol: TCP
       port: 50051
       targetPort: 50051
-  type: { { .Values.paymentservice.servicetype } }
+  type: {{ .Values.paymentservice.servicetype }}
 ---
 kind: ServiceAccount
 apiVersion: v1
 metadata:
   name: paymentservice
-  namespace: { { .Values.namespace } }
+  namespace: {{ .Values.namespace }}
