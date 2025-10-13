@@ -24,3 +24,8 @@ emailservice:
   replicasCount: 1
   imagetag: 2
   servicetype: ClusterIP
+
+paymentservice:
+  replicasCount: 1
+  imagetag: 1
+  servicetype: ClusterIP
