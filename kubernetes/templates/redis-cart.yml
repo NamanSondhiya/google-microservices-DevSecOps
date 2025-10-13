@@ -31,7 +31,7 @@ spec:
 kind: Service
 apiVersion: v1
 metadata:
-    name: redis-cart
+    name: redis-cart-svc
     namespace: {{ .Values.namespace }}
     labels:
        app: redis-cart
@@ -47,5 +47,7 @@ spec:
 kind: ServiceAccount
 apiVersion: v1
 metadata:
-    name: adservice
+    name: adservice-sa
     namespace: {{ .Values.namespace }}
+    labels:
+      app: redis-cart

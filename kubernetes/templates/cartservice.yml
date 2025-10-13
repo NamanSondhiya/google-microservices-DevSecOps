@@ -39,7 +39,7 @@ spec:
 kind: Service
 apiVersion: v1
 metadata:
-    name: cartservice
+    name: cartservice-svc
     namespace: {{ .Values.namespace }}
     labels:
         app: cartservice
@@ -55,7 +55,7 @@ spec:
 kind: ServiceAccount
 apiVersion: v1
 metadata:
-    name: cartservice
+    name: cartservice-sa
     namespace: {{ .Values.namespace }}
     labels:
         app: cartservice

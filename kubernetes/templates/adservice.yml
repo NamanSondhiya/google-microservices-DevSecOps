@@ -34,21 +34,21 @@ spec:
 kind: Service
 apiVersion: v1
 metadata:
-    name: adservice
-    namespace: {{ .Values.namespace }}
-    labels:
-        app: adservice
+  name: adservice-svc
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: adservice
 spec:
-    selector:
-        app: adservice
-    ports:
-        - protocol: TCP
-          port: 9555
-          targetPort: 9555
-    type: {{ .Values.adservice.servicetype }}
+  selector:
+    app: adservice
+  ports:
+    - protocol: TCP
+      port: 9555
+      targetPort: 9555
+  type: {{ .Values.adservice.servicetype }}
 ---
 kind: ServiceAccount
 apiVersion: v1
 metadata:
-    name: adservice
-    namespace: {{ .Values.namespace }}
+  name: adservice-sa
+  namespace: {{ .Values.namespace }}

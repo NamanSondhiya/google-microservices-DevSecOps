@@ -52,6 +52,14 @@ services:
       - PORT=3550
     restart: always
 
+  shippingservice:
+    build: ./src/shippingservice
+    ports:
+      - "50052:50051"
+    environment:
+      - PORT=50051
+    restart: always
+
   cartservice:
     build: ./src/cartservice/src
     ports:
@@ -131,14 +139,6 @@ services:
     depends_on:
       productcatalogservice:
         condition: service_started
-    restart: always
-
-  shippingservice:
-    build: ./src/shippingservice
-    ports:
-      - "50052:50051"
-    environment:
-      - PORT=50051
     restart: always
 
   loadgenerator:

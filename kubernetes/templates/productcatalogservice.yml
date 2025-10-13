@@ -1,7 +1,7 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: productcatalogservice
+  name: productcatalogservice-deploy
   namespace: {{ .Values.namespace }}
   labels:
     app: productcatalogservice
@@ -34,7 +34,7 @@ spec:
 kind: Service
 apiVersion: v1
 metadata:
-    name: productcatalogservice
+    name: productcatalogservice-svc
     namespace: {{ .Values.namespace }}
     labels:
         app: productcatalogservice
@@ -50,7 +50,7 @@ spec:
 kind: ServiceAccount
 apiVersion: v1
 metadata:
-  name: productcatalogservice
+  name: productcatalogservice-sa
   namespace: {{ .Values.namespace }}
   labels:
     app: productcatalogservice

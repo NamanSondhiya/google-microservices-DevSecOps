@@ -34,21 +34,23 @@ spec:
 kind: Service
 apiVersion: v1
 metadata:
-    name: emailservice
-    namespace: {{ .Values.namespace }}
-    labels:
-        app: emailservice
+  name: emailservice-svc
+  namespace: {{ .Values.namespace }}
+  labels:
+      app: emailservice
 spec:
-    selector:
-        app: emailservice
-    ports:
-        - port: 8008
-          targetPort: 8080
-          protocol: TCP
-    type: {{ .Values.emailservice.servicetype }}
+  selector:
+      app: emailservice
+  ports:
+      - port: 8008
+        targetPort: 8080
+        protocol: TCP
+  type: {{ .Values.emailservice.servicetype }}
 ---
 kind: ServiceAccount
 apiVersion: v1
 metadata:
-    name: emailservice
-    namespace: {{ .Values.namespace }}
+  name: emailservice-sa
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: emailservice

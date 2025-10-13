@@ -30,8 +30,12 @@ paymentservice:
   imagetag: 1
   servicetype: ClusterIP
 
-
 productcatalogservice:
+  replicasCount: 1
+  imagetag: 1
+  servicetype: ClusterIP
+
+shippingservice:
   replicasCount: 1
   imagetag: 1
   servicetype: ClusterIP
