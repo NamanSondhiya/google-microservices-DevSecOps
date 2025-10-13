@@ -28,6 +28,14 @@ services:
       - PORT=7000
     restart: always
 
+  emailservice:
+    build: ./src/emailservice
+    ports:
+      - "8082:8080"
+    environment:
+      - PORT=8080
+    restart: always
+
   cartservice:
     build: ./src/cartservice/src
     ports:
@@ -65,14 +73,6 @@ services:
         condition: service_started
       cartservice:
         condition: service_started
-    restart: always
-
-  emailservice:
-    build: ./src/emailservice
-    ports:
-      - "8082:8080"
-    environment:
-      - PORT=8080
     restart: always
 
   frontend:

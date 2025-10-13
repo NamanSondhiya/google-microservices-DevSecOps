@@ -1,7 +1,7 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-    name: redis-cart
+    name: redis-cart-deploy
     namespace: {{ .Values.namespace }}
     labels:
       app: redis-cart

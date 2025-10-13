@@ -1,0 +1,54 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+    name: emailservice-deploy
+    namespace: {{ .Values.namespace }}
+    labels:
+        app: emailservice
+spec:
+    replicas: {{ .Values.emailservice.replicasCount }}
+    selector: 
+        matchLabels:
+            app: emailservice
+    template:
+        metadata:
+            labels:
+                app: emailservice
+        spec:
+            containers:
+            - name: emailservice
+              image: namanss/emailservice:{{ .Values.emailservice.imagetag }}
+              ports:
+                - containerPort: 8080
+              env:
+                - name: PORT
+                  value: "8080"
+              resources:
+                requests:
+                  memory: "128Mi"
+                  cpu: "100m"
+                limits:
+                  memory: "256Mi"
+                  cpu: "500m"
+---
+kind: Service
+apiVersion: v1
+metadata:
+    name: emailservice
+    namespace: {{ .Values.namespace }}
+    labels:
+        app: emailservice
+spec:
+    selector:
+        app: emailservice
+    ports:
+        - port: 8008
+          targetPort: 8080
+          protocol: TCP
+    type: {{ .Values.emailservice.servicetype }}
+---
+kind: ServiceAccount
+apiVersion: v1
+metadata:
+    name: emailservice
+    namespace: {{ .Values.namespace }}
