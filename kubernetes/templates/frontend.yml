@@ -7,6 +7,7 @@ metadata:
     app: frontend
 spec:
   replicas: {{ .Values.frontend.replicasCount }}
+  serviceAccountName: frontend-sa
   selector:
     matchLabels:
       app: frontend
@@ -24,19 +25,19 @@ spec:
           - name: PORT
             value: "8080"
           - name: PRODUCT_CATALOG_SERVICE_ADDR
-            value: productcatalogservice-svc:3550
+            value: productcatalogservice-svc.{{ .Values.namespace }}.svc.cluster.local:3550
           - name: CURRENCY_SERVICE_ADDR
-            value: currencyservice-svc:7000
+            value: currencyservice-svc.{{ .Values.namespace }}.svc.cluster.local:7000
           - name: CART_SERVICE_ADDR
-            value: cartservice-svc:7070
+            value: cartservice-svc.{{ .Values.namespace }}.svc.cluster.local:7070
           - name: RECOMMENDATION_SERVICE_ADDR
-            value: recommendationservice-svc:8080
+            value: recommendationservice-svc.{{ .Values.namespace }}.svc.cluster.local:8080
           - name: SHIPPING_SERVICE_ADDR
-            value: shippingservice-svc:50051
+            value: shippingservice-svc.{{ .Values.namespace }}.svc.cluster.local:50051
           - name: CHECKOUT_SERVICE_ADDR
-            value: checkoutservice-svc:5050
+            value: checkoutservice-svc.{{ .Values.namespace }}.svc.cluster.local:5050
           - name: AD_SERVICE_ADDR
-            value: adservice-svc:9555
+            value: adservice-svc.{{ .Values.namespace }}.svc.cluster.local:9555
           resources:
             requests:
               memory: "256Mi"
@@ -57,8 +58,9 @@ spec:
     app: frontend
   ports:
     - protocol: TCP
-      port: 8080
+      port: {{ .Values.frontend.servicePort }}
       targetPort: 8080
+      nodePort: {{ .Values.frontend.NodePort }}
   type: {{ .Values.frontend.servicetype }}
 ---
 kind: ServiceAccount
