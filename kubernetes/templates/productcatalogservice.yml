@@ -23,6 +23,10 @@ spec:
           env:
             - name: PORT
               value: "3550"
+            - name: DISABLE_TRACING
+              value: "true"
+            - name: DISABLE_PROFILER
+              value: "true"
           resources:
             requests:
                 memory: "128Mi"

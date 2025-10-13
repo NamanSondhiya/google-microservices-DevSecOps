@@ -18,6 +18,11 @@ spec:
             containers:
                 - name: redis-cart
                   image: "redis:{{ .Values.redisCart.imagetag }}"
+                  env:
+                  - name: DISABLE_TRACING
+                    value: "true"
+                  - name: DISABLE_PROFILER
+                    value: "true"
                   ports:
                     - containerPort: 6379
             resources:
