@@ -44,6 +44,14 @@ services:
       - PORT=50051
     restart: always
 
+  productcatalogservice:
+    build: ./src/productcatalogservice
+    ports:
+      - "3550:3550"
+    environment:
+      - PORT=3550
+    restart: always
+
   cartservice:
     build: ./src/cartservice/src
     ports:
@@ -111,14 +119,6 @@ services:
         condition: service_started
       adservice:
         condition: service_started
-    restart: always
-
-  productcatalogservice:
-    build: ./src/productcatalogservice
-    ports:
-      - "3550:3550"
-    environment:
-      - PORT=3550
     restart: always
 
   recommendationservice:

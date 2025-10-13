@@ -1,0 +1,56 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: productcatalogservice
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: productcatalogservice
+spec:
+  replicas: {{ .Values.productcatalogservice.replicasCount }}
+  selector:
+    matchLabels:
+      app: productcatalogservice
+  template:
+    metadata:
+      labels:
+        app: productcatalogservice
+    spec:
+      containers:
+        - name: productcatalogservice
+          image: namanss/productcatalogservice:{{ .Values.productcatalogservice.imagetag }}
+          ports:
+            - containerPort: 3550
+          env:
+            - name: PORT
+              value: "3550"
+          resources:
+            requests:
+                memory: "128Mi"
+                cpu: "100m"
+            limits:
+                memory: "256Mi"
+                cpu: "300m"
+---
+kind: Service
+apiVersion: v1
+metadata:
+    name: productcatalogservice
+    namespace: {{ .Values.namespace }}
+    labels:
+        app: productcatalogservice
+spec:
+    selector:
+        app: productcatalogservice
+    ports:
+        - protocol: TCP
+          port: 3550
+          targetPort: 3550
+    type: {{ .Values.productcatalogservice.servicetype }}
+---
+kind: ServiceAccount
+apiVersion: v1
+metadata:
+  name: productcatalogservice
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: productcatalogservice

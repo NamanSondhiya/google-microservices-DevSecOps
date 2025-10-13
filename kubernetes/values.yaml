@@ -29,3 +29,9 @@ paymentservice:
   replicasCount: 1
   imagetag: 1
   servicetype: ClusterIP
+
+
+productcatalogservice:
+  replicasCount: 1
+  imagetag: 1
+  servicetype: ClusterIP
