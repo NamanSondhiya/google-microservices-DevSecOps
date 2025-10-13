@@ -36,6 +36,14 @@ services:
       - PORT=8080
     restart: always
 
+  paymentservice:
+    build: ./src/paymentservice
+    ports:
+      - "50051:50051"
+    environment:
+      - PORT=50051
+    restart: always
+
   cartservice:
     build: ./src/cartservice/src
     ports:
@@ -103,14 +111,6 @@ services:
         condition: service_started
       adservice:
         condition: service_started
-    restart: always
-
-  paymentservice:
-    build: ./src/paymentservice
-    ports:
-      - "50051:50051"
-    environment:
-      - PORT=50051
     restart: always
 
   productcatalogservice:
