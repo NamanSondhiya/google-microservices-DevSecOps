@@ -60,3 +60,8 @@ frontend:
   servicePort: 8080
   NodePort: 31328
   servicetype: NodePort
+
+loadgenerator:
+  replicasCount: 1
+  imagetag: 5
+  servicetype: ClusterIP
