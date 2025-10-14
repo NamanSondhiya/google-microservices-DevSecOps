@@ -43,6 +43,7 @@
 ------recommendationservice
 ------productcatalogservice
 ------shippingservice
+------loadgenerator
 
 [] GitOps CD with ArgoCD pending
 [] UPDATED README.md with all services and their ports
