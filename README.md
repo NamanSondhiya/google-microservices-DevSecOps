@@ -6,7 +6,7 @@
 **Online Boutique** is a cloud-first microservices demo application.  The application is a
 web-based e-commerce app where users can browse items, add them to the cart, and purchase them.
 
-Google uses this application to demonstrate how developers can modernize enterprise applications using Google Cloud products, including: [Google Kubernetes Engine (GKE)](https://cloud.google.com/kubernetes-engine), [Cloud Service Mesh (CSM)](https://cloud.google.com/service-mesh), [gRPC](https://grpc.io/), [Cloud Operations](https://cloud.google.com/products/operations), [Spanner](https://cloud.google.com/spanner), [Memorystore](https://cloud.google.com/memorystore), [AlloyDB](https://cloud.google.com/alloydb), and [Gemini](https://ai.google.dev/). This application works on any Kubernetes cluster.
+This application demonstrates how developers can modernize enterprise applications using microservices, gRPC, and other technologies. This application works on any Kubernetes cluster, including Amazon EKS.
 
 If you’re using this demo, please **★Star** this repository to show your interest!
 
@@ -42,11 +42,11 @@ Find **Protocol Buffers Descriptions** at the [`./protos` directory](/protos).
 | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
 | [![Screenshot of store homepage](/docs/img/online-boutique-frontend-1.png)](/docs/img/online-boutique-frontend-1.png) | [![Screenshot of checkout screen](/docs/img/online-boutique-frontend-2.png)](/docs/img/online-boutique-frontend-2.png) |
 
-## Quickstart (GKE)
+## Quickstart (Kubernetes)
 
 1. Ensure you have the following requirements:
-   - [Google Cloud project](https://cloud.google.com/resource-manager/docs/creating-managing-projects#creating_a_project).
-   - Shell environment with `gcloud`, `git`, and `kubectl`.
+   - Kubernetes cluster (e.g., Amazon EKS).
+   - Shell environment with `helm`, `git`, and `kubectl`.
 
 2. Clone the latest major version.
 
@@ -57,33 +57,13 @@ Find **Protocol Buffers Descriptions** at the [`./protos` directory](/protos).
 
    The `--depth 1` argument skips downloading git history.
 
-3. Set the Google Cloud project and region and ensure the Google Kubernetes Engine API is enabled.
+3. Deploy Online Boutique to the cluster using Helm.
 
    ```sh
-   export PROJECT_ID=<PROJECT_ID>
-   export REGION=us-central1
-   gcloud services enable container.googleapis.com \
-     --project=${PROJECT_ID}
+   helm install online-boutique ./kubernetes
    ```
 
-   Substitute `<PROJECT_ID>` with the ID of your Google Cloud project.
-
-4. Create a GKE cluster and get the credentials for it.
-
-   ```sh
-   gcloud container clusters create-auto online-boutique \
-     --project=${PROJECT_ID} --region=${REGION}
-   ```
-
-   Creating the cluster may take a few minutes.
-
-5. Deploy Online Boutique to the cluster.
-
-   ```sh
-   kubectl apply -f ./release/kubernetes-manifests.yaml
-   ```
-
-6. Wait for the pods to be ready.
+4. Wait for the pods to be ready.
 
    ```sh
    kubectl get pods
@@ -107,7 +87,7 @@ Find **Protocol Buffers Descriptions** at the [`./protos` directory](/protos).
    shippingservice-6ccc89f8fd-v686r         1/1     Running   0          2m58s
    ```
 
-7. Access the web frontend in a browser using the frontend's external IP.
+5. Access the web frontend in a browser using the frontend's external IP.
 
    ```sh
    kubectl get service frontend-external | awk '{print $4}'
@@ -115,16 +95,13 @@ Find **Protocol Buffers Descriptions** at the [`./protos` directory](/protos).
 
    Visit `http://EXTERNAL_IP` in a web browser to access your instance of Online Boutique.
 
-8. Congrats! You've deployed the default Online Boutique. To deploy a different variation of Online Boutique (e.g., with Google Cloud Operations tracing, Istio, etc.), see [Deploy Online Boutique variations with Kustomize](#deploy-online-boutique-variations-with-kustomize).
+6. Congrats! You've deployed the default Online Boutique. To deploy a different variation of Online Boutique (e.g., with service mesh, etc.), see [Deploy Online Boutique variations with Kustomize](#deploy-online-boutique-variations-with-kustomize).
 
-9. Once you are done with it, delete the GKE cluster.
+7. Once you are done with it, uninstall the release.
 
    ```sh
-   gcloud container clusters delete online-boutique \
-     --project=${PROJECT_ID} --region=${REGION}
+   helm uninstall online-boutique
    ```
-
-   Deleting the cluster may take a few minutes.
 
 ## Additional deployment options
 

@@ -11,6 +11,8 @@ spec:
     matchLabels:
       app: adservice
   template:
+    strategy:
+      type: blue-green
     metadata:
       labels:
         app: adservice

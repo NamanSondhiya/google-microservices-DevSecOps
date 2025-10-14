@@ -53,7 +53,7 @@ checkoutservice:
   
 frontend:
   replicasCount: 1
-  imagetag: 4
+  imagetag: 9
   servicePort: 8080
   NodePort: 31328
   servicetype: NodePort

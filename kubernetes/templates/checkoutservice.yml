@@ -15,6 +15,8 @@ spec:
       labels:
         app: checkoutservice
     spec:
+      strategy:
+        type: blue-green
       containers:
         - name: checkoutservice
           image: namanss/checkoutservice:{{ .Values.checkoutservice.imagetag }}

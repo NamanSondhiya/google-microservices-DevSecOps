@@ -11,6 +11,8 @@ spec:
     matchLabels:
       app: paymentservice
   template:
+    strategy:
+      type: blue-green
     metadata:
       labels:
         app: paymentservice

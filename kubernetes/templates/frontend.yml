@@ -15,6 +15,8 @@ spec:
       labels:
         app: frontend
     spec:
+      strategy:
+        type: blue-green
       serviceAccountName: frontend-sa
       containers:
         - name: frontend
