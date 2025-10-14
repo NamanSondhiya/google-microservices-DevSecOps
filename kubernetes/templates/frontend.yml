@@ -37,7 +37,7 @@ spec:
           - name: SHIPPING_SERVICE_ADDR
             value: shippingservice-svc.{{ .Values.namespace }}.svc.cluster.local:50051
           - name: CHECKOUT_SERVICE_ADDR
-            value: checkoutservice-svc.{{ .Values.namespace }}.svc.cluster.local:5050
+            value: checkoutservice-svc.{{ .Values.namespace }}.svc.cluster.local:8080
           - name: AD_SERVICE_ADDR
             value: adservice-svc.{{ .Values.namespace }}.svc.cluster.local:9555
           - name: DISABLE_TRACING
