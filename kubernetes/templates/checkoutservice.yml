@@ -7,6 +7,8 @@ metadata:
     app: checkoutservice
 spec:
   replicas: {{ .Values.checkoutservice.replicasCount }}
+  strategy:
+        type: {{ .Values.strategy.type }}
   selector:
     matchLabels:
       app: checkoutservice
@@ -15,8 +17,6 @@ spec:
       labels:
         app: checkoutservice
     spec:
-      strategy:
-        type: blue-green
       containers:
         - name: checkoutservice
           image: namanss/checkoutservice:{{ .Values.checkoutservice.imagetag }}
@@ -54,7 +54,7 @@ spec:
 kind: Service
 apiVersion: v1
 metadata:
-  name: checkoutservice
+  name: checkoutservice-svc
   namespace: {{ .Values.namespace }}
   labels:
     app: checkoutservice

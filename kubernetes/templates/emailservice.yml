@@ -6,6 +6,8 @@ metadata:
     labels:
         app: emailservice
 spec:
+    strategy:
+        type: {{ .Values.strategy.type }}
     replicas: {{ .Values.emailservice.replicasCount }}
     selector: 
         matchLabels:
@@ -15,8 +17,6 @@ spec:
             labels:
                 app: emailservice
         spec:
-            strategy:
-              type: blue-green
             containers:
             - name: emailservice
               image: namanss/emailservice:{{ .Values.emailservice.imagetag }}

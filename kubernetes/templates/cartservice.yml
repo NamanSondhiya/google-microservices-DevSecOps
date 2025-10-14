@@ -6,6 +6,8 @@ metadata:
     labels:
        app: cartservice
 spec:
+    strategy:
+        type: {{ .Values.strategy.type }}
     replicas: {{ .Values.cartservice.replicasCount }}
     selector:
         matchLabels:
@@ -15,8 +17,6 @@ spec:
             labels:
                 app: cartservice
         spec:
-            strategy:
-               type: blue-green
             containers:
               - name: cartservice
                 image: docker.io/namanss/cartservice:{{ .Values.cartservice.imagetag }}
@@ -39,8 +39,6 @@ spec:
                     memory: "180Mi"
                     cpu: "200m"
                 restartPolicy: Always
-                dependsOn:
-                  - redis-cart
 ---
 kind: Service
 apiVersion: v1

@@ -6,6 +6,8 @@ metadata:
     labels:
        app: currencyservice
 spec:
+    strategy:
+        type: {{ .Values.strategy.type }}
     replicas: {{ .Values.currencyservice.replicasCount }}
     selector:
         matchLabels:
@@ -15,8 +17,6 @@ spec:
             labels:
                 app: currencyservice
         spec:
-            strategy:
-                type: blue-green
             containers:
                 - name: currencyservice
                   image: docker.io/namanss/currencyservice:{{ .Values.currencyservice.imagetag }}

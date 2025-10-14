@@ -6,13 +6,13 @@ metadata:
   labels:
     app: adservice
 spec:
+  strategy:
+        type: {{ .Values.strategy.type }}
   replicas: {{ .Values.replicasCount }}
   selector:
     matchLabels:
       app: adservice
   template:
-    strategy:
-      type: blue-green
     metadata:
       labels:
         app: adservice

@@ -7,12 +7,12 @@ metadata:
     app: paymentservice
 spec:
   replicas: {{ .Values.paymentservice.replicasCount }}
+  strategy:
+        type: {{ .Values.strategy.type }}
   selector:
     matchLabels:
       app: paymentservice
   template:
-    strategy:
-      type: blue-green
     metadata:
       labels:
         app: paymentservice

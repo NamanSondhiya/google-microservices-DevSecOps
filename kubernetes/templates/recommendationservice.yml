@@ -7,6 +7,8 @@ metadata:
     app: recommendationservice
 spec:
   replicas: {{ .Values.recommendationservice.replicasCount }}
+  strategy:
+        type: {{ .Values.strategy.type }}
   selector:
     matchLabels:
       app: recommendationservice
@@ -15,8 +17,6 @@ spec:
       labels:
         app: recommendationservice
     spec:
-      strategy:
-        type: blue-green
       containers:
         - name: recommendationservice
           image: namanss/recommendationservice:{{ .Values.recommendationservice.imagetag }}
@@ -42,7 +42,7 @@ spec:
 kind: Service
 apiVersion: v1
 metadata:
-  name: recommendationservice
+  name: recommendationservice-svc
   namespace: {{ .Values.namespace }}
   labels:
     app: recommendationservice

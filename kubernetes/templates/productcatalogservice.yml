@@ -7,6 +7,8 @@ metadata:
     app: productcatalogservice
 spec:
   replicas: {{ .Values.productcatalogservice.replicasCount }}
+  strategy:
+        type: {{ .Values.strategy.type }}
   selector:
     matchLabels:
       app: productcatalogservice
@@ -15,8 +17,6 @@ spec:
       labels:
         app: productcatalogservice
     spec:
-      strategy:
-        type: blue-green
       containers:
         - name: productcatalogservice
           image: namanss/productcatalogservice:{{ .Values.productcatalogservice.imagetag }}

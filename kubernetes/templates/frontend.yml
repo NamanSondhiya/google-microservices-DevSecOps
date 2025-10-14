@@ -6,6 +6,8 @@ metadata:
   labels:
     app: frontend
 spec:
+  strategy:
+        type: {{ .Values.strategy.type }}
   replicas: {{ .Values.frontend.replicasCount }}
   selector:
     matchLabels:
@@ -15,8 +17,6 @@ spec:
       labels:
         app: frontend
     spec:
-      strategy:
-        type: blue-green
       serviceAccountName: frontend-sa
       containers:
         - name: frontend

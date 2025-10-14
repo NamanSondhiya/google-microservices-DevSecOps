@@ -7,6 +7,8 @@ metadata:
       app: redis-cart
 spec:
     replicas: {{ .Values.redisCart.replicasCount }}
+    strategy:
+        type: {{ .Values.strategy.type }}
     selector:
         matchLabels:
             app: redis-cart
@@ -15,8 +17,6 @@ spec:
             labels:
                 app: redis-cart
         spec:
-            strategy:
-                type: blue-green
             containers:
                 - name: redis-cart
                   image: "redis:{{ .Values.redisCart.imagetag }}"

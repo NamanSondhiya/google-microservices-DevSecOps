@@ -1,5 +1,8 @@
 namespace: application
 
+strategy:
+  type: RollingUpdate
+
 redisCart:
   replicasCount: 1
   imagetag: alpine
@@ -53,7 +56,7 @@ checkoutservice:
   
 frontend:
   replicasCount: 1
-  imagetag: 9
+  imagetag: 10
   servicePort: 8080
   NodePort: 31328
   servicetype: NodePort

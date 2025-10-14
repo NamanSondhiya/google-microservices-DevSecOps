@@ -7,6 +7,8 @@ metadata:
     app: shippingservice
 spec:
   replicas: {{ .Values.shippingservice.replicasCount }}
+  strategy:
+        type: {{ .Values.strategy.type }}
   selector:
     matchLabels:
       app: shippingservice
@@ -15,8 +17,6 @@ spec:
       labels:
         app: shippingservice
     spec:
-      strategy:
-        type: blue-green
       containers:
         - name: shippingservice
           image: namanss/shippingservice:{{ .Values.shippingservice.imagetag }}
