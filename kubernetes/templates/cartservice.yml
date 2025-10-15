@@ -33,11 +33,11 @@ spec:
                     value: "true"
                 resources:
                   limits:
-                    memory: "300Mi"
-                    cpu: "300m"
-                  requests:
-                    memory: "180Mi"
+                    memory: "100Mi"
                     cpu: "200m"
+                  requests:
+                    memory: "256Mi"
+                    cpu: "300m"
 ---
 kind: Service
 apiVersion: v1
