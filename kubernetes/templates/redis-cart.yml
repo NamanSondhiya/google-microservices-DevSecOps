@@ -54,7 +54,7 @@ spec:
 kind: ServiceAccount
 apiVersion: v1
 metadata:
-    name: adservice-sa
+    name: rediscart-sa
     namespace: {{ .Values.namespace }}
     labels:
       app: redis-cart
