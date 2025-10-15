@@ -111,6 +111,41 @@ Find **Protocol Buffers Descriptions** at the [`./protos` directory](/protos).
 - **AI assistant using Gemini**: [See these instructions](/kustomize/components/shopping-assistant/README.md) to deploy a Gemini-powered AI assistant that suggests products to purchase based on an image.
 - **And more**: The [`/kustomize` directory](/kustomize) contains instructions for customizing the deployment of Online Boutique with other variations.
 
+## Project Structure
+
+The project is organized as follows:
+
+- **src/**: Contains the source code for all microservices.
+  - **adservice/**: Java-based ad service.
+  - **cartservice/**: C#-based cart service using Redis.
+  - **checkoutservice/**: Go-based checkout service.
+  - **currencyservice/**: Node.js-based currency conversion service.
+  - **emailservice/**: Python-based email service.
+  - **frontend/**: Go-based web frontend with HTML templates and static assets.
+  - **loadgenerator/**: Python/Locust-based load testing service.
+  - **paymentservice/**: Node.js-based payment service.
+  - **productcatalogservice/**: Go-based product catalog service.
+  - **recommendationservice/**: Python-based recommendation service.
+  - **shippingservice/**: Go-based shipping service.
+
+- **kubernetes/**: Helm chart for deploying the application on Kubernetes.
+  - **templates/**: Kubernetes manifests for each service.
+  - **values.yaml**: Default configuration values for the Helm chart.
+
+- **docs/**: Documentation files, including development guides, tutorials, and images.
+
+- **Jenkinsfile/**: Jenkins pipeline definitions for CI/CD.
+
+- **protos/**: Protocol Buffer definitions for gRPC services.
+
+- **kustomize/**: Kustomize configurations for different deployment variations (e.g., with service mesh, AI assistant).
+
+- **terraform/**: Terraform configurations for infrastructure deployment.
+
+- **.github/**: GitHub Actions workflows for CI/CD.
+
+This structure supports a microservices architecture with clear separation of concerns, enabling independent development, deployment, and scaling of each service.
+
 ## Documentation
 
 - [Development](/docs/development-guide.md) to learn how to run and develop this app locally.
