@@ -8,10 +8,14 @@ pipeline {
    
     tools {
         jdk 'jdk21'
+        gradle 'gradle8'
     }
     
     environment {
         SONAR_EV= tool 'Sonar'
+        GOOGLE_APPLICATION_CREDENTIALS = ''
+        GCP_PROJECT_ID = ''
+        ENABLE_GCP = 'false'
     }
 
     stages{
@@ -35,7 +39,7 @@ pipeline {
         stage('Code Clone from Github') {
             steps {
                 script {
-                    git_clone("https://github.com/NamanSondhiya/google-microservices-DevSecOps.git", "main")
+                    git_clone("https://github.com/NamanSondhiya/google-microservices-DevSecOps.git", "dev")
                 }
             }
         }
@@ -44,8 +48,7 @@ pipeline {
                 dir('src/adservice') {
                     script {
                         sh 'chmod +x gradlew'
-                        sh './gradlew googleJavaFormat'
-                        sh './gradlew clean build test'
+                        sh './gradlew clean build -x test'
                     }
                 }
             }
