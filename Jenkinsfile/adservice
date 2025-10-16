@@ -58,6 +58,7 @@ pipeline {
                 dir('src/adservice') {
                     script {
                         sh 'chmod +x gradlew'
+                        sh './gradlew googleJavaFormat'
                         sh './gradlew clean build test'
                     }
                 }
