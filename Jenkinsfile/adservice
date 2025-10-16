@@ -2,12 +2,29 @@ library('jenkins-shared') _
 pipeline {
     agent any
 
+     parameters {
+        string(name: 'IMAGE_TAG_AD', defaultValue: '', description: 'Enter the Adservice Docker image tag')
+    }
+   
     tools {
         jdk 'jdk21'
-        jdk 'jdk17'
+    }
+    
+    environment {
+        SONAR_EV= tool 'Sonar'
     }
 
     stages{
+        stage('Validate the Parameters') {
+            steps {
+                script {              
+                    if (params.IMAGE_TAG_AD == '' ) {
+                        error("IMAGE_TAG_AD' must be provided and can't be empty.")
+                    }
+                    echo "--||-----Using tag ${params.IMAGE_TAG_AD} -----||--"
+                }
+            }
+        }
         stage('Clean the workspace') {
             steps {
                 script {
@@ -18,7 +35,34 @@ pipeline {
         stage('Code Clone from Github') {
             steps {
                 script {
-                    git_clone("https://github.com/NamanSondhiya/google-microservices-DevSecOps.git", "devOps")
+                    git_clone("https://github.com/NamanSondhiya/google-microservices-DevSecOps.git", "main")
+                }
+            }
+        }
+        stage('Build and Unit Test') {
+            steps {
+                dir('src/adservice') {
+                    script {
+                        sh 'chmod +x gradlew'
+                        sh './gradlew googleJavaFormat'
+                        sh './gradlew clean build test'
+                    }
+                }
+            }
+        }
+        stage('Sonarqube Analysis') {
+            steps {
+                dir('src/adservice') {
+                    script {
+                        sonarqube_analysis("${SONAR_EV}", "adservice", "adservice", "java")
+                    }
+                }
+            }
+        }
+        stage('Quality Gate') {
+            steps {
+                script  {
+                    sonarqube_QualityGate(3, true)
                 }
             }
         }
@@ -39,14 +83,14 @@ pipeline {
         stage('Docker Build') {
             steps {
                 script {
-                    docker_build("adservice", "${BUILD_NUMBER}", "namanss", "src/adservice")
+                    docker_build("adservice", "${params.IMAGE_TAG_AD}", "namanss", "src/adservice")
                 }
             }
         }
         stage('Trivy Image Scan') {
             steps {
                 script {
-                    trivy_image_scan("adservice","${BUILD_NUMBER}","namanss")
+                    trivy_image_scan("adservice","${params.IMAGE_TAG_AD}","namanss")
                 }
             }
             post {
@@ -58,7 +102,7 @@ pipeline {
         stage('Docker Push') {
             steps {
                 script {
-                    docker_push("adservice", "${BUILD_NUMBER}", "namanss")
+                    docker_push("adservice", "${params.IMAGE_TAG_AD}", "namanss")
                 }
             }
         }

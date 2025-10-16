@@ -1,0 +1,49 @@
+[]DockerFile Updated tested and working
+
+[]Docker-Compose for local deploy NO ALLOYDB
+
+[]CI with JENKINS completed no Email/SLACK addition]
+
+------ ADservice
+------ Cartservice
+------ checkoutservice
+------ currencyservice
+------ emailservice
+------ frontend
+------ loadgenerator
+------ paymentservice
+------ recommendationservice
+------ productcatalogservice
+------ shippingservice
+
+[] Pending Email/SLACK addition
+
+------ ADservice
+------ Cartservice
+------ checkoutservice
+------ currencyservice
+------ emailservice
+------ frontend
+------ loadgenerator
+------ paymentservice
+------ recommendationservice
+------ productcatalogservice
+------ shippingservice
+
+[]k8s-chart-working + testing and redirection of port
+      KIND TESTING
+----- ADservice
+----- Cartservice
+----- checkoutservice
+----- currencyservice
+----- emailservice
+----- frontend
+----- loadgenerator
+----- paymentservice
+----- recommendationservice
+----- productcatalogservice
+----- shippingservice
+----- loadgenerator
+
+[] GitOps CD with ArgoCD pending
+[] UPDATED README.md with all services and their ports

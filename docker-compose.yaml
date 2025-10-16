@@ -1,4 +1,15 @@
 services:
+
+  adservice:
+    build: ./src/adservice
+    ports:
+      - "9555:9555"
+    environment:
+      - PORT=9555
+      - DISABLE_STATS=1
+      - DISABLE_TRACING=1
+    restart: always
+
   redis-cart:
     image: redis:alpine
     ports:
@@ -9,14 +20,44 @@ services:
       timeout: 3s
       retries: 5
 
-  adservice:
-    build: ./src/adservice
+  currencyservice:
+    build: ./src/currencyservice
     ports:
-      - "9555:9555"
+      - "7000:7000"
     environment:
-      - PORT=9555
-      - DISABLE_STATS=1
-      - DISABLE_TRACING=1
+      - PORT=7000
+    restart: always
+
+  emailservice:
+    build: ./src/emailservice
+    ports:
+      - "8082:8080"
+    environment:
+      - PORT=8080
+    restart: always
+
+  paymentservice:
+    build: ./src/paymentservice
+    ports:
+      - "50051:50051"
+    environment:
+      - PORT=50051
+    restart: always
+
+  productcatalogservice:
+    build: ./src/productcatalogservice
+    ports:
+      - "3550:3550"
+    environment:
+      - PORT=3550
+    restart: always
+
+  shippingservice:
+    build: ./src/shippingservice
+    ports:
+      - "50052:50051"
+    environment:
+      - PORT=50051
     restart: always
 
   cartservice:
@@ -29,6 +70,18 @@ services:
     depends_on:
       redis-cart:
         condition: service_healthy
+    restart: always
+
+  recommendationservice:
+    build: ./src/recommendationservice
+    ports:
+      - "8083:8080"
+    environment:
+      - PORT=8080
+      - PRODUCT_CATALOG_SERVICE_ADDR=productcatalogservice:3550
+    depends_on:
+      productcatalogservice:
+        condition: service_started
     restart: always
 
   checkoutservice:
@@ -56,22 +109,6 @@ services:
         condition: service_started
       cartservice:
         condition: service_started
-    restart: always
-
-  currencyservice:
-    build: ./src/currencyservice
-    ports:
-      - "7000:7000"
-    environment:
-      - PORT=7000
-    restart: always
-
-  emailservice:
-    build: ./src/emailservice
-    ports:
-      - "8082:8080"
-    environment:
-      - PORT=8080
     restart: always
 
   frontend:
@@ -102,42 +139,6 @@ services:
         condition: service_started
       adservice:
         condition: service_started
-    restart: always
-
-  paymentservice:
-    build: ./src/paymentservice
-    ports:
-      - "50051:50051"
-    environment:
-      - PORT=50051
-    restart: always
-
-  productcatalogservice:
-    build: ./src/productcatalogservice
-    ports:
-      - "3550:3550"
-    environment:
-      - PORT=3550
-    restart: always
-
-  recommendationservice:
-    build: ./src/recommendationservice
-    ports:
-      - "8083:8080"
-    environment:
-      - PORT=8080
-      - PRODUCT_CATALOG_SERVICE_ADDR=productcatalogservice:3550
-    depends_on:
-      productcatalogservice:
-        condition: service_started
-    restart: always
-
-  shippingservice:
-    build: ./src/shippingservice
-    ports:
-      - "50052:50051"
-    environment:
-      - PORT=50051
     restart: always
 
   loadgenerator:
