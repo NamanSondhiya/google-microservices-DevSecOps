@@ -57,7 +57,7 @@ pipeline {
             steps {
                 dir('src/adservice') {
                     withSonarQubeEnv('Sonar') {
-                        sh ''' $SCANNER_EV/bin/sonar-scanner -Dsonar.projectName=adservice -Dsonar.projectKey=adservice -Dsonar.sources=. -Dsonar.java.binaries=build/classes/java/main '''
+                        sh ''' $SONAR_EV/bin/sonar-scanner -Dsonar.projectName=adservice -Dsonar.projectKey=adservice -Dsonar.sources=. -Dsonar.java.binaries=build/classes/java/main '''
                     }
                 }
             }
