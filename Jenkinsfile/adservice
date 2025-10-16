@@ -19,7 +19,7 @@ pipeline {
             steps {
                 script {              
                     if (params.IMAGE_TAG_AD == '' ) {
-                        error("IMAGE_TAG_AD' must be provided and can't be non-empty.")
+                        error("IMAGE_TAG_AD' must be provided and can't be empty.")
                     }
                     echo "--||-----Using tag ${params.IMAGE_TAG_AD} -----||--"
                 }
@@ -65,8 +65,10 @@ pipeline {
         }
         stage('Sonarqube Analysis') {
             steps {
-                script {
-                    sonarqube_analysis("${SONAR_EV}", "adservice", "adservice")
+                dir('src/adservice') {
+                    script {
+                        sonarqube_analysis("${SONAR_EV}", "adservice", "adservice")
+                    }
                 }
             }
         }
