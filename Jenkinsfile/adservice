@@ -67,7 +67,7 @@ pipeline {
             steps {
                 dir('src/adservice') {
                     script {
-                        sonarqube_analysis("${SONAR_EV}", "adservice", "adservice")
+                        sonarqube_analysis("${SONAR_EV}", "adservice", "adservice", "java")
                     }
                 }
             }
