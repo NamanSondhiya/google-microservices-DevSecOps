@@ -39,20 +39,6 @@ pipeline {
                 }
             }
         }
-        stage('Trivy Fs Scan') {
-            steps {
-                dir('src/adservice') {
-                    script {
-                        trivy_fs_scan()
-                    }
-                }
-            }
-            post {
-                always {
-                    archiveArtifacts 'src/adservice/trivy-fs-report.txt'
-                }
-            }
-        }
         stage('Build and Unit Test') {
             steps {
                 dir('src/adservice') {
@@ -77,6 +63,20 @@ pipeline {
             steps {
                 script  {
                     sonarqube_QualityGate(3, true)
+                }
+            }
+        }
+        stage('Trivy Fs Scan') {
+            steps {
+                dir('src/adservice') {
+                    script {
+                        trivy_fs_scan()
+                    }
+                }
+            }
+            post {
+                always {
+                    archiveArtifacts 'src/adservice/trivy-fs-report.txt'
                 }
             }
         }
