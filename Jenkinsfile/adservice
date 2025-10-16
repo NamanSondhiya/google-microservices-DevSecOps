@@ -66,8 +66,6 @@ pipeline {
                                 -Dsonar.projectKey=adservice \
                                 -Dsonar.sources=. \
                                 -Dsonar.java.binaries=build/classes/java/main \
-                                -Dsonar.host.url=$SONAR_HOST_URL \
-                                -Dsonar.login=$SONAR_TOKEN
                                 '''
                         }
                     }
