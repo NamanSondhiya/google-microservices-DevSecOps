@@ -56,8 +56,20 @@ pipeline {
         stage('Sonarqube Analysis') {
             steps {
                 dir('src/adservice') {
-                    script {
-                        sonarqube_analysis("${SONAR_EV}", "adservice", "adservice", "java")
+                    withSonarQubeEnv('Sonar') {
+                        withCredentials([string(credentialsId: "SonarToken", variable: 'SONAR_TOKEN')]) {
+                            sh '''
+                                #!/bin/bash
+                                SONAR_SCANNER="${SONAR_HOME}/bin/sonar-scanner"
+                                "${SONAR_EV}" \
+                                -Dsonar.projectName=adservice \
+                                -Dsonar.projectKey=adservice \
+                                -Dsonar.sources=. \
+                                -Dsonar.java.binaries=build/classes/java/main \
+                                -Dsonar.host.url=$SONAR_HOST_URL \
+                                -Dsonar.login=$SONAR_TOKEN
+                                '''
+                        }
                     }
                 }
             }
