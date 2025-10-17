@@ -1,4 +1,10 @@
 library('jenkins-shared') _
+
+def COLOR_MAP = [
+    'FAILURE' : 'Danger',
+    'SUCCESS' : 'Good',
+]
+
 pipeline {
     agent any
 
@@ -107,6 +113,16 @@ pipeline {
                 script {
                     docker_push("adservice", "${params.IMAGE_TAG_AD}", "namanss")
                 }
+            }
+        }
+    }
+    post {
+        always {
+            echo 'Slack Notification'
+            slackSend {
+                channel: '#jenkins-ci'
+                color: COLOUR_MAP(currentBuild.currentResult)
+                message: "${currentBuild.currentResult}:" Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}
             }
         }
     }
