@@ -68,14 +68,14 @@ pipeline {
         stage('Docker Build') {
             steps {
                 script {
-                    docker_build(env.IMAGE_NAME, "${BUILD_NUMBER}", env.DOCKER_REGISTRY, env.DOCKERFILE_PATH)
+                    docker_build(env.IMAGE_NAME, "${params.IMAGE_TAG_RECC}", env.DOCKER_REGISTRY, env.DOCKERFILE_PATH)
                 }
             }
         }
         stage('Trivy Image Scan') {
             steps {
                 script {
-                    trivy_image_scan(env.IMAGE_NAME, "${BUILD_NUMBER}", env.DOCKER_REGISTRY)
+                    trivy_image_scan(env.IMAGE_NAME, "${params.IMAGE_TAG_RECC}", env.DOCKER_REGISTRY)
                 }
             }
             post {
@@ -87,9 +87,19 @@ pipeline {
         stage('Docker Push') {
             steps {
                 script {
-                    docker_push(env.IMAGE_NAME, "${BUILD_NUMBER}", env.DOCKER_REGISTRY)
+                    docker_push(env.IMAGE_NAME, "${params.IMAGE_TAG_RECC}", env.DOCKER_REGISTRY)
                 }
             }
+        }
+    }
+    post {
+        always {
+            echo 'Slack Notification'
+            slackSend (
+                channel: '#jenkins-ci',
+                color: COLOR_MAP(currentBuild.currentResult),
+                message: "${currentBuild.currentResult}: Job ${env.JOB_NAME} build: ${env.BUILD_NUMBER}"
+            )
         }
     }
 }

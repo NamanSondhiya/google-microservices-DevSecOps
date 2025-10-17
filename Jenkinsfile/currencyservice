@@ -9,7 +9,7 @@ pipeline {
     agent any
 
     parameters {
-        string(name: 'IMAGE_TAG_AD', defaultValue: '', description: 'Enter the Adservice Docker image tag')
+        string(name: 'IMAGE_TAG_CURR', defaultValue: '', description: 'Enter the Currencyservice Docker image tag')
     }
 
     tools {
@@ -76,14 +76,14 @@ pipeline {
         stage('Docker Build') {
             steps {
                 script {
-                    docker_build("currencyservice", "${BUILD_NUMBER}", "namanss", "src/currencyservice")
+                    docker_build("currencyservice", "${params.IMAGE_TAG_CURR}", "namanss", "src/currencyservice")
                 }
             }
         }
         stage('Trivy Image Scan') {
             steps {
                 script {
-                    trivy_image_scan("currencyservice","${BUILD_NUMBER}","namanss")
+                    trivy_image_scan("currencyservice","${params.IMAGE_TAG_CURR}","namanss")
                 }
             }
             post {
@@ -95,9 +95,19 @@ pipeline {
         stage('Docker Push') {
             steps {
                 script {
-                    docker_push("currencyservice", "${BUILD_NUMBER}", "namanss")
+                    docker_push("currencyservice", "${params.IMAGE_TAG_CURR}", "namanss")
                 }
             }
+        }
+    }
+    post {
+        always {
+            echo 'Slack Notification'
+            slackSend (
+                channel: '#jenkins-ci',
+                color: COLOR_MAP(currentBuild.currentResult),
+                message: "${currentBuild.currentResult}: Job ${env.JOB_NAME} build: ${env.BUILD_NUMBER}"
+            )
         }
     }
 }

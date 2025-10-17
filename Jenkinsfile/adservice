@@ -3,6 +3,7 @@ library('jenkins-shared') _
 def COLOR_MAP = [
     FAILURE: 'danger',
     SUCCESS: 'good',
+    UNSTABLE: 'warning'
 ]
 
 pipeline {
@@ -121,7 +122,7 @@ pipeline {
             echo 'Slack Notification'
             slackSend (
                 channel: '#jenkins-ci',
-                color: COLOR_MAP(currentBuild.currentResult),
+                color: COLOR_MAP[currentBuild.currentResult],
                 message: "${currentBuild.currentResult}: Job ${env.JOB_NAME} build: ${env.BUILD_NUMBER}"
             )
         }

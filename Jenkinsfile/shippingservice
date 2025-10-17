@@ -139,14 +139,14 @@ pipeline {
         stage('Docker Build') {
             steps {
                 script {
-                    docker_build("shippingservice", "${BUILD_NUMBER}", "namanss", "src/shippingservice")
+                    docker_build("shippingservice", "${params.IMAGE_TAG_SHIP}", "namanss", "src/shippingservice")
                 }
             }
         }
         stage('Trivy Image Scan') {
             steps {
                 script {
-                    trivy_image_scan("shippingservice","${BUILD_NUMBER}","namanss")
+                    trivy_image_scan("shippingservice","${params.IMAGE_TAG_SHIP}","namanss")
                 }
             }
             post {
@@ -158,9 +158,19 @@ pipeline {
         stage('Docker Push') {
             steps {
                 script {
-                    docker_push("shippingservice", "${BUILD_NUMBER}", "namanss")
+                    docker_push("shippingservice", "${params.IMAGE_TAG_SHIP}", "namanss")
                 }
             }
+        }
+    }
+    post {
+        always {
+            echo 'Slack Notification'
+            slackSend (
+                channel: '#jenkins-ci',
+                color: COLOR_MAP(currentBuild.currentResult),
+                message: "${currentBuild.currentResult}: Job ${env.JOB_NAME} build: ${env.BUILD_NUMBER}"
+            )
         }
     }
 }
