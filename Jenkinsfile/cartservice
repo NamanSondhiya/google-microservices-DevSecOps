@@ -26,7 +26,7 @@ pipeline {
         stage('Validate the Parameters') {
             steps {
                 script {              
-                    if (params.IMAGE_TAG_AD == '' ) {
+                    if (params.IMAGE_TAG_CART == '' ) {
                         error("IMAGE_TAG_CART' must be provided and can't be empty.")
                     }
                     echo "--||-----Using tag ${params.IMAGE_TAG_CART} -----||--"
