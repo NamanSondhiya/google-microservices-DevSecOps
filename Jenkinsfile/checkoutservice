@@ -1,17 +1,17 @@
 library('jenkins-shared') _
 
 def COLOR_MAP = [
-    'FAILURE' : 'Danger',
-    'SUCCESS' : 'Good',
+    FAILURE: 'danger',
+    SUCCESS: 'good',
 ]
 
 pipeline {
     agent any
 
     parameters {
-        string(name: 'IMAGE_TAG_AD', defaultValue: '', description: 'Enter the Adservice Docker image tag')
+        string(name: 'IMAGE_TAG_CHECK', defaultValue: '', description: 'Enter the Checkoutservice Docker image tag')
     }
-    
+
     tools {
         jdk 'jdk17'
         go 'go1.25'
@@ -34,7 +34,7 @@ pipeline {
         stage('Code Clone from Github') {
             steps {
                 script {
-                    git_clone("https://github.com/NamanSondhiya/google-microservices-DevSecOps.git", "devOps")
+                    git_clone("https://github.com/NamanSondhiya/google-microservices-DevSecOps.git", "dev")
                 }
             }
         }
@@ -129,14 +129,14 @@ pipeline {
         stage('Docker Build') {
             steps {
                 script {
-                    docker_build("checkoutservice", "${BUILD_NUMBER}", "namanss", "src/checkoutservice")
+                    docker_build("checkoutservice", "${params.IMAGE_TAG_CHECK}", "namanss", "src/checkoutservice")
                 }
             }
         }
         stage('Trivy Image Scan') {
             steps {
                 script {
-                    trivy_image_scan("checkoutservice","${BUILD_NUMBER}","namanss")
+                    trivy_image_scan("checkoutservice","${params.IMAGE_TAG_CHECK}","namanss")
                 }
             }
             post {
@@ -148,9 +148,19 @@ pipeline {
         stage('Docker Push') {
             steps {
                 script {
-                    docker_push("checkoutservice", "${BUILD_NUMBER}", "namanss")
+                    docker_push("checkoutservice", "${params.IMAGE_TAG_CHECK}", "namanss")
                 }
             }
+        }
+    }
+    post {
+        always {
+            echo 'Slack Notification'
+            slackSend (
+                channel: '#jenkins-ci',
+                color: COLOR_MAP(currentBuild.currentResult),
+                message: "${currentBuild.currentResult}: Job ${env.JOB_NAME} build: ${env.BUILD_NUMBER}"
+            )
         }
     }
 }

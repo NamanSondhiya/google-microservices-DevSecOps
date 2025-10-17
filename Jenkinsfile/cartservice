@@ -9,9 +9,9 @@ pipeline {
     agent any
 
     parameters {
-        string(name: 'IMAGE_TAG_AD', defaultValue: '', description: 'Enter the Adservice Docker image tag')
+        string(name: 'IMAGE_TAG_CART', defaultValue: '', description: 'Enter the Cartservice Docker image tag')
     }
-    
+
     tools {
         dotnetsdk 'dotnet9'
         dotnetsdk 'dotnet7'
@@ -32,7 +32,7 @@ pipeline {
         stage('Code Clone from Github') {
             steps {
                 script {
-                    git_clone("https://github.com/NamanSondhiya/google-microservices-DevSecOps.git", "devOps")
+                    git_clone("https://github.com/NamanSondhiya/google-microservices-DevSecOps.git", "dev")
                 }
             }
         }
@@ -94,14 +94,14 @@ pipeline {
         stage('Docker Build') {
             steps {
                 script {
-                    docker_build("cartservice", "${BUILD_NUMBER}", "namanss", "src/cartservice/src")
+                    docker_build("cartservice", "${params.IMAGE_TAG_CART}", "namanss", "src/cartservice/src")
                 }
             }
         }
         stage('Trivy Image Scan') {
             steps {
                 script {
-                    trivy_image_scan("cartservice","${BUILD_NUMBER}","namanss")
+                    trivy_image_scan("cartservice","${params.IMAGE_TAG_CART}","namanss")
                 }
             }
             post {
@@ -113,9 +113,19 @@ pipeline {
         stage('Docker Push') {
             steps {
                 script {
-                    docker_push("cartservice", "${BUILD_NUMBER}", "namanss")
+                    docker_push("cartservice", "${params.IMAGE_TAG_CART}", "namanss")
                 }
             }
+        }
+    }
+    post {
+        always {
+            echo 'Slack Notification'
+            slackSend (
+                channel: '#jenkins-ci',
+                color: COLOR_MAP(currentBuild.currentResult),
+                message: "${currentBuild.currentResult}: Job ${env.JOB_NAME} build: ${env.BUILD_NUMBER}"
+            )
         }
     }
 }

@@ -1,8 +1,8 @@
 library('jenkins-shared') _
 
 def COLOR_MAP = [
-    'FAILURE' : 'Danger',
-    'SUCCESS' : 'Good',
+    FAILURE: 'danger',
+    SUCCESS: 'good',
 ]
 
 pipeline {
