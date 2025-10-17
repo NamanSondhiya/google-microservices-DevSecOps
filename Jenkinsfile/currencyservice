@@ -1,8 +1,8 @@
 library('jenkins-shared') _
 
 def COLOR_MAP = [
-    'FAILURE' : 'Danger',
-    'SUCCESS' : 'Good',
+    FAILURE: 'danger',
+    SUCCESS: 'good',
 ]
 
 pipeline {
@@ -11,7 +11,7 @@ pipeline {
     parameters {
         string(name: 'IMAGE_TAG_AD', defaultValue: '', description: 'Enter the Adservice Docker image tag')
     }
-    
+
     tools {
         jdk 'jdk17'
         nodejs 'nodejs20'
@@ -32,7 +32,7 @@ pipeline {
         stage('Code Clone from Github') {
             steps {
                 script {
-                    git_clone("https://github.com/NamanSondhiya/google-microservices-DevSecOps.git", "devOps")
+                    git_clone("https://github.com/NamanSondhiya/google-microservices-DevSecOps.git", "dev")
                 }
             }
         }

@@ -1,8 +1,8 @@
 library('jenkins-shared') _
 
 def COLOR_MAP = [
-    'FAILURE' : 'Danger',
-    'SUCCESS' : 'Good',
+    FAILURE: 'danger',
+    SUCCESS: 'good',
 ]
 
 pipeline {
@@ -32,7 +32,7 @@ pipeline {
         stage('Code Clone from Github') {
             steps {
                 script {
-                    git_clone("https://github.com/NamanSondhiya/google-microservices-DevSecOps.git", "devOps")
+                    git_clone("https://github.com/NamanSondhiya/google-microservices-DevSecOps.git", "dev")
                 }
             }
         }
