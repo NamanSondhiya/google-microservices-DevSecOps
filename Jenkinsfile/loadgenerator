@@ -1,4 +1,10 @@
 library('jenkins-shared') _
+
+def COLOR_MAP = [
+    'FAILURE' : 'Danger',
+    'SUCCESS' : 'Good',
+]
+
 pipeline {
     agent any
 

@@ -1,6 +1,16 @@
 library('jenkins-shared') _
+
+def COLOR_MAP = [
+    'FAILURE' : 'Danger',
+    'SUCCESS' : 'Good',
+]
+
 pipeline {
     agent any
+
+    parameters {
+        string(name: 'IMAGE_TAG_PROD_CAT', defaultValue: '', description: 'Enter the Productcatalogservice Docker image tag')
+    }
 
     tools {
         go 'go1.25'

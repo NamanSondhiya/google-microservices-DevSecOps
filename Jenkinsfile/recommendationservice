@@ -1,6 +1,16 @@
 library('jenkins-shared') _
+
+def COLOR_MAP = [
+    'FAILURE' : 'Danger',
+    'SUCCESS' : 'Good',
+]
+
 pipeline {
     agent any
+
+    parameters {
+        string(name: 'IMAGE_TAG_RECC', defaultValue: '', description: 'Enter the Recommendationservice Docker image tag')
+    }
 
     environment {
         DOCKER_REGISTRY = 'namanss'

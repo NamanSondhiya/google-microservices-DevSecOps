@@ -1,6 +1,16 @@
 library('jenkins-shared') _
+
+def COLOR_MAP = [
+    'FAILURE' : 'Danger',
+    'SUCCESS' : 'Good',
+]
+
 pipeline {
     agent any
+    
+    parameters {
+        string(name: 'IMAGE_TAG_MAIL', defaultValue: '', description: 'Enter the Emailservice Docker image tag')
+    }
 
     tools {
         jdk 'jdk17'
