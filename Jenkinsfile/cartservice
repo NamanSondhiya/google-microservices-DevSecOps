@@ -136,7 +136,7 @@ pipeline {
                 def buildStatus = currentBuild.currentResult
                 def colorCode = buildStatus == 'SUCCESS' ? '#00FF00' : '#FF0000'
                 slackSend(
-                    channel: '#jenkins-alerts',
+                    channel: '#jenkins-ci',
                     color: colorCode,
                     message: "Build *${env.JOB_NAME}* #${env.BUILD_NUMBER} finished with status: *${buildStatus}*\n${env.BUILD_URL}"
                 )
