@@ -130,5 +130,10 @@ pipeline {
                 )
             }
         }
+        success {
+            build job: "google-microservice-CD", parameters: [
+                string(name:'IMAGE_TAG_AD', value: "$(params.IMAGE_TAG_Ad)")
+            ]
+        }
     }
 }

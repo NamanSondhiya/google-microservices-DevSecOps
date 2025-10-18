@@ -106,5 +106,10 @@ pipeline {
                 )
             }
         }
+        success {
+            buid job: "google-microservice-CD", parameters: [
+                string(name: "IMAGE_TAG_RECC", value: "${params.IMAGE_TAG_RECC}")
+            ]
+        }
     }
 }

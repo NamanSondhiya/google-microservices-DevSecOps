@@ -83,14 +83,14 @@ pipeline {
         stage('Docker Build') {
             steps {
                 script {
-                    docker_build("emailservice", "${BUILD_NUMBER}", "namanss", "src/emailservice")
+                    docker_build("emailservice", "${params.IMAGE_TAG_MAIL}", "namanss", "src/emailservice")
                 }
             }
         }
         stage('Trivy Image Scan') {
             steps {
                 script {
-                    trivy_image_scan("emailservice","${BUILD_NUMBER}","namanss")
+                    trivy_image_scan("emailservice","${params.IMAGE_TAG_MAIL}","namanss")
                 }
             }
             post {
@@ -102,7 +102,7 @@ pipeline {
         stage('Docker Push') {
             steps {
                 script {
-                    docker_push("emailservice", "${BUILD_NUMBER}", "namanss")
+                    docker_push("emailservice", "${params.IMAGE_TAG_MAIL}", "namanss")
                 }
             }
         }
@@ -119,6 +119,11 @@ pipeline {
                     message: "Build *${env.JOB_NAME}* #${env.BUILD_NUMBER} finished with status: *${buildStatus}*\n${env.BUILD_URL}"
                 )
             }
+        }
+        success {
+            buid job: "google-microservice-CD", parameters: [
+                string(name: "IMAGE_TAG_MAIL", value: "${params.IMAGE_TAG_MAIL}")
+            ]
         }
     }
 }

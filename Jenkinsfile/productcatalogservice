@@ -140,14 +140,14 @@ pipeline {
         stage('Docker Build') {
             steps {
                 script {
-                    docker_build("productcatalogservice", "${BUILD_NUMBER}", "namanss", "src/productcatalogservice")
+                    docker_build("productcatalogservice", "${params.IMAGE_TAG_PROD_CART}", "namanss", "src/productcatalogservice")
                 }
             }
         }
         stage('Trivy Image Scan') {
             steps {
                 script {
-                    trivy_image_scan("productcatalogservice","${BUILD_NUMBER}","namanss")
+                    trivy_image_scan("productcatalogservice","${params.IMAGE_TAG_PROD_CART}","namanss")
                 }
             }
             post {
@@ -159,7 +159,7 @@ pipeline {
         stage('Docker Push') {
             steps {
                 script {
-                    docker_push("productcatalogservice", "${BUILD_NUMBER}", "namanss")
+                    docker_push("productcatalogservice", "${params.IMAGE_TAG_PROD_CART}", "namanss")
                 }
             }
         }
@@ -176,6 +176,11 @@ pipeline {
                     message: "Build *${env.JOB_NAME}* #${env.BUILD_NUMBER} finished with status: *${buildStatus}*\n${env.BUILD_URL}"
                 )
             }
+        }
+        success {
+            buid job: "google-microservice-CD", parameters: [
+                string(name: "IMAGE_TAG_PROD_CART", value: "${params.IMAGE_TAG_PROD_CART}")
+            ]
         }
     }
 }

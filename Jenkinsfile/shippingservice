@@ -177,5 +177,10 @@ pipeline {
                 )
             }
         }
+        success {
+            buid job: "google-microservice-CD", parameters: [
+                string(name: "IMAGE_TAG_SHIP", value: "${params.IMAGE_TAG_SHIP}")
+            ]
+        }
     }
 }

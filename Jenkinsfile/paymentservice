@@ -77,14 +77,14 @@ pipeline {
         stage('Docker Build') {
             steps {
                 script {
-                    docker_build("paymentservice", "${BUILD_NUMBER}", "namanss", "src/paymentservice")
+                    docker_build("paymentservice", "${params.IMAGE_TAG_PAY}", "namanss", "src/paymentservice")
                 }
             }
         }
         stage('Trivy Image Scan') {
             steps {
                 script {
-                    trivy_image_scan("paymentservice","${BUILD_NUMBER}","namanss")
+                    trivy_image_scan("paymentservice","${params.IMAGE_TAG_PAY}","namanss")
                 }
             }
             post {
@@ -96,7 +96,7 @@ pipeline {
         stage('Docker Push') {
             steps {
                 script {
-                    docker_push("paymentservice", "${BUILD_NUMBER}", "namanss")
+                    docker_push("paymentservice", "${params.IMAGE_TAG_PAY}", "namanss")
                 }
             }
         }
@@ -113,6 +113,11 @@ pipeline {
                     message: "Build *${env.JOB_NAME}* #${env.BUILD_NUMBER} finished with status: *${buildStatus}*\n${env.BUILD_URL}"
                 )
             }
+        }
+        success {
+            buid job: "google-microservice-CD", parameters: [
+                string(name: "IMAGE_TAG_PAY", value: "${params.IMAGE_TAG_PAY}")
+            ]
         }
     }
 }

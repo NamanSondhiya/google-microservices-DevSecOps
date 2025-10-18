@@ -140,14 +140,14 @@ pipeline {
         stage('Docker Build') {
             steps {
                 script {
-                    docker_build("frontend", "${BUILD_NUMBER}", "namanss", "src/frontend")
+                    docker_build("frontend", "${params.IMAGE_TAG_FRONT}", "namanss", "src/frontend")
                 }
             }
         }
         stage('Trivy Image Scan') {
             steps {
                 script {
-                    trivy_image_scan("frontend","${BUILD_NUMBER}","namanss")
+                    trivy_image_scan("frontend","${params.IMAGE_TAG_FRONT}","namanss")
                 }
             }
             post {
@@ -159,7 +159,7 @@ pipeline {
         stage('Docker Push') {
             steps {
                 script {
-                    docker_push("frontend", "${BUILD_NUMBER}", "namanss")
+                    docker_push("frontend", "${params.IMAGE_TAG_FRONT}", "namanss")
                 }
             }
         }
@@ -176,6 +176,11 @@ pipeline {
                     message: "Build *${env.JOB_NAME}* #${env.BUILD_NUMBER} finished with status: *${buildStatus}*\n${env.BUILD_URL}"
                 )
             }
+        }
+        success {
+            buid job: "google-microservice-CD", parameters: [
+                string(name: "IMAGE_TAG_FRONT", value: "${params.IMAGE_TAG_FRONT}")
+            ]
         }
     }
 }
