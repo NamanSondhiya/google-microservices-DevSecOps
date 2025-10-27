@@ -10,7 +10,7 @@ pipeline {
     agent any
 
     parameters {
-        string(name: 'IMAGE_TAG_PROD_CAT', defaultValue: '', description: 'Enter the Productcatalogservice Docker image tag')
+        string(name: 'IMAGE_TAG_PROD_CART', defaultValue: '', description: 'Enter the Productcatalogservice Docker image tag')
     }
 
     tools {
