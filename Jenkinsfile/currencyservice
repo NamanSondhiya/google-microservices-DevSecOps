@@ -115,7 +115,7 @@ pipeline {
             }
         }
         success {
-            build job "google-microservice-CD", parameters: [
+            build job: "google-microservice-CD", parameters: [
                 string(name: "IMAGE_TAG_CURR", value: "${params.IMAGE_TAG_CURR}")
             ]
         }
