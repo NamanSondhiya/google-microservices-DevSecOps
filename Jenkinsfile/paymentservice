@@ -23,6 +23,16 @@ pipeline {
     }
 
     stages{
+        stage('Validate the Parameters') {
+            steps {
+                script {              
+                    if (params.IMAGE_TAG_PAY == '' ) {
+                        error("IMAGE_TAG_PAY' must be provided and can't be empty.")
+                    }
+                    echo "--||-----Using tag ${params.IMAGE_TAG_PAY} -----||--"
+                }
+            }
+        }
         stage('Clean the workspace') {
             steps {
                 script {
