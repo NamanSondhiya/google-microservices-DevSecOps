@@ -33,22 +33,30 @@ Find **Protocol Buffers Descriptions** at the [`./protos` directory](/protos).
 | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
 | [![Screenshot of store homepage](/docs/img/online-boutique-frontend-1.png)](/docs/img/online-boutique-frontend-1.png) | [![Screenshot of checkout screen](/docs/img/online-boutique-frontend-2.png)](/docs/img/online-boutique-frontend-2.png) |
 
-## CI/CD Pipeline Overview
+## DevSecOps CI Pipeline
 
-This repository implements the Continuous Integration (CI) pipeline for the Google Microservices DevSecOps project.
+This repository implements a comprehensive Continuous Integration (CI) pipeline using Jenkins, showcasing enterprise-grade DevSecOps practices.
 
 ### CI Pipeline Features
-- **Multi-language Support**: Builds for Go, Python, Node.js, Java, and .NET services
-- **Docker Image Building**: Creates optimized container images for each microservice
-- **Security Scanning**: Integrates DevSecOps practices with vulnerability scanning
-- **Automated Testing**: Runs unit and integration tests across all services
-- **Artifact Management**: Pushes images to container registry for CD pipeline
+- **Multi-language Support**: Automated builds for Go, Python, Node.js, Java, and .NET services
+- **Docker Image Building**: Creates optimized, multi-stage container images for each microservice
+- **Security Scanning**: Integrated vulnerability scanning and compliance checks
+- **Automated Testing**: Comprehensive unit and integration test suites across all services
+- **Artifact Management**: Automated image tagging and registry pushes (ECR planned migration from Docker Hub)
+- **Parallel Execution**: Concurrent builds for improved pipeline efficiency
 
-### Jenkins Pipeline Structure
-- `Jenkinsfile/` contains service-specific build configurations
-- Supports parallel builds for faster CI execution
-- Includes Slack notifications for build status updates
-- Email notifications planned for future implementation
+### Jenkins Implementation
+- **Shared Libraries**: Utilizes custom Jenkins shared library (`https://github.com/NamanSondhiya/Jenkins-trusted-libraries.git`) for reusable pipeline functions
+- **Service-Specific Pipelines**: Individual `Jenkinsfile/` configurations for each microservice
+- **Notification System**: Slack integration for real-time build status updates
+- **Email Notifications**: Currently in development for comprehensive alerting
+- **Build Optimization**: Parallel processing and caching for faster execution
+
+### DevSecOps Practices
+- **Security-First Approach**: Automated security scans integrated into build process
+- **Compliance Checks**: Policy enforcement and audit trails
+- **Vulnerability Management**: Continuous monitoring and remediation
+- **Access Control**: Principle of least privilege implemented across pipeline stages
 
 ### Local Development
 Use Docker Compose for local testing and development:
@@ -58,6 +66,17 @@ docker-compose up
 ```
 
 This starts all microservices locally with proper service discovery and dependencies.
+
+### Infrastructure Setup (AWS)
+For production deployment, ensure proper EC2 instance sizing and security group configuration:
+
+**Recommended EC2 Instance Types:**
+- t3.large (8GB RAM, 2 vCPU) - Basic functionality
+- t3.xlarge (16GB RAM, 4 vCPU) - Full monitoring stack
+- t3.2xlarge (32GB RAM, 8 vCPU) - Production workloads
+
+**Security Group Ports:**
+- HTTP (80), HTTPS (443), SSH (22), Jenkins (8080), SonarQube (9000)
 
 ### Deployment
 The CI pipeline feeds into the CD repository (`google-microservices-DevSecOps-CD`) which handles production deployments to AWS EKS using GitOps with ArgoCD.
@@ -91,12 +110,14 @@ This structure supports a microservices architecture with clear separation of co
 
 ## Skills Demonstrated
 
-- **Multi-language Development**: Proficiency in Go, Python, Node.js, Java, and C#
-- **Microservices Design**: Service decomposition, API design, and inter-service communication
-- **Containerization**: Docker best practices for multi-language applications
-- **CI/CD**: Jenkins pipeline development for automated builds and testing
-- **DevSecOps**: Integration of security scanning and compliance checks
-- **Cloud-Native**: AWS EKS deployment with GitOps and Helm
+- **Multi-language Development**: Proficiency in Go, Python, Node.js, Java, and C# across 10 microservices
+- **Microservices Design**: Service decomposition, gRPC API design, and inter-service communication patterns
+- **Containerization**: Multi-stage Docker builds, security hardening, and optimization for multi-language stack
+- **CI/CD**: Jenkins pipeline development with shared libraries, parallel execution, and comprehensive automation
+- **DevSecOps**: Security scanning, vulnerability management, compliance checks, and principle of least privilege
+- **Cloud-Native**: AWS EKS deployment with GitOps, Helm packaging, and infrastructure as code
+- **Infrastructure as Code**: Terraform/OpenTofu for automated EKS provisioning (in development)
+- **Monitoring & Observability**: Health checks, structured logging, metrics collection, and alerting strategies
 
 ## Documentation
 
