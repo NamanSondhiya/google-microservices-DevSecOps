@@ -1,24 +1,16 @@
-<!-- <p align="center">
-<img src="/src/frontend/static/icons/Hipster_HeroLogoMaroon.svg" width="300" alt="Online Boutique" />
-</p> -->
+# Google Microservices DevSecOps
+
 ![Continuous Integration](https://github.com/GoogleCloudPlatform/microservices-demo/workflows/Continuous%20Integration%20-%20Main/Release/badge.svg)
 
-**Online Boutique** is a cloud-first microservices demo application.  The application is a
-web-based e-commerce app where users can browse items, add them to the cart, and purchase them.
+**Online Boutique** is a cloud-native microservices demo application built for AWS deployment. This web-based e-commerce app demonstrates modern DevSecOps practices with 10 microservices (excluding loadgenerator) communicating via gRPC.
 
-This application demonstrates how developers can modernize enterprise applications using microservices, gRPC, and other technologies. This application works on any Kubernetes cluster, including Amazon EKS.
-
-If you’re using this demo, please **★Star** this repository to show your interest!
-
-**Note to Googlers:** Please fill out the form at [go/microservices-demo](http://go/microservices-demo).
+This application showcases enterprise-grade microservices architecture, containerization, and CI/CD pipelines ready for production deployment on AWS EKS.
 
 ## Architecture
 
-**Online Boutique** is composed of 11 microservices written in different
-languages that talk to each other over gRPC.
+**Online Boutique** consists of 10 microservices written in multiple languages, designed for cloud-native deployment.
 
-[![Architecture of
-microservices](/docs/img/architecture-diagram.png)](/docs/img/architecture-diagram.png)
+[![Architecture of microservices](/docs/img/architecture-diagram.png)](/docs/img/architecture-diagram.png)
 
 Find **Protocol Buffers Descriptions** at the [`./protos` directory](/protos).
 
@@ -34,7 +26,6 @@ Find **Protocol Buffers Descriptions** at the [`./protos` directory](/protos).
 | [checkoutservice](/src/checkoutservice)             | Go            | Retrieves user cart, prepares order and orchestrates the payment, shipping and the email notification.                            |
 | [recommendationservice](/src/recommendationservice) | Python        | Recommends other products based on what's given in the cart.                                                                      |
 | [adservice](/src/adservice)                         | Java          | Provides text ads based on given context words.                                                                                   |
-| [loadgenerator](/src/loadgenerator)                 | Python/Locust | Continuously sends requests imitating realistic user shopping flows to the frontend.                                              |
 
 ## Screenshots
 
@@ -42,74 +33,34 @@ Find **Protocol Buffers Descriptions** at the [`./protos` directory](/protos).
 | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
 | [![Screenshot of store homepage](/docs/img/online-boutique-frontend-1.png)](/docs/img/online-boutique-frontend-1.png) | [![Screenshot of checkout screen](/docs/img/online-boutique-frontend-2.png)](/docs/img/online-boutique-frontend-2.png) |
 
-## Quickstart (Kubernetes)
+## CI/CD Pipeline Overview
 
-1. Ensure you have the following requirements:
-   - Kubernetes cluster (e.g., Amazon EKS).
-   - Shell environment with `helm`, `git`, and `kubectl`.
+This repository implements the Continuous Integration (CI) pipeline for the Google Microservices DevSecOps project.
 
-2. Clone the latest major version.
+### CI Pipeline Features
+- **Multi-language Support**: Builds for Go, Python, Node.js, Java, and .NET services
+- **Docker Image Building**: Creates optimized container images for each microservice
+- **Security Scanning**: Integrates DevSecOps practices with vulnerability scanning
+- **Automated Testing**: Runs unit and integration tests across all services
+- **Artifact Management**: Pushes images to container registry for CD pipeline
 
-   ```sh
-   git clone --depth 1 --branch v0 https://github.com/GoogleCloudPlatform/microservices-demo.git
-   cd microservices-demo/
-   ```
+### Jenkins Pipeline Structure
+- `Jenkinsfile/` contains service-specific build configurations
+- Supports parallel builds for faster CI execution
+- Includes Slack notifications for build status updates
+- Email notifications planned for future implementation
 
-   The `--depth 1` argument skips downloading git history.
+### Local Development
+Use Docker Compose for local testing and development:
 
-3. Deploy Online Boutique to the cluster using Helm.
+```bash
+docker-compose up
+```
 
-   ```sh
-   helm install online-boutique ./kubernetes
-   ```
+This starts all microservices locally with proper service discovery and dependencies.
 
-4. Wait for the pods to be ready.
-
-   ```sh
-   kubectl get pods
-   ```
-
-   After a few minutes, you should see the Pods in a `Running` state:
-
-   ```
-   NAME                                     READY   STATUS    RESTARTS   AGE
-   adservice-76bdd69666-ckc5j               1/1     Running   0          2m58s
-   cartservice-66d497c6b7-dp5jr             1/1     Running   0          2m59s
-   checkoutservice-666c784bd6-4jd22         1/1     Running   0          3m1s
-   currencyservice-5d5d496984-4jmd7         1/1     Running   0          2m59s
-   emailservice-667457d9d6-75jcq            1/1     Running   0          3m2s
-   frontend-6b8d69b9fb-wjqdg                1/1     Running   0          3m1s
-   loadgenerator-665b5cd444-gwqdq           1/1     Running   0          3m
-   paymentservice-68596d6dd6-bf6bv          1/1     Running   0          3m
-   productcatalogservice-557d474574-888kr   1/1     Running   0          3m
-   recommendationservice-69c56b74d4-7z8r5   1/1     Running   0          3m1s
-   redis-cart-5f59546cdd-5jnqf              1/1     Running   0          2m58s
-   shippingservice-6ccc89f8fd-v686r         1/1     Running   0          2m58s
-   ```
-
-5. Access the web frontend in a browser using the frontend's external IP.
-
-   ```sh
-   kubectl get service frontend-external | awk '{print $4}'
-   ```
-
-   Visit `http://EXTERNAL_IP` in a web browser to access your instance of Online Boutique.
-
-6. Congrats! You've deployed the default Online Boutique. To deploy a different variation of Online Boutique (e.g., with service mesh, etc.), see [Deploy Online Boutique variations with Kustomize](#deploy-online-boutique-variations-with-kustomize).
-
-7. Once you are done with it, uninstall the release.
-
-   ```sh
-   helm uninstall online-boutique
-   ```
-
-## Additional deployment options
-
-- **Terraform**: [See these instructions](/terraform) to learn how to deploy Online Boutique using [Terraform](https://www.terraform.io/intro).
-- **Istio / Cloud Service Mesh**: [See these instructions](/kustomize/components/service-mesh-istio/README.md) to deploy Online Boutique alongside an Istio-backed service mesh.
-- **Non-GKE clusters (Minikube, Kind, etc)**: See the [Development guide](/docs/development-guide.md) to learn how you can deploy Online Boutique on non-GKE clusters.
-- **AI assistant using Gemini**: [See these instructions](/kustomize/components/shopping-assistant/README.md) to deploy a Gemini-powered AI assistant that suggests products to purchase based on an image.
-- **And more**: The [`/kustomize` directory](/kustomize) contains instructions for customizing the deployment of Online Boutique with other variations.
+### Deployment
+The CI pipeline feeds into the CD repository (`google-microservices-DevSecOps-CD`) which handles production deployments to AWS EKS using GitOps with ArgoCD.
 
 ## Project Structure
 
@@ -128,52 +79,29 @@ The project is organized as follows:
   - **recommendationservice/**: Python-based recommendation service.
   - **shippingservice/**: Go-based shipping service.
 
-- **kubernetes/**: Helm chart for deploying the application on Kubernetes.
-  - **templates/**: Kubernetes manifests for each service.
-  - **values.yaml**: Default configuration values for the Helm chart.
+- **Jenkinsfile/**: Jenkins pipeline definitions for CI builds of each service.
 
-- **docs/**: Documentation files, including development guides, tutorials, and images.
+- **docker-compose.yaml**: Local development setup with all services.
 
-- **Jenkinsfile/**: Jenkins pipeline definitions for CI/CD.
+- **docs/**: Documentation files, including development guides and architecture details.
 
 - **protos/**: Protocol Buffer definitions for gRPC services.
 
-- **kustomize/**: Kustomize configurations for different deployment variations (e.g., with service mesh, AI assistant).
+This structure supports a microservices architecture with clear separation of concerns, enabling independent development and testing of each service.
 
-- **terraform/**: Terraform configurations for infrastructure deployment.
+## Skills Demonstrated
 
-- **.github/**: GitHub Actions workflows for CI/CD.
-
-This structure supports a microservices architecture with clear separation of concerns, enabling independent development, deployment, and scaling of each service.
+- **Multi-language Development**: Proficiency in Go, Python, Node.js, Java, and C#
+- **Microservices Design**: Service decomposition, API design, and inter-service communication
+- **Containerization**: Docker best practices for multi-language applications
+- **CI/CD**: Jenkins pipeline development for automated builds and testing
+- **DevSecOps**: Integration of security scanning and compliance checks
+- **Cloud-Native**: AWS EKS deployment with GitOps and Helm
 
 ## Documentation
 
-- [Development](/docs/development-guide.md) to learn how to run and develop this app locally.
+- [Development Guide](/docs/development-guide.md) for local setup and development
+- [Product Requirements](/docs/product-requirements.md) for project guidelines
+- [Purpose](/docs/purpose.md) for project objectives
 
-## Demos featuring Online Boutique
 
-- [Platform Engineering in action: Deploy the Online Boutique sample apps with Score and Humanitec](https://medium.com/p/d99101001e69)
-- [The new Kubernetes Gateway API with Istio and Anthos Service Mesh (ASM)](https://medium.com/p/9d64c7009cd)
-- [Use Azure Redis Cache with the Online Boutique sample on AKS](https://medium.com/p/981bd98b53f8)
-- [Sail Sharp, 8 tips to optimize and secure your .NET containers for Kubernetes](https://medium.com/p/c68ba253844a)
-- [Deploy multi-region application with Anthos and Google cloud Spanner](https://medium.com/google-cloud/a2ea3493ed0)
-- [Use Google Cloud Memorystore (Redis) with the Online Boutique sample on GKE](https://medium.com/p/82f7879a900d)
-- [Use Helm to simplify the deployment of Online Boutique, with a Service Mesh, GitOps, and more!](https://medium.com/p/246119e46d53)
-- [How to reduce microservices complexity with Apigee and Anthos Service Mesh](https://cloud.google.com/blog/products/application-modernization/api-management-and-service-mesh-go-together)
-- [gRPC health probes with Kubernetes 1.24+](https://medium.com/p/b5bd26253a4c)
-- [Use Google Cloud Spanner with the Online Boutique sample](https://medium.com/p/f7248e077339)
-- [Seamlessly encrypt traffic from any apps in your Mesh to Memorystore (redis)](https://medium.com/google-cloud/64b71969318d)
-- [Strengthen your app's security with Cloud Service Mesh and Anthos Config Management](https://cloud.google.com/service-mesh/docs/strengthen-app-security)
-- [From edge to mesh: Exposing service mesh applications through GKE Ingress](https://cloud.google.com/architecture/exposing-service-mesh-apps-through-gke-ingress)
-- [Take the first step toward SRE with Cloud Operations Sandbox](https://cloud.google.com/blog/products/operations/on-the-road-to-sre-with-cloud-operations-sandbox)
-- [Deploying the Online Boutique sample application on Cloud Service Mesh](https://cloud.google.com/service-mesh/docs/onlineboutique-install-kpt)
-- [Anthos Service Mesh Workshop: Lab Guide](https://codelabs.developers.google.com/codelabs/anthos-service-mesh-workshop)
-- [KubeCon EU 2019 - Reinventing Networking: A Deep Dive into Istio's Multicluster Gateways - Steve Dake, Independent](https://youtu.be/-t2BfT59zJA?t=982)
-- Google Cloud Next'18 SF
-  - [Day 1 Keynote](https://youtu.be/vJ9OaAqfxo4?t=2416) showing GKE On-Prem
-  - [Day 3 Keynote](https://youtu.be/JQPOPV_VH5w?t=815) showing Stackdriver
-    APM (Tracing, Code Search, Profiler, Google Cloud Build)
-  - [Introduction to Service Management with Istio](https://www.youtube.com/watch?v=wCJrdKdD6UM&feature=youtu.be&t=586)
-- [Google Cloud Next'18 London – Keynote](https://youtu.be/nIq2pkNcfEI?t=3071)
-  showing Stackdriver Incident Response Management
-- [Microservices demo showcasing Go Micro](https://github.com/go-micro/demo)
