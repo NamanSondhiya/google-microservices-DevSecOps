@@ -1,0 +1,37 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: google-microservices-devsecops
+  title: Google Microservices DevSecOps
+  description: Microservices demo with Jenkins CI/CD pipeline and security scanning
+  annotations:
+    github.com/project-slug: NamanSondhiya/google-microservices-DevSecOps
+    jenkins.io/job-full-name: 'google-microservices-ci'
+    backstage.io/kubernetes-id: google-microservices
+    backstage.io/kubernetes-label-selector: 'app.kubernetes.io/part-of=google-microservices'
+  tags:
+    - microservices
+    - jenkins
+    - devsecops
+    - kind
+    - go
+    - python
+    - nodejs
+  links:
+    - url: https://github.com/NamanSondhiya/google-microservices-DevSecOps
+      title: Source Code
+      icon: github
+spec:
+  type: service
+  lifecycle: production
+  owner: user:default/guest
+  system: microservices-platform
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: microservices-platform
+  description: Google Microservices Demo Platform
+spec:
+  owner: user:default/guest
+  domain: default

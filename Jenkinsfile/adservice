@@ -9,8 +9,13 @@ def COLOR_MAP = [
 pipeline {
     agent any
 
-     parameters {
+    parameters {
         string(name: 'IMAGE_TAG_AD', defaultValue: '', description: 'Enter the Adservice Docker image tag')
+        choice (
+            name: 'ENV',
+            chocies: ['dev', 'stage', 'prod'],
+            description: 'Select the deployment environment'
+        )
     }
    
     tools {
@@ -132,7 +137,8 @@ pipeline {
         }
         success {
             build job: "google-microservice-CD", parameters: [
-                string(name:'IMAGE_TAG_AD', value: "${params.IMAGE_TAG_AD}")
+                string(name:'IMAGE_TAG_AD', value: "${params.IMAGE_TAG_AD}"),
+                string(name:'ENV', value: "${params.ENV}")
             ]
         }
     }
