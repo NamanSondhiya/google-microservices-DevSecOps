@@ -13,7 +13,7 @@ pipeline {
         string(name: 'IMAGE_TAG_AD', defaultValue: '', description: 'Enter the Adservice Docker image tag')
         choice (
             name: 'ENV',
-            chocies: ['dev', 'stage', 'prod'],
+            choices: ['dev', 'stage', 'prod'],
             description: 'Select the deployment environment'
         )
     }
