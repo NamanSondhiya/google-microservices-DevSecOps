@@ -10,7 +10,11 @@ pipeline {
     agent any
 
     parameters {
-        string(name: 'IMAGE_TAG_AD', defaultValue: '', description: 'Enter the Adservice Docker image tag')
+        string (
+            name: 'IMAGE_TAG_AD',
+            defaultValue: '',
+            description: 'Enter the Adservice Docker image tag'
+        )
         choice (
             name: 'ENV',
             choices: ['dev', 'stage', 'prod'],
