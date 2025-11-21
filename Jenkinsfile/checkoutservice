@@ -11,6 +11,11 @@ pipeline {
 
     parameters {
         string(name: 'IMAGE_TAG_CHECK', defaultValue: '', description: 'Enter the Checkoutservice Docker image tag')
+        choice (
+            name: 'ENV',
+            choices: ['dev', 'stage', 'prod'],
+            description: 'Select the deployment environment'
+        )
     }
 
     tools {
@@ -179,7 +184,8 @@ pipeline {
         }
         success {
             build job: "google-microservice-CD", parameters: [
-                string(name: 'IMAGE_TAG_CHECK', value: "${params.IMAGE_TAG_CHECK}")
+                string(name: 'IMAGE_TAG_CHECK', value: "${params.IMAGE_TAG_CHECK}"),
+                string(name:'ENV', value: "${params.ENV}")
             ]
         }   
     }

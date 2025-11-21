@@ -11,6 +11,11 @@ pipeline {
     
     parameters {
         string(name: 'IMAGE_TAG_MAIL', defaultValue: '', description: 'Enter the Emailservice Docker image tag')
+        choice (
+            name: 'ENV',
+            choices: ['dev', 'stage', 'prod'],
+            description: 'Select the deployment environment'
+        )
     }
 
     tools {
@@ -132,7 +137,8 @@ pipeline {
         }
         success {
             build job: "google-microservice-CD", parameters: [
-                string(name: "IMAGE_TAG_MAIL", value: "${params.IMAGE_TAG_MAIL}")
+                string(name: "IMAGE_TAG_MAIL", value: "${params.IMAGE_TAG_MAIL}"),
+                string(name:'ENV', value: "${params.ENV}")
             ]
         }
     }

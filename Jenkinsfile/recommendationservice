@@ -11,6 +11,11 @@ pipeline {
 
     parameters {
         string(name: 'IMAGE_TAG_RECC', defaultValue: '', description: 'Enter the Recommendationservice Docker image tag')
+        choice (
+            name: 'ENV',
+            choices: ['dev', 'stage', 'prod'],
+            description: 'Select the deployment environment'
+        )
     }
 
     environment {
@@ -118,7 +123,8 @@ pipeline {
         }
         success {
             build job: "google-microservice-CD", parameters: [
-                string(name: "IMAGE_TAG_RECC", value: "${params.IMAGE_TAG_RECC}")
+                string(name: "IMAGE_TAG_RECC", value: "${params.IMAGE_TAG_RECC}"),
+                string(name:'ENV', value: "${params.ENV}")
             ]
         }
     }
