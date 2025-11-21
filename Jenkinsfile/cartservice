@@ -10,7 +10,7 @@ pipeline {
     agent any
 
     parameters {
-        string(name: 'IMAGE_TAG_CART', defaultValue: '', description: 'Enter the Cartservice Docker image tag'),
+        string(name: 'IMAGE_TAG_CART', defaultValue: '', description: 'Enter the Cartservice Docker image tag')
         choice (
             name: 'ENV',
             chocies: ['dev', 'stage', 'prod'],
