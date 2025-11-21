@@ -10,7 +10,12 @@ pipeline {
     agent any
 
     parameters {
-        string(name: 'IMAGE_TAG_CART', defaultValue: '', description: 'Enter the Cartservice Docker image tag')
+        string(name: 'IMAGE_TAG_CART', defaultValue: '', description: 'Enter the Cartservice Docker image tag'),
+        choice (
+            name: 'ENV',
+            chocies: ['dev', 'stage', 'prod'],
+            description: 'Select the deployment environment'
+        )
     }
 
     tools {
@@ -144,7 +149,8 @@ pipeline {
         }
         success {
             build job: "google-microservice-CD", parameters: [
-                string(name: "IMAGE_TAG_CART", value: "${params.IMAGE_TAG_CART}")
+                string(name: "IMAGE_TAG_CART", value: "${params.IMAGE_TAG_CART}"),
+                string(name:'ENV', value: "${params.ENV}")
             ]
         }
     }
